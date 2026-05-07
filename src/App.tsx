@@ -95,7 +95,7 @@ const translations = {
       { title: "Full-Service Partner", desc: "Von der Materialbeschaffung bis zur finalen Montage alles aus einer Hand." }
     ],
     besuchsplanTitle: "BESUCHSPLAN & POTENZIALE",
-    besuchsplanDesc: "Katalog potenzieller SME-Partner in Österreich mit Fokus auf Metallbau und Fahrzeugtechnik.",
+    besuchsplanDesc: "Katalog potenzieller KMU-Partner in Österreich mit Fokus auf Metallbau und Fahrzeugtechnik.",
     pitchLabel: "IHR PITCH (INFO-MATERIAL):",
     strategyLabel: "STRATEGIE:",
     tipsTitle: "GESPRÄCHS-TIPPS",
@@ -201,7 +201,7 @@ const translations = {
       { title: "Full-Service Partner", desc: "Od nabave materiala do končne montaže – vse na enem mestu." }
     ],
     besuchsplanTitle: "NAČRT OBISKA IN POTENCIALI",
-    besuchsplanDesc: "Katalog potencialnih SME partnerjev v Srednji Evropi s poudarkom na kovinskih konstrukcijah in tehnologiji vozil.",
+    besuchsplanDesc: "Katalog potencialnih MSP partnerjev v Srednji Evropi s poudarkom na kovinskih konstrukcijah in tehnologiji vozil.",
     pitchLabel: "VAŠ 'WELDING' PITCH:",
     strategyLabel: "STRATEGIJA PREBOJA:",
     tipsTitle: "NASVETI ZA POGOVOR",
@@ -254,7 +254,7 @@ const translations = {
       { title: "Full-Service Partner", desc: "Az anyagbeszerzéstől a végső összeszerelésig – minden egy kézből." }
     ],
     besuchsplanTitle: "LÁTOGATÁSI TERV ÉS POTENCIÁLOK",
-    besuchsplanDesc: "SME-partnerek katalógusa Közép-Európában, különös tekintettel a fémszerkezetekre és a járműtechnológiára.",
+    besuchsplanDesc: "KKV-partnerek katalógusa Közép-Európában, különös tekintettel a fémszerkezetekre és a járműtechnológiára.",
     pitchLabel: "AZ ÖN 'WELDING' PITCH ANYAGA:",
     strategyLabel: "STRATÉGIA:",
     tipsTitle: "BESZÉLGETÉSI TIPPEK",
@@ -307,7 +307,7 @@ const translations = {
       { title: "Full-Service partner", desc: "Od nabave materijala do završne montaže – sve na jednom mjestu." }
     ],
     besuchsplanTitle: "PLAN POSJETA I POTENCIJALI",
-    besuchsplanDesc: "Katalog potencijalnih SME partnera u Austriji s fokusom na metalnu gradnju i tehnologiju vozila.",
+    besuchsplanDesc: "Katalog potencijalnih MSP partnera u Austriji s fokusom na metalnu gradnju i tehnologiju vozila.",
     pitchLabel: "VAŠ PITCH (INFO MATERIJAL):",
     strategyLabel: "STRATEGIJA:",
     tipsTitle: "SAVJETI ZA RAZGOVOR",
@@ -377,7 +377,7 @@ const WELDING_SLANG = [
     en: "Rust is a foreign word to us", 
     sl: "Rja je za nas tuja beseda", 
     hu: "A rozsda számunkra ismeretlen fogalom",
-    hr: "Rđa je za nas nepoznata riječ",
+    hr: "Hrđa je za nas nepoznata riječ",
     context: "Finish / Corrosion protection"
   },
   { 
@@ -397,6 +397,30 @@ const WELDING_SLANG = [
     context: "Mastery"
   },
   {
+    de: "WIG ist kein Tanzstil",
+    en: "TIG is not a dance style",
+    sl: "WIG ni plesni slog",
+    hu: "A WIG nem táncstílus",
+    hr: "WIG nije plesni stil",
+    context: "Precision"
+  },
+  {
+    de: "Wenn's nicht hält, war's kein Schweißer",
+    en: "If it doesn't hold, it wasn't a welder",
+    sl: "Če ne drži, ni bil varilec",
+    hu: "Ha nem tart, az nem hegesztő volt",
+    hr: "Ako ne drži, nije bio zavarivač",
+    context: "Quality Assurance"
+  },
+  {
+    de: "Elektrode ist kein Knabberzeug",
+    en: "An electrode is not a snack",
+    sl: "Elektroda ni prigrizek",
+    hu: "Az elektróda nem rágcsálnivaló",
+    hr: "Elektroda nije grickalica",
+    context: "Safety first"
+  },
+  {
     de: "Ein Schweißer stirbt nie, ihm geht nur der Draht aus",
     en: "A welder never dies, he just runs out of rod",
     sl: "Varilec nikoli ne umre, samo žice mu zmanjka",
@@ -410,10 +434,10 @@ const TRIP_TABS = [
   {
     id: 'max_efficiency',
     label: 'The MAX-Efficiency Tour',
-    description: 'Extremer 2-Tages-Plan (8 Firmen/Tag). Fokus: SME-Netzwerk & Vorfertigung in OÖ/Stmk.',
+    description: 'Extremer 2-Tages-Plan (8 Firmen/Tag). Fokus: KMU-Netzwerk & Vorfertigung in OÖ/Stmk.',
     leads: [
       {
-        group: "Tag 1: SME-Cluster OÖ (Linz-Steyr)",
+        group: "Tag 1: KMU-Cluster OÖ (Linz-Steyr)",
         focus: "High-Density Vorfertigung",
         companies: [
           { 
@@ -422,7 +446,7 @@ const TRIP_TABS = [
             contact: "+43 732 6711", 
             web: "zeko.at", 
             maps: "https://maps.google.com/?q=Zeko+Mobility", 
-            desc: "Sonderaufbauten SME.", 
+            desc: "Sonderaufbauten KMU.", 
             strategy: "Schnelle Schweißkonsolen.", 
             pitch: ["Lichtbogen zündet in 24h.", "Wir biegen uns für Sie, aber unsere Schweißnähte brechen nie."], 
             pitchEN: ["Arc strikes in 24h.", "We bend over backwards for you, but our welds never crack."],
@@ -433,7 +457,7 @@ const TRIP_TABS = [
           },
           { 
             name: "TAT-Technom", 
-            address: "Technopark 1, Traun", 
+            address: "Technopark 1, 4061 Pasching", 
             contact: "+43 7229 64840", 
             web: "tat.at", 
             maps: "https://maps.google.com/?q=TAT-Technom", 
@@ -445,12 +469,12 @@ const TRIP_TABS = [
             pitchHU: ["Hegesztési varratok, amelyek csak nevetnek a vibráción.", "Az ISO 3834-3 a szívverésünk."],
             travelNext: { distance: "6km", time: "10 min" } 
           },
-          { name: "WD-Metall", address: "Gewerbepark, Ansfelden", contact: "+43 7229 88164", web: "wd-metall.at", maps: "https://maps.google.com/?q=WD-Metall", desc: "Blechtechnik.", strategy: "Laser-Schweiß-Kombis.", pitch: ["Modernster Park.", "SME-Preise."], travelNext: { distance: "12km", time: "15 min" } },
+          { name: "WD-Metall", address: "Gewerbepark, Ansfelden", contact: "+43 7229 88164", web: "wd-metall.at", maps: "https://maps.google.com/?q=WD-Metall", desc: "Blechtechnik.", strategy: "Laser-Schweiß-Kombis.", pitch: ["Modernster Park.", "KMU-Preise."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Hofmann Metall", address: "Gewerbepark 5, Sierning", contact: "+43 7259 3131", web: "hofmann-metall.at", maps: "https://maps.google.com/?q=Hofmann+Metall", desc: "Gehäusebau.", strategy: "Serienfertigung.", pitch: ["Kapazitäts-Puffer.", "Hohe Genauigkeit."], travelNext: { distance: "8km", time: "10 min" } },
-          { name: "Glatz Mechanik", address: "Gründbergstr. 1, Steyr", contact: "+43 7252 73061", web: "glatz.at", maps: "https://maps.google.com/?q=Glatz+Mechanik", desc: "Maschinenbau SME.", strategy: "Vorfertigung Module.", pitch: ["Baugruppen-Montage.", "Terminfokus."], travelNext: { distance: "5km", time: "8 min" } },
-          { name: "SME Stahlbau", address: "Industriezeile, Steyr", contact: "+43 7252 1122", web: "sme-steyr.at", maps: "https://maps.google.com/?q=SME+Stahlbau", desc: "Leichtbau-Experten.", strategy: "Dünnblech-Schweißen.", pitch: ["Alu & Edelstahl.", "Spezial-Lose."], travelNext: { distance: "15km", time: "20 min" } },
+          { name: "Glatz Mechanik", address: "Gründbergstr. 1, Steyr", contact: "+43 7252 73061", web: "glatz.at", maps: "https://maps.google.com/?q=Glatz+Mechanik", desc: "Maschinenbau KMU.", strategy: "Vorfertigung Module.", pitch: ["Baugruppen-Montage.", "Terminfokus."], travelNext: { distance: "5km", time: "8 min" } },
+          { name: "KMU Stahlbau", address: "Industriezeile, Steyr", contact: "+43 7252 1122", web: "sme-steyr.at", maps: "https://maps.google.com/?q=SME+Stahlbau", desc: "Leichtbau-Experten.", strategy: "Dünnblech-Schweißen.", pitch: ["Alu & Edelstahl.", "Spezial-Lose."], travelNext: { distance: "15km", time: "20 min" } },
           { name: "M-Tech Austria", address: "Haager Str., Enns", contact: "+43 7223 82121", web: "m-tech.at", maps: "https://maps.google.com/?q=M-Tech+Austria", desc: "Anlagenbau Zulieferer.", strategy: "Rahmenkonstruktionen.", pitch: ["Extreme Schweißtiefe.", "Prüfzertifiziert."], travelNext: { distance: "10km", time: "12 min" } },
-          { name: "Laska Maschinen", address: "Makartstraße, Linz", contact: "+43 732 3311", web: "laska.at", maps: "https://maps.google.com/?q=Laska+Maschinen", desc: "Lebensmitteltechnik.", strategy: "Edelstahl-Fokus.", pitch: ["Hygiene-Schweißnähte.", "SME-Serienbau."] }
+          { name: "Laska Maschinen", address: "Makartstraße, Linz", contact: "+43 732 3311", web: "laska.at", maps: "https://maps.google.com/?q=Laska+Maschinen", desc: "Lebensmitteltechnik.", strategy: "Edelstahl-Fokus.", pitch: ["Hygiene-Schweißnähte.", "KMU-Serienbau."] }
         ]
       },
       {
@@ -458,13 +482,192 @@ const TRIP_TABS = [
         focus: "Heavy Metal & Outsourcing Hubs",
         companies: [
           { name: "Krenhof GmbH", address: "Schmiedgasse, Köflach", contact: "+43 3144 2505", web: "krenhof.at", maps: "https://maps.google.com/?q=Krenhof", desc: "Schmiedetechnik.", strategy: "Schweißbaugruppen-Kombi.", pitch: ["Vormontierte Teile.", "Serien-Spezialist."], travelNext: { distance: "25km", time: "25 min" } },
-          { name: "Berger Fabrik", address: "Grazer Str., Knittelfeld", contact: "+43 3512 82511", web: "berger.at", maps: "https://maps.google.com/?q=Berger+Fabrik", desc: "Apparatebau SME.", strategy: "Edelstahl & Sonderstähle.", pitch: ["Druckbehälter-Nähte.", "ISO-Qualität."], travelNext: { distance: "18km", time: "18 min" } },
+          { name: "Berger Fabrik", address: "Grazer Str., Knittelfeld", contact: "+43 3512 82511", web: "berger.at", maps: "https://maps.google.com/?q=Berger+Fabrik", desc: "Apparatebau KMU.", strategy: "Edelstahl & Sonderstähle.", pitch: ["Druckbehälter-Nähte.", "ISO-Qualität."], travelNext: { distance: "18km", time: "18 min" } },
           { name: "Stahl-Grabner", address: "Industrieallee, Hartberg", contact: "+43 3332 62654", web: "grabner.at", maps: "https://maps.google.com/?q=Grabner", desc: "Fahrzeugbau Zulieferer.", strategy: "Hilfsrahmen in Serie.", pitch: ["Feinkornbaustahl-Pro.", "Roboter-Schweißen."], travelNext: { distance: "30km", time: "28 min" } },
           { name: "Kohlbacher Metall", address: "Gasselsdorf, Lang", contact: "+43 3452 71501", web: "kohlbacher.at", maps: "https://maps.google.com/?q=Kohlbacher", desc: "Modulbau-Fertigung.", strategy: "Vorfertigung Stahlbau.", pitch: ["Logistik-Erfahrung DE.", "Modul-Skalierung."], travelNext: { distance: "12km", time: "15 min" } },
-          { name: "Mecabau GmbH", address: "Lassnitzhöhe", contact: "+43 316 2727", web: "mecabau.at", maps: "https://maps.google.com/?q=Mecabau", desc: "Präzision-SME.", strategy: "Leichte Baugruppen.", pitch: ["CNC & Schweißen.", "Just-in-time SME."], travelNext: { distance: "8km", time: "10 min" } },
+          { name: "Mecabau GmbH", address: "Lassnitzhöhe", contact: "+43 316 2727", web: "mecabau.at", maps: "https://maps.google.com/?q=Mecabau", desc: "Präzision-KMU.", strategy: "Leichte Baugruppen.", pitch: ["CNC & Schweißen.", "Just-in-time KMU."], travelNext: { distance: "8km", time: "10 min" } },
           { name: "Austropressen", address: "Roitham", contact: "+43 7613 2337", web: "austropressen.com", maps: "https://maps.google.com/?q=Austropressen", desc: "Entsorgungstechnik.", strategy: "Massive Pressgehäuse.", pitch: ["Schwere Bauteile.", "Verlängerte Werkbank."], travelNext: { distance: "45km", time: "35 min" } },
           { name: "Framag GmbH", address: "Frankenburg", contact: "+43 7683 5040", web: "framag.at", maps: "https://maps.google.com/?q=Framag", desc: "Schwingungstechnik.", strategy: "Gedämpfte Gestelle.", pitch: ["Verbund-Schweißbau.", "Präzisions-Outsourcing."], travelNext: { distance: "15km", time: "12 min" } },
-          { name: "SME Guss-Schweiß", address: "Wels-Nord", contact: "+43 7242 1122", web: "guss-schweiss.at", maps: "https://maps.google.com/?q=SME+Guss", desc: "Spezial-Zulieferer.", strategy: "Guss-Verschweißung.", pitch: ["SME-Nische.", "Partner für Sonderbau."] }
+          { name: "KMU Guss-Schweiß", address: "Wels-Nord", contact: "+43 7242 1122", web: "guss-schweiss.at", maps: "https://maps.google.com/?q=SME+Guss", desc: "Spezial-Zulieferer.", strategy: "Guss-Verschweißung.", pitch: ["KMU-Nische.", "Partner für Sonderbau."] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'bayern_tour',
+    label: 'Bayern KMU Tour (DE)',
+    labelHR: 'Turneja Bavarska (Njemačka)',
+    labelEN: 'Bavaria SME Tour (Germany)',
+    description: 'Fokus: Premium-Stahlbau, Automotive-Supply & Spezialmaschinenbau in Oberbayern & Schwaben',
+    leads: [
+      {
+        group: "Tag 1: München & Umland",
+        focus: "High-Tech Stahlbau & Spezial-Fahrzeugbau",
+        companies: [
+          { 
+            name: "Meiller Kipper", 
+            address: "Ambros-Meiller-Straße 1, 80993 München", 
+            contact: "+49 89 1487", 
+            web: "meiller.com", 
+            maps: "https://maps.google.com/?q=Meiller+Kipper+Muenchen", 
+            desc: "Weltmarktführer für Kippaufbauten.", 
+            strategy: "Stahlbau-Zulieferung.", 
+            pitch: ["Harte Schale, harter Kern – wir schweißen für die Ewigkeit.", "Kipp-Stabilität beginnt bei der Wurzelnaht."],
+            pitchEN: ["Tough shell, tough core – we weld for eternity.", "Tipping stability starts at the root pass."],
+            pitchSL: ["Trda lupina, trdo jedro – varimo za večnost.", "Stabilnost prevračanja se začne pri korenskem zvaru."],
+            pitchHU: ["Kemény héj, kemény mag – az örökkévalóságnak hegesztünk.", "A billenési stabilitás a gyökvarratnál kezdődik."],
+            pitchHR: ["Tvrda kora, tvrda jezgra – zavarujemo za vječnost.", "Stabilnost kipanja počinje s korijenskim zvarom."],
+            travelNext: { distance: "25km", time: "30 min" }
+          },
+          { 
+            name: "Krauss-Maffei Wegmann", 
+            address: "Krauss-Maffei-Straße 11, 80997 München", 
+            contact: "+49 89 8140", 
+            web: "knds.de", 
+            maps: "https://maps.google.com/?q=KMW+Muenchen", 
+            desc: "Systemhaus für Schutzsysteme.", 
+            strategy: "Präzisions-Schweißbau.", 
+            pitch: ["Panzerstahl-Flüsterer: Wo andere aufgeben, brennt unser Lichtbogen erst richtig.", "Höchste Zertifizierung: Wir schweißen, was andere nicht mal ansehen dürfen."],
+            pitchEN: ["Tank-steel whisperers: where others quit, our arc really starts to burn.", "Highest certification: we weld what others aren't even allowed to look at."],
+            pitchSL: ["Šepetalci tankovskemu jeklu: kjer drugi odnehajo, naš oblok šele zares zagori.", "Najvišji certifikat: varimo tisto, česar drugi niti gledati ne smejo."],
+            pitchHR: ["Šaptači čeliku za tenkove: tamo gdje drugi odustaju, naš električni luk tek počinje gorjeti.", "Najviši certifikati: zavarujemo ono što drugi ne smiju ni gledati."],
+            travelNext: { distance: "18km", time: "25 min" }
+          },
+          { 
+            name: "MAN Truck & Bus", 
+            address: "Dachauer Str. 667, 80995 München", 
+            contact: "+49 89 1580", 
+            web: "man.eu", 
+            maps: "https://maps.google.com/?q=MAN+Muenchen", 
+            desc: "Nutzfahrzeuge Global.", 
+            strategy: "Rahmenbau KMU-Outsourcing.", 
+            pitch: ["Stahl-Poesie unter dem Helm.", "24h Prototyping."],
+            pitchEN: ["Steel poetry under the helmet.", "24h Prototyping."],
+            pitchHR: ["Čelična poezija pod maskom.", "Izrada prototipa unutar 24 sata."],
+            travelNext: { distance: "5km", time: "10 min" }
+          },
+          { 
+            name: "MTU Aero Engines", 
+            address: "Dachauer Str. 665, 80995 München", 
+            contact: "+49 89 1489", 
+            web: "mtu.de", 
+            maps: "https://maps.google.com/?q=MTU+Muenchen", 
+            desc: "Triebwerkstechnik.", 
+            strategy: "Spezial-Schweißverfahren.", 
+            pitch: ["Cleanroom standards.", "Ti-Welding expert."],
+            pitchHR: ["Standardi čiste sobe.", "Stručnjak za zavarivanje titana."]
+          }
+        ]
+      },
+      {
+        group: "Tag 2: Augsburg & Schwaben",
+        focus: "Anlagenbau & Robotik-Cluster",
+        companies: [
+          { 
+            name: "Humbaur GmbH", 
+            address: "Mercedesring 1, 86368 Gersthofen", 
+            contact: "+49 821 2492", 
+            web: "humbaur.com", 
+            maps: "https://maps.google.com/?q=Humbaur+Gersthofen", 
+            desc: "Anhänger- & Kofferaufbauten.", 
+            strategy: "Chassis-Fertigung.", 
+            pitch: ["Wir schmieden das Rückgrat Ihrer Logistik.", "Verzinkte Perfektion: Rost ist für uns ein Fremdwort."],
+            pitchEN: ["We forge the backbone of your logistics.", "Galvanized perfection: rust is a foreign word to us."],
+            pitchHR: ["Kovemo okosnicu vaše logistike.", "Pocinčano savršenstvo: hrđa je za nas nepoznata riječ."],
+            travelNext: { distance: "12km", time: "15 min" }
+          },
+          { 
+            name: "Linde Material Handling", 
+            address: "Carl-von-Linde-Platz, 63743 Aschaffenburg Hub", 
+            contact: "+49 6021 990", 
+            web: "linde-mh.de", 
+            maps: "https://maps.google.com/?q=Linde+MH", 
+            desc: "Intralogistik Global.", 
+            strategy: "Rahmenbau & Hubgerüste.", 
+            pitch: ["Präzision in jeder Naht.", "Staplerstahler."],
+            pitchHR: ["Preciznost u svakom šavu.", "Čelik za viličare."],
+            travelNext: { distance: "25km", time: "20 min" }
+          },
+          { 
+            name: "Zeppelin Systems", 
+            address: "Elektronstraße 1, 86316 Friedberg", 
+            contact: "+49 821 7483", 
+            web: "zeppelin-systems.com", 
+            maps: "https://maps.google.com/?q=Zeppelin+Systems+Friedberg", 
+            desc: "Anlagenbau für Schüttgüter.", 
+            strategy: "Silobau & Behälter.", 
+            pitch: ["Alu- & Edelstahlschweißen.", "Großkomponenten."],
+            pitchHR: ["Zavarivanje aluminija i nehrđajućeg čelika.", "Velike komponente."],
+            travelNext: { distance: "35km", time: "40 min" }
+          },
+          { 
+            name: "KUKA Robotics", 
+            address: "Zugspitzstraße 140, 86165 Augsburg", 
+            contact: "+49 821 797", 
+            web: "kuka.com", 
+            maps: "https://maps.google.com/?q=KUKA+Augsburg", 
+            desc: "Automatisierungsprofi.", 
+            strategy: "Vorrichtungskomponenten.", 
+            pitch: ["Smart Factory Integration.", "Precision frames."],
+            pitchHR: ["Integracija pametne tvornice.", "Precizni okviri."]
+          }
+        ]
+      },
+      {
+        group: "Tag 3: Niederbayern & Landshut",
+        focus: "Heavy Engineering & Logistik-Systeme",
+        companies: [
+          { 
+            name: "Sennebogen", 
+            address: "Sennebogenstraße 10, 94315 Straubing", 
+            contact: "+49 9421 540", 
+            web: "sennebogen.com", 
+            maps: "https://maps.google.com/?q=Sennebogen+Straubing", 
+            desc: "Umschlagsbagger & Krane.", 
+            strategy: "Massivstahlbau-Outsourcing.", 
+            pitch: ["Baggermasten-Chirurgen: Millimeterarbeit an Tonnen von Stahl.", "Wir bändigen den Verzug in jedem Millimeter."],
+            pitchEN: ["Boom surgeons: millimeter precision on tons of steel.", "We tame the distortion in every millimeter."],
+            pitchSL: ["Kirurgi za bagrske roke: milimetrska natančnost na tonah jekla.", "Ukrotimo popačenje v vsakem milimetru."],
+            pitchHR: ["Kirurzi za grane bagera: milimetarska preciznost na tonama čelika.", "Ukrotimo svako izobličenje u svakom milimetru."],
+            travelNext: { distance: "45km", time: "40 min" }
+          },
+          { 
+            name: "Goldhofer AG", 
+            address: "Donaustraße 95, 87700 Memmingen", 
+            contact: "+49 8331 150", 
+            web: "goldhofer.com", 
+            maps: "https://maps.google.com/?q=Goldhofer+Memmingen", 
+            desc: "Schwerlast-Transport.", 
+            strategy: "Fahrwerk-Module.", 
+            pitch: ["Extreme Tragkraft.", "Spezial-Stahlbau."],
+            pitchHR: ["Ekstremna nosivost.", "Specijalni čelični objekti."],
+            travelNext: { distance: "30km", time: "25 min" }
+          },
+          { 
+            name: "Sturm Gruppe", 
+            address: "Industriestraße 10, 94330 Salching", 
+            contact: "+49 9421 5520", 
+            web: "sturm-gruppe.com", 
+            maps: "https://maps.google.com/?q=Sturm+Gruppe+Salching", 
+            desc: "Fördertechnik & Oberflächen.", 
+            strategy: "Anlagen-Gestelle.", 
+            pitch: ["Ihre Gestelle, unsere Schweißnaht – eine Verbindung fürs Leben.", "Magie unter dem Helm: Wir schweißen schneller als die Konkurrenz schaut."],
+            pitchEN: ["Your frames, our weld – a bond for life.", "Magic under the helmet: we weld faster than the competition looks."],
+            pitchSL: ["Vaši okvirji, naš zvar – vez za vse življenje.", "Magija pod masko: varimo hitreje, kot konkurenca gleda."],
+            pitchHR: ["Vaši okviri, naš zavar – veza za cijeli život.", "Magija pod maskom: zavarujemo brže nego što konkurencija gleda."],
+            travelNext: { distance: "28km", time: "30 min" }
+          },
+          { 
+            name: "Dräxlmaier Group", 
+            address: "Landshuter Str. 100, 84137 Vilsbiburg", 
+            contact: "+49 8741 47", 
+            web: "draexlmaier.com", 
+            maps: "https://maps.google.com/?q=Draexlmaier+Vilsbiburg", 
+            desc: "Premium Automotive Supply.", 
+            strategy: "Batteriegehäuse-Frames.", 
+            pitch: ["E-Mobility transition.", "Quality management."],
+            pitchHR: ["Prijelaz na e-mobilnost.", "Upravljanje kvalitetom."]
+          }
         ]
       }
     ]
@@ -476,15 +679,15 @@ const TRIP_TABS = [
     leads: [
       {
         group: "Tag 1: Cluster Linz/Leonding/Wels",
-        focus: "High-Tech Fabrication & SME Precision",
+        focus: "High-Tech Fabrication & KMU-Präzision",
         companies: [
-          { name: "Zeko Mobility", address: "Welser Str. 83, 4060 Leonding", contact: "+43 732 6711", web: "zeko.at", maps: "https://maps.google.com/?q=Zeko+Mobility", desc: "Sonderaufbauten SME.", strategy: "Vorfertigung von Schweißkonsolen.", pitch: ["24h Prototypenbau.", "SME Flexibilität."], travelNext: { distance: "4km", time: "8 min" } },
+          { name: "Zeko Mobility", address: "Welser Str. 83, 4060 Leonding", contact: "+43 732 6711", web: "zeko.at", maps: "https://maps.google.com/?q=Zeko+Mobility", desc: "Sonderaufbauten KMU.", strategy: "Vorfertigung von Schweißkonsolen.", pitch: ["24h Prototypenbau.", "KMU Flexibilität."], travelNext: { distance: "4km", time: "8 min" } },
           { name: "TAT-Technom", address: "Technopark 1, 4050 Traun", contact: "+43 7229 64840", web: "tat.at", maps: "https://maps.google.com/?q=TAT-Technom", desc: "Antriebstechnik.", strategy: "Maschinengestelle.", pitch: ["Vibrationsresistent.", "ISO 3834-3."], travelNext: { distance: "6km", time: "10 min" } },
           { name: "WD-Metall", address: "Roseggerstraße 12, 4050 Traun", contact: "+43 699 172", web: "wd-metall.at", maps: "https://maps.google.com/?q=WD-Metall", desc: "Blechtechnik.", strategy: "Serien-Outsourcing.", pitch: ["Verlängerte Werkbank.", "EU-Preiskalkulation."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Fronius Schweißtechnik", address: "Froniusplatz 1, 4600 Wels", contact: "+43 7242 241", web: "fronius.com", maps: "https://maps.google.com/?q=Fronius+Wels", desc: "Weltmarktführer Schweißtechnik.", strategy: "Automation & Robotics.", pitch: ["Automatisierte Schweißzellen.", "High-End Beratung."], travelNext: { distance: "5km", time: "11 min" } },
-          { name: "Rübig GmbH", address: "Schlosserstraße 2, 4600 Wels", contact: "+43 7242 66060", web: "ruebig.at", maps: "https://maps.google.com/?q=Ruebig+Wels", desc: "Härterei & Schmiede.", strategy: "Bauteil-Veredelung.", pitch: ["Glühen & Härten.", "SME-Serienfertigung."], travelNext: { distance: "4km", time: "8 min" } },
-          { name: "Starlim Sterner", address: "Mühlstraße 21, 4614 Marchtrenk", contact: "+43 7242 2288", web: "starlim-sterner.com", maps: "https://maps.google.com/?q=Starlim", desc: "Werkzeugbau SME.", strategy: "Präzisions-Komponenten.", pitch: ["Mikro-Präzision.", "SME Excellence."], travelNext: { distance: "12km", time: "15 min" } },
-          { name: "Reform-Werke", address: "Haidingerstraße 7, 4600 Wels", contact: "+43 7242 2320", web: "reform.at", maps: "https://maps.google.com/?q=Reform+Wels", desc: "Spezialfahrzeuge.", strategy: "Leichtbau-Chassis.", pitch: ["Fahrwerks-Schweißung.", "Serien-SME."], travelNext: { distance: "8km", time: "12 min" } },
+          { name: "Rübig GmbH", address: "Schlosserstraße 2, 4600 Wels", contact: "+43 7242 66060", web: "ruebig.at", maps: "https://maps.google.com/?q=Ruebig+Wels", desc: "Härterei & Schmiede.", strategy: "Bauteil-Veredelung.", pitch: ["Glühen & Härten.", "KMU-Serienfertigung."], travelNext: { distance: "4km", time: "8 min" } },
+          { name: "Starlim Sterner", address: "Mühlstraße 21, 4614 Marchtrenk", contact: "+43 7242 2288", web: "starlim-sterner.com", maps: "https://maps.google.com/?q=Starlim", desc: "Werkzeugbau KMU.", strategy: "Präzisions-Komponenten.", pitch: ["Mikro-Präzision.", "KMU Excellence."], travelNext: { distance: "12km", time: "15 min" } },
+          { name: "Reform-Werke", address: "Haidingerstraße 7, 4600 Wels", contact: "+43 7242 2320", web: "reform.at", maps: "https://maps.google.com/?q=Reform+Wels", desc: "Spezialfahrzeuge.", strategy: "Leichtbau-Chassis.", pitch: ["Fahrwerks-Schweißung.", "Serien-KMU."], travelNext: { distance: "8km", time: "12 min" } },
           { name: "Ke Kelit GmbH", address: "Ignaz-Mayer-Straße 17, 4020 Linz", contact: "+43 50 6973", web: "kekelit.at", maps: "https://maps.google.com/?q=Ke+Kelit+Linz", desc: "Rohrsysteme.", strategy: "Metall-Armaturen.", pitch: ["Präzisions-Schweißung.", "Industrie-Serien."] }
         ]
       },
@@ -493,9 +696,9 @@ const TRIP_TABS = [
         focus: "Automotive, Agrar & Industrial Hubs",
         companies: [
           { name: "Ernst Riedler", address: "Oberndorf 42, 4522 Sierning", contact: "+43 7259 2737", web: "riedler.at", maps: "https://maps.google.com/?q=Riedler+Sierning", desc: "Forst-Fahrzeuge.", strategy: "Massiv-Stahlbau.", pitch: ["Heavy Duty Rahmen.", "Forst-Kompetenz."], travelNext: { distance: "5km", time: "8 min" } },
-          { name: "Hofmann Metall", address: "Gewerbepark 5, 4522 Sierning", contact: "+43 7259 3131", web: "hofmann-metall.at", maps: "https://maps.google.com/?q=Hofmann+Metall", desc: "Blech-SME.", strategy: "Gehäuse-Serien.", pitch: ["Präzise Vorfertigung.", "Schnelle SME-Wege."], travelNext: { distance: "15km", time: "20 min" } },
+          { name: "Hofmann Metall", address: "Gewerbepark 5, 4522 Sierning", contact: "+43 7259 3131", web: "hofmann-metall.at", maps: "https://maps.google.com/?q=Hofmann+Metall", desc: "Blech-KMU.", strategy: "Gehäuse-Serien.", pitch: ["Präzise Vorfertigung.", "Schnelle KMU-Wege."], travelNext: { distance: "15km", time: "20 min" } },
           { name: "Vakutec", address: "Pernsteinerstraße 14, 4542 Nußbach", contact: "+43 7583 8317", web: "vakutec.at", maps: "https://maps.google.com/?q=Vakutec", desc: "Agrar-Technik.", strategy: "Behälterbau.", pitch: ["Druckfeste Tanks.", "Edelstahl-Fokus."], travelNext: { distance: "28km", time: "25 min" } },
-          { name: "Pöttinger", address: "Industriegelände 1, 4710 Grieskirchen", contact: "+43 7248 6000", web: "poettinger.at", maps: "https://maps.google.com/?q=Poettinger", desc: "Agrar Global SME.", strategy: "Chassis-Outsourcing.", pitch: ["Mähwerks-Rahmen.", "Großserien-Partner."], travelNext: { distance: "35km", time: "30 min" } },
+          { name: "Pöttinger", address: "Industriegelände 1, 4710 Grieskirchen", contact: "+43 7248 6000", web: "poettinger.at", maps: "https://maps.google.com/?q=Poettinger", desc: "Agrar Global KMU.", strategy: "Chassis-Outsourcing.", pitch: ["Mähwerks-Rahmen.", "Großserien-Partner."], travelNext: { distance: "35km", time: "30 min" } },
           { name: "Salvagnini", address: "Salvagninistraße 1, 4303 Ennsdorf", contact: "+43 7223 885", web: "salvagnini.at", maps: "https://maps.google.com/?q=Salvagnini", desc: "Maschinenbau.", strategy: "Gehäuse-Vorfertigung.", pitch: ["Blech-Exzellenz.", "High-End Gehäuse."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Schöller-Bleckmann", address: "Wirtschaftspark, 4470 Enns", contact: "+43 2630 3150", web: "sbo.at", maps: "https://maps.google.com/?q=SBO+Enns", desc: "Ölfeld-Technik.", strategy: "Spezial-Schweißen.", pitch: ["Nicht-magnetisch.", "API-Standards."], travelNext: { distance: "8km", time: "10 min" } },
           { name: "Hainzl Industries", address: "Industriezeile 56, 4020 Linz", contact: "+43 732 7892", web: "hainzl.at", maps: "https://maps.google.com/?q=Hainzl+Linz", desc: "Hydraulik-Systeme.", strategy: "Aggregat-Rahmen.", pitch: ["System-Integration.", "Dichte Behälter."], travelNext: { distance: "15km", time: "18 min" } },
@@ -511,7 +714,7 @@ const TRIP_TABS = [
     leads: [
       {
         group: "Tag 1: Graz & Umland (Cluster Süd)",
-        focus: "Heavy Engineering & SME Metal Cluster",
+        focus: "Heavy Engineering & KMU Metall Cluster",
         companies: [
           { name: "Binder+Co AG", address: "Grazer Straße 19, 8200 Gleisdorf", contact: "+43 3112 8030", web: "binder-co.at", maps: "https://maps.google.com/?q=Binder+Co", desc: "Siebtechnik.", strategy: "Hardox-Schweißmodule.", pitch: ["Verschleißfeste Konstruktion.", "Bergbau-Synergien."], travelNext: { distance: "25km", time: "25 min" } },
           { name: "Krenhof GmbH", address: "Krenhofstraße 1, 8580 Köflach", contact: "+43 3144 2505", web: "krenhof.at", maps: "https://maps.google.com/?q=Krenhof", desc: "Schmiedetechnik.", strategy: "Vormontierte Baugruppen.", pitch: ["Automotive Standards.", "Großserien-Expertise."], travelNext: { distance: "12km", time: "15 min" } },
@@ -519,8 +722,8 @@ const TRIP_TABS = [
           { name: "Andritz AG (Division Graz)", address: "Stattegger Straße 18, 8045 Graz", contact: "+43 316 6902", web: "andritz.com", maps: "https://maps.google.com/?q=Andritz+Graz", desc: "Anlagenbau Global.", strategy: "Wasserkraft-Gehäuse.", pitch: ["Turbinen-Komponenten.", "Zertifizierter Schweißerpool."], travelNext: { distance: "15km", time: "18 min" } },
           { name: "Wuppermann Metall", address: "Gürtelstraße 11, 8750 Judenburg", contact: "+43 3572 791", web: "wuppermann.at", maps: "https://maps.google.com/?q=Wuppermann+Judenburg", desc: "Blech- & Profilprofi.", strategy: "Vorverzinkte Schweißteile.", pitch: ["Korrosionsschutz-Fokus.", "Profil-Verschweißung."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "MAGNA Steyr", address: "Liebenauer Hauptstraße 317, 8041 Graz", contact: "+43 316 404", web: "magna.at", maps: "https://maps.google.com/?q=Magna+Graz", desc: "Automotive Hub.", strategy: "Prototypen-Schweißgruppen.", pitch: ["Innovative Werkstoffe.", "Technologie-Spitze."], travelNext: { distance: "14km", time: "16 min" } },
-          { name: "Ramsauer Metallbau", address: "Grazer Straße 68, 8641 St. Marein im Mürztal", contact: "+43 3862 5505", web: "ramsauer-metall.at", maps: "https://maps.google.com/?q=Ramsauer+St+Marein", desc: "SME Stahlbau.", strategy: "Vorfertigung Hallen-Module.", pitch: ["Flexibilität & Speed.", "Montagefertige Einheiten."], travelNext: { distance: "18km", time: "22 min" } },
-          { name: "Stahl-Grabner", address: "Industriestraße 1, 8240 Friedberg", contact: "+43 3332 62654", web: "grabner.at", maps: "https://maps.google.com/?q=Grabner+Hartberg", desc: "Fahrzeugbau SME.", strategy: "LKW-Hilfsrahmen.", pitch: ["Feinkornbaustahl-Pro.", "Serien-Rahmenbau."] }
+          { name: "Ramsauer Metallbau", address: "Grazer Straße 68, 8641 St. Marein im Mürztal", contact: "+43 3862 5505", web: "ramsauer-metall.at", maps: "https://maps.google.com/?q=Ramsauer+St+Marein", desc: "KMU Stahlbau.", strategy: "Vorfertigung Hallen-Module.", pitch: ["Flexibilität & Speed.", "Montagefertige Einheiten."], travelNext: { distance: "18km", time: "22 min" } },
+          { name: "Stahl-Grabner", address: "Industriestraße 1, 8240 Friedberg", contact: "+43 3332 62654", web: "grabner.at", maps: "https://maps.google.com/?q=Grabner+Hartberg", desc: "Fahrzeugbau KMU.", strategy: "LKW-Hilfsrahmen.", pitch: ["Feinkornbaustahl-Pro.", "Serien-Rahmenbau."] }
         ]
       },
       {
@@ -530,9 +733,9 @@ const TRIP_TABS = [
           { name: "voestalpine Tubulars", address: "Alpinestraße 17, 8652 Kindberg", contact: "+43 3865 2293", web: "voestalpine.com/tubulars", maps: "https://maps.google.com/?q=Tubulars+Kindberg", desc: "Nahtlosrohre.", strategy: "Spezialkupplungen & Flansche.", pitch: ["Prüfzertifiziert.", "Hochdruck-Schweißnähte."], travelNext: { distance: "28km", time: "25 min" } },
           { name: "Palfinger (Werk Bruck)", address: "Leobner Straße 24, 8600 Bruck an der Mur", contact: "+43 3862 531", web: "palfinger.com", maps: "https://maps.google.com/?q=Palfinger+Bruck", desc: "Ladekran-Komponenten.", strategy: "Arm-Verlängerungen.", pitch: ["Leichtbau-Genauigkeit.", "Automatisierte Fertigung."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Norske Skog", address: "Fabriksgasse 10, 8600 Bruck an der Mur", contact: "+43 3862 331", web: "norskeskog.com", maps: "https://maps.google.com/?q=Norske+Skog+Bruck", desc: "Papierindustrie.", strategy: "Großbehälter & Rohrleitungen.", pitch: ["Korrosionsbeständigkeit.", "Anlagen-Vorfertigung."], travelNext: { distance: "18km", time: "20 min" } },
-          { name: "WIKUS Sägetechnik", address: "Gewerbestraße 2, 8684 Spital am Semmering", contact: "+43 3853 234", web: "wikus.at", maps: "https://maps.google.com/?q=Wikus+Spital", desc: "Präzisions-Sägebänder.", strategy: "Maschinengestelle SME.", pitch: ["Präzise Vorfertigung.", "SME-Partnerschaft."], travelNext: { distance: "22km", time: "25 min" } },
-          { name: "Böhler-Uddeholm Precision", address: "Mariazeller Straße 25, 8605 Kapfenberg", contact: "+43 3862 20", web: "bohler-precision.com", maps: "https://maps.google.com/?q=Bohler+Kapfenberg", desc: "Spezialstahl SME.", strategy: "Vorfertigung für Werkzeuge.", pitch: ["Materialexzellenz.", "High-Tech Schweißverfahren."], travelNext: { distance: "5km", time: "8 min" } },
-          { name: "Mecabau GmbH", address: "Grazer Straße 39, 8047 Lassnitzhöhe", contact: "+43 316 2727", web: "mecabau.at", maps: "https://maps.google.com/?q=Mecabau", desc: "Präzisions-Schweiß-SME.", strategy: "Baugruppen-Montagemodule.", pitch: ["Just-in-Time SME.", "Roboter-Precision."], travelNext: { distance: "14km", time: "16 min" } },
+          { name: "WIKUS Sägetechnik", address: "Gewerbestraße 2, 8684 Spital am Semmering", contact: "+43 3853 234", web: "wikus.at", maps: "https://maps.google.com/?q=Wikus+Spital", desc: "Präzisions-Sägebänder.", strategy: "Maschinengestelle KMU.", pitch: ["Präzise Vorfertigung.", "KMU-Partnerschaft."], travelNext: { distance: "22km", time: "25 min" } },
+          { name: "Böhler-Uddeholm Precision", address: "Mariazeller Straße 25, 8605 Kapfenberg", contact: "+43 3862 20", web: "bohler-precision.com", maps: "https://maps.google.com/?q=Bohler+Kapfenberg", desc: "Spezialstahl KMU.", strategy: "Vorfertigung für Werkzeuge.", pitch: ["Materialexzellenz.", "High-Tech Schweißverfahren."], travelNext: { distance: "5km", time: "8 min" } },
+          { name: "Mecabau GmbH", address: "Grazer Straße 39, 8047 Lassnitzhöhe", contact: "+43 316 2727", web: "mecabau.at", maps: "https://maps.google.com/?q=Mecabau", desc: "Präzisions-Schweiß-KMU.", strategy: "Baugruppen-Montagemodule.", pitch: ["Just-in-Time KMU.", "Roboter-Precision."], travelNext: { distance: "14km", time: "16 min" } },
           { name: "URBAS Maschinenfabrik", address: "Industriepark, 8790 Eisenerz", contact: "+43 4232 2521", web: "urbas.at", maps: "https://maps.google.com/?q=Urbas+Eisenerz", desc: "Energietechnik.", strategy: "Kesselgehäuse & Roste.", pitch: ["Massivstahl-Module.", "Wärmetechnik-Erfahrung."], travelNext: { distance: "35km", time: "30 min" } },
           { name: "Kohlbacher Metallbau", address: "Gewerbezone 15, 8665 Langenwang", contact: "+43 3854 2465", web: "kohlbacher.at", maps: "https://maps.google.com/?q=Kohlbacher+Langenwang", desc: "Fertigteil-Stahlbau.", strategy: "Modulare Schweißbaugruppen.", pitch: ["Großserien-Logistik.", "Effiziente Montage-Vorbereitung."] }
         ]
@@ -552,7 +755,7 @@ const TRIP_TABS = [
           { name: "Worthington", address: "Industriezeile 1, 3291 Kienberg", contact: "07485 606", web: "worthington.at", maps: "https://maps.google.com/?q=Worthington+Kienberg", desc: "Druckbehälter.", strategy: "Serien-Tanks.", pitch: ["Druckfeste Nähte.", "Automatisierte Serie."], travelNext: { distance: "45km", time: "40 min" } },
           { name: "Schöller-Bl.", address: "Hauptstraße 2, 2630 Ternitz", contact: "02630 3150", web: "sbo.at", maps: "https://maps.google.com/?q=SBO+Ternitz", desc: "Oilfield Tools.", strategy: "Präzisions-Schweißen.", pitch: ["Speziallegierungen.", "API Standards."], travelNext: { distance: "8km", time: "10 min" } },
           { name: "Semperit", address: "Wimpassing 1, 2632 Wimpassing", contact: "02630 3100", web: "semperit.com", maps: "https://maps.google.com/?q=Semperit+Wimpassing", desc: "Gummi-Metall.", strategy: "Verbund-Komponenten.", pitch: ["Haftungsspezialist.", "Metall-Vorbereitung."], travelNext: { distance: "12km", time: "15 min" } },
-          { name: "Kraus & Naimer", address: "Schumanngasse 35, 1180 Wien", contact: "01 404060", web: "krausnaimer.com", maps: "https://maps.google.com/?q=Kraus+Naimer+Wien", desc: "Schaltgeräte SME.", strategy: "Gehäuse-Komponenten.", pitch: ["Dauerhafte Kontakte.", "SME Zuverlässigkeit."], travelNext: { distance: "5km", time: "10 min" } },
+          { name: "Kraus & Naimer", address: "Schumanngasse 35, 1180 Wien", contact: "01 404060", web: "krausnaimer.com", maps: "https://maps.google.com/?q=Kraus+Naimer+Wien", desc: "Schaltgeräte KMU.", strategy: "Gehäuse-Komponenten.", pitch: ["Dauerhafte Kontakte.", "KMU Zuverlässigkeit."], travelNext: { distance: "5km", time: "10 min" } },
           { name: "Knorr-Bremse", address: "Beethovengasse 43, 2340 Mödling", contact: "02236 409", web: "knorr-bremse.com", maps: "https://maps.google.com/?q=Knorr+Bremse+Moedling", desc: "Bremssysteme.", strategy: "Alu-Gehäuse Schweißung.", pitch: ["Sicherheit im Fokus.", "Zertifizierte Prozesse."], travelNext: { distance: "8km", time: "12 min" } },
           { name: "Isovolta", address: "Isovolta-Straße 1, 2355 Wiener Neudorf", contact: "02236 605", web: "isovolta.com", maps: "https://maps.google.com/?q=Isovolta+Wiener+Neudorf", desc: "Isolierstoffe.", strategy: "Träger-Konstruktionen.", pitch: ["Elektrische Sicherheit.", "Kombinations-Bauteile."], travelNext: { distance: "10km", time: "15 min" } },
           { name: "Hoerbiger", address: "Seestadtstraße 27, 1220 Wien", contact: "01 22440", web: "hoerbiger.com", maps: "https://maps.google.com/?q=Hoerbiger+Wien", desc: "Kompressionstechnik.", strategy: "Ventil-Gehäuse.", pitch: ["Präzisions-Guss/Schweiß.", "Langfrist-Partner."] }
@@ -560,14 +763,14 @@ const TRIP_TABS = [
       },
       {
         group: "Tag 2: West-NÖ & Donau-Achse",
-        focus: "SME-Fertigung & Heavy Duty Automation",
+        focus: "KMU-Fertigung & Heavy Duty Automation",
         companies: [
           { name: "Doka Umdasch", address: "Josef Umdasch Platz 1, 3300 Amstetten", contact: "07472 605", web: "doka.com", maps: "https://maps.google.com/?q=Doka+Amstetten", desc: "Schalungsbau.", strategy: "Serien-Rahmen.", pitch: ["Robuste Konstruktion.", "Massenserien."], travelNext: { distance: "12km", time: "15 min" } },
-          { name: "Hauser Metall", address: "Gewerbestraße 2, 3102 Pottenbrunn", contact: "02742 4220", web: "hauser-metall.at", maps: "https://maps.google.com/?q=Hauser+Pottenbrunn", desc: "Stahlbau SME.", strategy: "Fassaden-Module.", pitch: ["Design & Statik.", "SME Flexibilität."], travelNext: { distance: "35km", time: "30 min" } },
+          { name: "Hauser Metall", address: "Gewerbestraße 2, 3102 Pottenbrunn", contact: "02742 4220", web: "hauser-metall.at", maps: "https://maps.google.com/?q=Hauser+Pottenbrunn", desc: "Stahlbau KMU.", strategy: "Fassaden-Module.", pitch: ["Design & Statik.", "KMU Flexibilität."], travelNext: { distance: "35km", time: "30 min" } },
           { name: "Voith Austria", address: "Linzer Straße 55, 3100 St. Pölten", contact: "02742 806", web: "voith.com", maps: "https://maps.google.com/?q=Voith+St+Poelten", desc: "Getriebetechnik.", strategy: "Gehäuse-Schweißbau.", pitch: ["Schwerlast-Getriebe.", "Zertifizierte Qualität."], travelNext: { distance: "15km", time: "20 min" } },
           { name: "Zizala (ZKW)", address: "Rottenhauser Straße 8, 3250 Wieselburg", contact: "07416 505", web: "zkw-group.com", maps: "https://maps.google.com/?q=ZKW+Wieselburg", desc: "Lichtsysteme Hub.", strategy: "Träger-Systeme.", pitch: ["Automotive Precision.", "Alu-Schweißungen."], travelNext: { distance: "28km", time: "25 min" } },
           { name: "TEUFELBERGER", address: "Florian-Berndl-Straße 10, 3100 St. Pölten", contact: "07242 615", web: "teufelberger.com", maps: "https://maps.google.com/?q=Teufelberger", desc: "Seiltechnik.", strategy: "Winden-Gehäuse.", pitch: ["Extreme Belastung.", "Sicherheits-Schweißnähte."], travelNext: { distance: "20km", time: "25 min" } },
-          { name: "GLASSER Metall", address: "Manker Straße 31, 3380 Pöchlarn", contact: "02757 2322", web: "glasser.at", maps: "https://maps.google.com/?q=Glasser+Poechlarn", desc: "Landtechnik SME.", strategy: "Anbaugeräte-Rahmen.", pitch: ["SME-Power.", "Agrar-Fokus."], travelNext: { distance: "10km", time: "12 min" } },
+          { name: "GLASSER Metall", address: "Manker Straße 31, 3380 Pöchlarn", contact: "02757 2322", web: "glasser.at", maps: "https://maps.google.com/?q=Glasser+Poechlarn", desc: "Landtechnik KMU.", strategy: "Anbaugeräte-Rahmen.", pitch: ["KMU-Power.", "Agrar-Fokus."], travelNext: { distance: "10km", time: "12 min" } },
           { name: "BUSATIS", address: "Busatisstraße 4, 3251 Purgstall", contact: "07489 7070", web: "busatis.com", maps: "https://maps.google.com/?q=Busatis+Purgstall", desc: "Verschleißtechnik.", strategy: "Messer-Träger.", pitch: ["Hartmetall-Integration.", "Spezial-Schweißen."], travelNext: { distance: "15km", time: "18 min" } },
           { name: "Hitzinger", address: "Helmholtzstraße 15, 4020 Linz", contact: "0732 381615", web: "hitzinger.at", maps: "https://maps.google.com/?q=Hitzinger", desc: "Generatorenbau.", strategy: "Aggregat-Gehäuse.", pitch: ["Vibrationsfrei.", "Maßgeschneidert."] }
         ]
@@ -581,11 +784,11 @@ const TRIP_TABS = [
     leads: [
       {
         group: "Tag 1: Salzburg Flachgau & Central",
-        focus: "Kranbau, SME Maschinenbau & Tech-Integration",
+        focus: "Kranbau, KMU-Maschinenbau & Tech-Integration",
         companies: [
           { name: "Palfinger AG", address: "Lamprechtshausener Bundesstraße 8, 5101 Bergheim", contact: "+43 662 22810", web: "palfinger.ag", maps: "https://maps.google.com/?q=Palfinger+Salzburg", desc: "Hebe-Systeme.", strategy: "Kran-Hilfsrahmen.", pitch: ["S700-S960 Expertise.", "ISO 15085 Zertifikat."], travelNext: { distance: "8km", time: "10 min" } },
-          { name: "Wacker Neuson", address: "Wacker-Neuson-Straße 1, 5113 Lamprechtshausen", contact: "+43 6274 2002", web: "wackerneuson.at", maps: "https://maps.google.com/?q=Wacker+Neuson+Lamprechtshausen", desc: "Baumaschinen.", strategy: "Bagger-Chassis.", pitch: ["Robuste Seriennähte.", "SME Flexibilität."], travelNext: { distance: "12km", time: "15 min" } },
-          { name: "GUGG GmbH", address: "Uttendorf 1, 5261 Uttendorf", contact: "+43 7724 2331", web: "gugg.at", maps: "https://maps.google.com/?q=GUGG+Uttendorf", desc: "SME Sonderbau.", strategy: "Kommunal-Rahmen.", pitch: ["Spezial-Lose.", "SME Strukturen."], travelNext: { distance: "25km", time: "25 min" } },
+          { name: "Wacker Neuson", address: "Wacker-Neuson-Straße 1, 5113 Lamprechtshausen", contact: "+43 6274 2002", web: "wackerneuson.at", maps: "https://maps.google.com/?q=Wacker+Neuson+Lamprechtshausen", desc: "Baumaschinen.", strategy: "Bagger-Chassis.", pitch: ["Robuste Seriennähte.", "KMU Flexibilität."], travelNext: { distance: "12km", time: "15 min" } },
+          { name: "GUGG GmbH", address: "Uttendorf 1, 5261 Uttendorf", contact: "+43 7724 2331", web: "gugg.at", maps: "https://maps.google.com/?q=GUGG+Uttendorf", desc: "KMU Sonderbau.", strategy: "Kommunal-Rahmen.", pitch: ["Spezial-Lose.", "KMU Strukturen."], travelNext: { distance: "25km", time: "25 min" } },
           { name: "Sigmatek", address: "Sigmatekstraße 1, 5113 Lamprechtshausen", contact: "+43 6274 4393", web: "sigmatek-automation.com", maps: "https://maps.google.com/?q=Sigmatek+Lamprechtshausen", desc: "Automatisierung.", strategy: "Schaltschrank-Gehäuse.", pitch: ["Präzise Alu-Gehäuse.", "Elektronik-Integration."], travelNext: { distance: "15km", time: "18 min" } },
           { name: "Windhager", address: "Anton-Windhager-Straße 20, 5201 Seekirchen", contact: "+43 6212 2341", web: "windhager.com", maps: "https://maps.google.com/?q=Windhager+Seekirchen", desc: "Heiztechnik.", strategy: "Kessel-Baugruppen.", pitch: ["Druckfeste Nähte.", "Serien-Fertigung."], travelNext: { distance: "18km", time: "20 min" } },
           { name: "Emco Maier", address: "Hallein", contact: "+43 6245 8910", web: "emco-world.com", maps: "https://maps.google.com/?q=Emco+Hallein", desc: "Werkzeugmaschinen.", strategy: "Maschinen-Betten.", pitch: ["Vibrationsdämpfung.", "Präzisions-Stahlbau."], travelNext: { distance: "12km", time: "15 min" } },
@@ -600,8 +803,8 @@ const TRIP_TABS = [
           { name: "Schwarzmüller", address: "Freinberg", contact: "+43 7713 8000", web: "schwarzmueller.com", maps: "https://maps.google.com/?q=Schwarzmueller+Freinberg", desc: "Trailer Global.", strategy: "Chassis-Komponenten.", pitch: ["Leichtbau-Expertise.", "Massenserien."], travelNext: { distance: "45km", time: "40 min" } },
           { name: "Fill", address: "Gurten", contact: "+43 7757 7010", web: "fill.co.at", maps: "https://maps.google.com/?q=Fill+Gurten", desc: "Plant Engineering.", strategy: "Automations-Gestelle.", pitch: ["High-End Schweißen.", "System-Partner."], travelNext: { distance: "35km", time: "30 min" } },
           { name: "Liebherr", address: "Bischofshofen", contact: "+43 50809 10", web: "liebherr.com", maps: "https://maps.google.com/?q=Liebherr+Bischofshofen", desc: "Radlader Global.", strategy: "Schaufel-Arme/Chassis.", pitch: ["Bergbau-DNA.", "Zertifikat ISO 3834."], travelNext: { distance: "55km", time: "45 min" } },
-          { name: "KTM AG", address: "Mattighofen", contact: "+43 7742 6000", web: "ktm.com", maps: "https://maps.google.com/?q=KTM+Mattighofen", desc: "Motorrad Hub.", strategy: "Rahmenbau SME.", pitch: ["Alu- & Stahlrahmen.", "Premium-Qualität."], travelNext: { distance: "15km", time: "18 min" } },
-          { name: "Wintersteiger", address: "Ried im Innkreis", contact: "+43 7751 8383", web: "wintersteiger.com", maps: "https://maps.google.com/?q=Wintersteiger+Ried", desc: "Spezialmaschinen.", strategy: "Maschinengestelle.", pitch: ["SME Speed.", "Präzise Vorfertigung."], travelNext: { distance: "28km", time: "25 min" } },
+          { name: "KTM AG", address: "Mattighofen", contact: "+43 7742 6000", web: "ktm.com", maps: "https://maps.google.com/?q=KTM+Mattighofen", desc: "Motorrad Hub.", strategy: "Rahmenbau KMU.", pitch: ["Alu- & Stahlrahmen.", "Premium-Qualität."], travelNext: { distance: "15km", time: "18 min" } },
+          { name: "Wintersteiger", address: "Ried im Innkreis", contact: "+43 7751 8383", web: "wintersteiger.com", maps: "https://maps.google.com/?q=Wintersteiger+Ried", desc: "Spezialmaschinen.", strategy: "Maschinengestelle.", pitch: ["KMU Speed.", "Präzise Vorfertigung."], travelNext: { distance: "28km", time: "25 min" } },
           { name: "FACC AG", address: "Ried-Reichersberg", contact: "+43 59 6160", web: "facc.com", maps: "https://maps.google.com/?q=FACC+Ried", desc: "Aerospace Hub.", strategy: "Vorrichtungen/Formen.", pitch: ["Präzisions-Stahlforme.", "High-End Engineering."], travelNext: { distance: "22km", time: "20 min" } },
           { name: "Rosenbauer", address: "Leonding", contact: "+43 732 6794", web: "rosenbauer.com", maps: "https://maps.google.com/?q=Rosenbauer+Leonding", desc: "Feuerwehrtechnik.", strategy: "Aufbau-Module.", pitch: ["Sicherheit im Fokus.", "Alu-Spezialbau."], travelNext: { distance: "15km", time: "18 min" } },
           { name: "Engel Austria", address: "Dietach", contact: "+43 50 620", web: "engelglobal.com", maps: "https://maps.google.com/?q=Engel+Dietach", desc: "Spritzguss-Global.", strategy: "Maschinen-Betten.", pitch: ["Massiver Schweißbau.", "Weltmarkt-Standard."] }
@@ -616,7 +819,7 @@ const TRIP_TABS = [
     leads: [
       {
         group: "Tag 1: Villach & Spittal",
-        focus: "High-Tech & SME Zulieferung",
+        focus: "High-Tech & KMU Zulieferung",
         companies: [
           {
             name: "Kostwein Maschinenbau",
@@ -633,7 +836,7 @@ const TRIP_TABS = [
             ],
             travelNext: { distance: "5 km", time: "8 min" }
           },
-          { name: "Lam Research", address: "Villach", contact: "+43 4242", web: "lamresearch.com", maps: "https://maps.google.com/?q=Lam+Research+Villach", desc: "Semicon Equipment.", strategy: "High-Precision Frames.", pitch: ["Cleanroom standards.", "SME precision."], travelNext: { distance: "12 km", time: "15 min" } },
+          { name: "Lam Research", address: "Villach", contact: "+43 4242", web: "lamresearch.com", maps: "https://maps.google.com/?q=Lam+Research+Villach", desc: "Semicon Equipment.", strategy: "High-Precision Frames.", pitch: ["Cleanroom standards.", "KMU precision."], travelNext: { distance: "12 km", time: "15 min" } },
           {
             name: "Wild GmbH",
             address: "Wildstraße 4, 9100 Völkermarkt",
@@ -645,11 +848,11 @@ const TRIP_TABS = [
             pitch: [
               "Höchste Präzision im Dünnblech-Schweißen.",
               "Zulieferung von Gehäusen für medizinische und optische Geräte.",
-              "SME-Partner für anspruchsvolle Systemintegration."
+              "KMU-Partner für anspruchsvolle Systemintegration."
             ],
             travelNext: { distance: "45 km", time: "35 min" }
           },
-          { name: "Europlast", address: "Berg im Drautal", contact: "+43 4712", web: "europlast.at", maps: "https://maps.google.com/?q=Europlast+Berg", desc: "Plastic Containers.", strategy: "Reinforcement frames.", pitch: ["Large component focus.", "Industrial SME."], travelNext: { distance: "15 km", time: "12 min" } },
+          { name: "Europlast", address: "Berg im Drautal", contact: "+43 4712", web: "europlast.at", maps: "https://maps.google.com/?q=Europlast+Berg", desc: "Plastic Containers.", strategy: "Reinforcement frames.", pitch: ["Large component focus.", "Industrial KMU."], travelNext: { distance: "15 km", time: "12 min" } },
           {
             name: "Lindner-Recyclingtech",
             address: "Villacher Str. 48, 9800 Spittal an der Drau",
@@ -665,14 +868,14 @@ const TRIP_TABS = [
             ],
             travelNext: { distance: "8 km", time: "10 min" }
           },
-          { name: "Technogroup", address: "Spittal", contact: "+43 4762", web: "technogroup.at", maps: "https://maps.google.com/?q=Technogroup+Spittal", desc: "Energy systems.", strategy: "Control cabinets.", pitch: ["Modular assembly.", "Electrical SME."], travelNext: { distance: "10 km", time: "12 min" } },
-          { name: "Hasslacher", address: "Sachsenburg-Spittal", contact: "+43 4769", web: "hasslacher.com", maps: "https://maps.google.com/?q=Hasslacher+Sachsenburg", desc: "Timber Industry.", strategy: "Sawmill maintenance.", pitch: ["Robust steelwork.", "Large scale SME."], travelNext: { distance: "15 km", time: "18 min" } },
+          { name: "Technogroup", address: "Spittal", contact: "+43 4762", web: "technogroup.at", maps: "https://maps.google.com/?q=Technogroup+Spittal", desc: "Energy systems.", strategy: "Control cabinets.", pitch: ["Modular assembly.", "Electrical KMU."], travelNext: { distance: "10 km", time: "12 min" } },
+          { name: "Hasslacher", address: "Sachsenburg-Spittal", contact: "+43 4769", web: "hasslacher.com", maps: "https://maps.google.com/?q=Hasslacher+Sachsenburg", desc: "Timber Industry.", strategy: "Sawmill maintenance.", pitch: ["Robust steelwork.", "Large scale KMU."], travelNext: { distance: "15 km", time: "18 min" } },
           { name: "ÖBB Villach", address: "Villach", contact: "+43 51717", web: "oebb.at", maps: "https://maps.google.com/?q=OEBB+Villach", desc: "Rail Infra.", strategy: "Bridge components.", pitch: ["Rail certified welding.", "Heavy infrastructure."] }
         ]
       },
       {
         group: "Tag 2: Klagenfurt & Wolfsberg",
-        focus: "Wasserkraft, SME & Papierindustrie",
+        focus: "Wasserkraft, KMU & Papierindustrie",
         companies: [
           {
             name: "Andritz Hydro GmbH",
@@ -689,7 +892,7 @@ const TRIP_TABS = [
             ],
             travelNext: { distance: "52 km", time: "40 min" }
           },
-          { name: "PMS Elektro", address: "Wolfsberg", contact: "+43 4352", web: "pms.at", maps: "https://maps.google.com/?q=PMS+Wolfsberg", desc: "Automation tech.", strategy: "Power plant modules.", pitch: ["Industrial automation.", "SME efficiency."], travelNext: { distance: "8 km", time: "10 min" } },
+          { name: "PMS Elektro", address: "Wolfsberg", contact: "+43 4352", web: "pms.at", maps: "https://maps.google.com/?q=PMS+Wolfsberg", desc: "Automation tech.", strategy: "Power plant modules.", pitch: ["Industrial automation.", "KMU efficiency."], travelNext: { distance: "8 km", time: "10 min" } },
           {
             name: "URBAS Maschinenfabrik GmbH",
             address: "Billrothstraße 7, 9100 Völkermarkt",
@@ -700,7 +903,7 @@ const TRIP_TABS = [
             strategy: "Outsourcing-Partner für schwere Kesselgehäuse.",
             pitch: [
               "Massivstahlbau-Schweißkompetenz für den Energiebereich.",
-              "SME-Servicelevel with industrieller Fertigungskapazität.",
+              "KMU-Servicelevel with industrieller Fertigungskapazität.",
               "Vorfertigung von Trägerstrukturen für Biomassekraftwerke."
             ],
             travelNext: { distance: "42 km", time: "35 min" }
@@ -735,7 +938,7 @@ const TRIP_TABS = [
     leads: [
       {
         group: "Tag 1: West-Ungarn (Győr)",
-        focus: "Fahrzeugbau & SME-Zulieferer",
+        focus: "Fahrzeugbau & KKV-Zulieferer",
         companies: [
           { 
             name: "Rába Automotive Holding", 
@@ -762,7 +965,7 @@ const TRIP_TABS = [
             strategy: "Assembly fixtures.", 
             pitch: ["Automotive tools.", "SME jigs."],
             pitchEN: ["Precision automotive tooling.", "High-quality SME jigs and fixtures."],
-            pitchHU: ["Precíziós autóipari szerszámok.", "Kiváló minőségű SME készülékek és befogók."],
+            pitchHU: ["Precíziós autóipari szerszámok.", "Kiváló minőségű KKV készülékek és befogók."],
             travelNext: { distance: "12 km", time: "15 min" } 
           },
           {
@@ -796,14 +999,14 @@ const TRIP_TABS = [
             ],
             travelNext: { distance: "10 km", time: "12 min" }
           },
-          { name: "Pannon Weld", address: "Győr", contact: "+36 96", web: "pannonweld.hu", maps: "https://maps.google.com/?q=Pannon+Weld+Gyor", desc: "Welding SME.", strategy: "Subcontracting.", pitch: ["Manual & Robot.", "SME flexibility."], travelNext: { distance: "15 km", time: "18 min" } },
+          { name: "Pannon Weld", address: "Győr", contact: "+36 96", web: "pannonweld.hu", maps: "https://maps.google.com/?q=Pannon+Weld+Gyor", desc: "Welding KKV.", strategy: "Subcontracting.", pitch: ["Manual & Robot.", "KKV flexibility."], travelNext: { distance: "15 km", time: "18 min" } },
           { name: "Karsai Holding", address: "Székesfehérvár Hub", contact: "+36 22", web: "karsai.hu", maps: "https://maps.google.com/?q=Karsai+Gyor", desc: "Tools & Plastics.", strategy: "Metal inserts.", pitch: ["Hybrid components.", "Automotive supply."], travelNext: { distance: "12 km", time: "15 min" } },
           { name: "Met-Na Kft.", address: "Győr", contact: "+36 96", web: "met-na.hu", maps: "https://maps.google.com/?q=Met-Na+Gyor", desc: "Precision machining.", strategy: "Precision housings.", pitch: ["CNC & Mounting.", "Short lead times."] }
         ]
       },
       {
         group: "Tag 2: Region Bratislava & Senec",
-        focus: "Automation, SME & Logistics Equipment",
+        focus: "Automation, KMU & Logistics Equipment",
         companies: [
           {
             name: "Volkswagen Slovakia (Zulieferpark)",
@@ -832,7 +1035,7 @@ const TRIP_TABS = [
             pitch: [
               "Outsourcing von Schweiß- und Drehteilen.",
               "Hohe Prozessstabilität für Großserien.",
-              "SME-Flexibilität innerhalb eines globalen Konzerns."
+              "KMU-Flexibilität innerhalb eines globalen Konzerns."
             ],
             travelNext: { distance: "25 km", time: "20 min" }
           },
@@ -853,13 +1056,13 @@ const TRIP_TABS = [
             travelNext: { distance: "15 km", time: "18 min" }
           },
           { name: "Tower Automotive", address: "Senec", contact: "+421 2", web: "towerinternational.com", maps: "https://maps.google.com/?q=Tower+Automotive+Senec", desc: "Structural parts.", strategy: "Body-in-white.", pitch: ["Chassis modules.", "Robotic welding."], travelNext: { distance: "22 km", time: "25 min" } },
-          { name: "Schüller", address: "Šamorín", contact: "+421 31", web: "schueller.sk", maps: "https://maps.google.com/?q=Schueller+Samorin", desc: "Kitchen/SME.", strategy: "Sheet metal parts.", pitch: ["Modular furniture.", "SME precision."], travelNext: { distance: "28 km", time: "30 min" } },
+          { name: "Schüller", address: "Šamorín", contact: "+421 31", web: "schueller.sk", maps: "https://maps.google.com/?q=Schueller+Samorin", desc: "Kitchen/KKV.", strategy: "Sheet metal parts.", pitch: ["Modular furniture.", "KKV precision."], travelNext: { distance: "28 km", time: "30 min" } },
           { name: "HB Reavis", address: "Bratislava", contact: "+421 2", web: "hbreavis.com", maps: "https://maps.google.com/?q=HB+Reavis", desc: "Construction tech.", strategy: "Steel structures.", pitch: ["Urban architecture.", "Large scale steel."] }
         ]
       },
       {
         group: "Tag 3: Wien & Speckgürtel",
-        focus: "Infrastruktur, SME-Stahlbau & Sonderfahrzeuge",
+        focus: "Infrastruktur, KMU-Stahlbau & Sonderfahrzeuge",
         companies: [
           {
             name: "Siemens Mobility - Leberstraße",
@@ -883,11 +1086,11 @@ const TRIP_TABS = [
             contact: "+43 1 769 66 11",
             web: "stahlbau-wien.at",
             maps: "https://www.google.com/maps/search/?api=1&query=Stahlbau+Wien+GmbH",
-            desc: "SME for specialized steel construction and custom solutions.",
+            desc: "KMU for specialized steel construction and custom solutions.",
             strategy: "Vorfertigung für komplexe innerstädtische Bauprojekte.",
             pitch: [
               "Schnelle Umsetzung von Sonder-Schweißkonstruktionen.",
-              "SME-Fokus: Kurze Entscheidungswege für eilige Anforderungen.",
+              "KMU-Fokus: Kurze Entscheidungswege für eilige Anforderungen.",
               "Präzise Vorfertigung zur Minimierung der Montagezeit vor Ort."
             ],
             travelNext: { distance: "12 km", time: "18 min" }
@@ -918,7 +1121,7 @@ const TRIP_TABS = [
   {
     id: 'slovenia',
     label: 'Slowenien & Adria Tour',
-    description: 'Fokus: Hochpräzisions-Stahlbau, SME-Maschinenbau & Automotive-Cluster',
+    description: 'Fokus: Hochpräzisions-Stahlbau, KMU-Maschinenbau & Automotive-Cluster',
     leads: [
       {
         group: "Tag 1: Maribor & Nord-Ost (Zentralslowenien)",
@@ -958,11 +1161,11 @@ const TRIP_TABS = [
             contact: "+386 4 280", 
             web: "kovinc.si", 
             maps: "https://maps.google.com/?q=Kovinc+Lahovce", 
-            desc: "Blechbearbeitung SME.", 
+            desc: "Blechbearbeitung MSP.", 
             strategy: "Gehäuse-Serien.", 
-            pitch: ["Plasma-Präzision, die den Stahl zum Schmelzen bringt.", "SME-Speed: Wir reagieren schneller als ein Plasmaschneider."], 
-            pitchEN: ["Plasma precision that melts hearts (and steel).", "SME speed: we strike faster than a plasma cutter."],
-            pitchSL: ["Plazemska natančnost, ki topi jeklo.", "SME hitrost: smo hitrejši od plazemskega rezalnika."],
+            pitch: ["Plasma-Präzision, die den Stahl zum Schmelzen bringt.", "MSP-Speed: Wir reagieren schneller als ein Plasmaschneider."], 
+            pitchEN: ["Plasma precision that melts hearts (and steel).", "MSP speed: we strike faster than a plasma cutter."],
+            pitchSL: ["Plazemska natančnost, ki topi jeklo.", "MSP hitrost: smo hitrejši od plazemskega rezalnika."],
             travelNext: { distance: "35km", time: "30 min" } 
           },
           { name: "Akrapovič", address: "Malo Hudo 3, 1295 Ivančna Gorica", contact: "+386 1 781", web: "akrapovic.com", maps: "https://maps.google.com/?q=Akrapovic+Ivancna+Gorica", desc: "High-End Exhaust.", strategy: "Titan/Inconel Schweißen.", pitch: ["WIG-Kunst auf Formel-1 Niveau.", "Gasschutz ist unsere Religion."], travelNext: { distance: "45km", time: "40 min" } },
@@ -974,14 +1177,14 @@ const TRIP_TABS = [
       },
       {
         group: "Tag 2: Zentralslowenien & Krško Axis",
-        focus: "High-Tech Fabrication & SME Hubs",
+        focus: "High-Tech Fabrication & MSP Hubs",
         companies: [
           { name: "Titus Group", address: "Dekani", contact: "+386 5 6631", web: "titusplus.com", maps: "https://maps.google.com/?q=Titus+Dekani", desc: "Möbel-Beschläge.", strategy: "Präzisions-Mechanik.", pitch: ["Massenserien.", "High-End Precision."], travelNext: { distance: "85km", time: "60 min" } },
-          { name: "Metalna Senovo", address: "Senovo", contact: "+386 7 488", web: "metalna-senovo.si", maps: "https://maps.google.com/?q=Metalna+Senovo", desc: "Stahlbau/Hebetechnik.", strategy: "Chassis-Vorfertigung.", pitch: ["Erfahrener SME Partner.", "Schwere Baugruppen."], travelNext: { distance: "115km", time: "1h 20" } },
+          { name: "Metalna Senovo", address: "Senovo", contact: "+386 7 488", web: "metalna-senovo.si", maps: "https://maps.google.com/?q=Metalna+Senovo", desc: "Stahlbau/Hebetechnik.", strategy: "Chassis-Vorfertigung.", pitch: ["Erfahrener MSP Partner.", "Schwere Baugruppen."], travelNext: { distance: "115km", time: "1h 20" } },
           { name: "Arcont d.d.", address: "Gornja Radgona", contact: "+386 2 5644", web: "arcont.si", maps: "https://maps.google.com/?q=Arcont+Radgona", desc: "Containerbau.", strategy: "Modulare Rahmen.", pitch: ["Automatisierte Serie.", "Exportschlager."], travelNext: { distance: "25km", time: "30 min" } },
           { name: "Trimo", address: "Trebnje", contact: "+386 7 348", web: "trimo-group.com", maps: "https://maps.google.com/?q=Trimo+Trebnje", desc: "Fassadensysteme.", strategy: "Stahl-Unterkonstruktion.", pitch: ["Design & Statik.", "Großprojekte."], travelNext: { distance: "35km", time: "30 min" } },
           { name: "ETI Izlake", address: "Izlake", contact: "+386 3 5657", web: "eti.si", maps: "https://maps.google.com/?q=ETI+Izlake", desc: "Elektrotechnik.", strategy: "Gehäuse-Module.", pitch: ["Keramik-Metall-Verbund.", "Schutz-Gehäuse."], travelNext: { distance: "45km", time: "40 min" } },
-          { name: "Revoz", address: "Novo Mesto", contact: "+386 7 331", web: "revoz.si", maps: "https://maps.google.com/?q=Revoz+Novo+Mesto", desc: "Automobilbau.", strategy: "Vorrichtungen/Gestelle.", pitch: ["Instandhaltung SME.", "Automotive Logistik."], travelNext: { distance: "15km", time: "20 min" } },
+          { name: "Revoz", address: "Novo Mesto", contact: "+386 7 331", web: "revoz.si", maps: "https://maps.google.com/?q=Revoz+Novo+Mesto", desc: "Automobilbau.", strategy: "Vorrichtungen/Gestelle.", pitch: ["Instandhaltung MSP.", "Automotive Logistik."], travelNext: { distance: "15km", time: "20 min" } },
           { name: "Krka", address: "Novo Mesto", contact: "+386 7 331", web: "krka.si", maps: "https://maps.google.com/?q=Krka+Novo+Mesto", desc: "Pharma Global.", strategy: "Inox-Rohrleitungen.", pitch: ["GMP-Standard.", "Orbital-Schweißen."], travelNext: { distance: "55km", time: "50 min" } },
           { name: "Domel", address: "Železniki", contact: "+386 4 511", web: "domel.com", maps: "https://maps.google.com/?q=Domel+Zelezniki", desc: "Elektromotoren.", strategy: "Motoren-Gehäuse.", pitch: ["Präzise Vorfertigung.", "Weltmarktführer."] }
         ]
@@ -999,9 +1202,9 @@ const TRIP_TABS = [
         companies: [
           { name: "Prinoth", address: "Innsbruck", contact: "+39 0472 901", web: "prinoth.com", maps: "https://maps.google.com/?q=Prinoth+Innsbruck", desc: "Pistenfahrzeuge.", strategy: "Chassis- & Schildbau.", pitch: ["Extreme Belastung.", "Kälteresistente Nähte."], travelNext: { distance: "15km", time: "15 min" } },
           { name: "GE Jenbacher", address: "Jenbach", contact: "+43 5244 600", web: "innio.com", maps: "https://maps.google.com/?q=GE+Jenbacher", desc: "Gasmotoren Global.", strategy: "Aggregat-Rahmen.", pitch: ["Vibrationsfest.", "Massivbau."], travelNext: { distance: "15km", time: "15 min" } },
-          { name: "Swarovski", address: "Wattens", contact: "+43 5224 500", web: "swarovski.com", maps: "https://maps.google.com/?q=Swarovski+Wattens", desc: "Kristall/Technik.", strategy: "Maschinengestell-SME.", pitch: ["High-End Standard.", "Präzisions-Stahlbau."], travelNext: { distance: "12km", time: "15 min" } },
-          { name: "Lindner Traktoren", address: "Kundl", contact: "+43 5338 7420", web: "lindner-traktoren.at", maps: "https://maps.google.com/?q=Lindner+Kundl", desc: "Agrar-SME.", strategy: "Fahrzeug-Chassis.", pitch: ["SME Power.", "Chassis-Kompetenz."], travelNext: { distance: "20km", time: "22 min" } },
-          { name: "Felder Group", address: "Hall in Tirol", contact: "+43 5223 5850", web: "felder-group.com", maps: "https://maps.google.com/?q=Felder+Group", desc: "Holzbearbeitung.", strategy: "Maschinen-Betten.", pitch: ["Serien-Präzision.", "Stahlbau SME."], travelNext: { distance: "15km", time: "18 min" } },
+          { name: "Swarovski", address: "Wattens", contact: "+43 5224 500", web: "swarovski.com", maps: "https://maps.google.com/?q=Swarovski+Wattens", desc: "Kristall/Technik.", strategy: "Maschinengestell-KMU.", pitch: ["High-End Standard.", "Präzisions-Stahlbau."], travelNext: { distance: "12km", time: "15 min" } },
+          { name: "Lindner Traktoren", address: "Kundl", contact: "+43 5338 7420", web: "lindner-traktoren.at", maps: "https://maps.google.com/?q=Lindner+Kundl", desc: "Agrar-KMU.", strategy: "Fahrzeug-Chassis.", pitch: ["KMU Power.", "Chassis-Kompetenz."], travelNext: { distance: "20km", time: "22 min" } },
+          { name: "Felder Group", address: "Hall in Tirol", contact: "+43 5223 5850", web: "felder-group.com", maps: "https://maps.google.com/?q=Felder+Group", desc: "Holzbearbeitung.", strategy: "Maschinen-Betten.", pitch: ["Serien-Präzision.", "Stahlbau KMU."], travelNext: { distance: "15km", time: "18 min" } },
           { name: "Binderholz", address: "Fügen", contact: "+43 5288 601", web: "binderholz.com", maps: "https://maps.google.com/?q=Binderholz+Fuegen", desc: "Holzindustrie.", strategy: "Sägewerks-Anlagenbau.", pitch: ["Robuster Anlagenbau.", "Verschleißtechnik."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Sandoz", address: "Kundl", contact: "+43 5338 200", web: "sandoz.com", maps: "https://maps.google.com/?q=Sandoz+Kundl", desc: "Pharma/Logistik.", strategy: "Reinraum-Gestelle.", pitch: ["Edelstahl-Expertise.", "GMP Schweißen."], travelNext: { distance: "10km", time: "12 min" } },
           { name: "Tiwag", address: "Innsbruck Region", contact: "+43 512 506", web: "tiwag.at", maps: "https://maps.google.com/?q=Tiwag+Innsbruck", desc: "Wasserkraft.", strategy: "Turbinen-Gehäuse.", pitch: ["Kraftwerks-Statik.", "Massivbau-Partner."] }
@@ -1012,13 +1215,13 @@ const TRIP_TABS = [
         focus: "Seilbahnen & High-Tech Aluminium",
         companies: [
           { name: "Doppelmayr", address: "Wolfurt", contact: "+43 5574 604", web: "doppelmayr.com", maps: "https://maps.google.com/?q=Doppelmayr+Wolfurt", desc: "Seilbahnen Global.", strategy: "Kabinen- & Rollenrahmen.", pitch: ["Sicherheits-Schweißung.", "Weltmarktführer-Standard."], travelNext: { distance: "5km", time: "8 min" } },
-          { name: "Meusburger", address: "Wolfurt", contact: "+43 5574 6706", web: "meusburger.com", maps: "https://maps.google.com/?q=Meusburger+Wolfurt", desc: "Normalien-Profi.", strategy: "Präzisions-Plattenbau.", pitch: ["Spannungsfrei glühen.", "SME Präzision."], travelNext: { distance: "8km", time: "10 min" } },
+          { name: "Meusburger", address: "Wolfurt", contact: "+43 5574 6706", web: "meusburger.com", maps: "https://maps.google.com/?q=Meusburger+Wolfurt", desc: "Normalien-Profi.", strategy: "Präzisions-Plattenbau.", pitch: ["Spannungsfrei glühen.", "KMU Präzision."], travelNext: { distance: "8km", time: "10 min" } },
           { name: "Hydro Extrusion", address: "Nenzing", contact: "+43 5525 601", web: "hydro.com", maps: "https://maps.google.com/?q=Hydro+Nenzing", desc: "Alu-Exzellenz.", strategy: "Alu-Schweißgruppen.", pitch: ["WIG/MIG Spezialist.", "Leichtbau-Fokus."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Liebherr-Nenzing", address: "Nenzing", contact: "+43 5525 606", web: "liebherr.com", maps: "https://maps.google.com/?q=Liebherr+Nenzing", desc: "港口/Raupenkran.", strategy: "Schwerlast-Gittermast.", pitch: ["Massivstahl-Expertise.", "Global Player."], travelNext: { distance: "15km", time: "18 min" } },
-          { name: "Blum", address: "Höchst", contact: "+43 5578 705", web: "blum.com", maps: "https://maps.google.com/?q=Blum+Hoechst", desc: "Beschläge Global.", strategy: "Automations-Rahmen.", pitch: ["Höchste Stückzahlen.", "Präzisions-SMEwege."], travelNext: { distance: "10km", time: "12 min" } },
+          { name: "Blum", address: "Höchst", contact: "+43 5578 705", web: "blum.com", maps: "https://maps.google.com/?q=Blum+Hoechst", desc: "Beschläge Global.", strategy: "Automations-Rahmen.", pitch: ["Höchste Stückzahlen.", "Präzisions-KMUwege."], travelNext: { distance: "10km", time: "12 min" } },
           { name: "Grass GmbH", address: "Höchst", contact: "+43 5578 701", web: "grass.at", maps: "https://maps.google.com/?q=Grass+Hoechst", desc: "Bewegungs-Systeme.", strategy: "Auszug-Komponenten.", pitch: ["Stahl-Präzision.", "Serien-Schweißung."], travelNext: { distance: "12km", time: "15 min" } },
-          { name: "Alpla Group", address: "Hard", contact: "+43 5574 602", web: "alpla.com", maps: "https://maps.google.com/?q=Alpla+Hard", desc: "Verpackungs-Global.", strategy: "Formenbau-Gestelle.", pitch: ["Werkzeugbau-DNA.", "SME Partnerschaft."], travelNext: { distance: "8km", time: "10 min" } },
-          { name: "Konzett Metall", address: "Ludesch", contact: "+43 5550 2434", web: "konzett-metall.at", maps: "https://maps.google.com/?q=Konzett+Ludesch", desc: "SME-Metallprofi.", strategy: "Sonderbau-Module.", pitch: ["SME Speed.", "Customized Steel."] }
+          { name: "Alpla Group", address: "Hard", contact: "+43 5574 602", web: "alpla.com", maps: "https://maps.google.com/?q=Alpla+Hard", desc: "Verpackungs-Global.", strategy: "Formenbau-Gestelle.", pitch: ["Werkzeugbau-DNA.", "KMU Partnerschaft."], travelNext: { distance: "8km", time: "10 min" } },
+          { name: "Konzett Metall", address: "Ludesch", contact: "+43 5550 2434", web: "konzett-metall.at", maps: "https://maps.google.com/?q=Konzett+Ludesch", desc: "KMU-Metallprofi.", strategy: "Sonderbau-Module.", pitch: ["KMU Speed.", "Customized Steel."] }
         ]
       }
     ]
@@ -1058,26 +1261,26 @@ const TRIP_TABS = [
             pitchHU: ["Autóipari precíziós szabványok.", "Just-in-time logisztikai támogatás."],
             travelNext: { distance: "30km", time: "35 min" } 
           },
-          { name: "Csepel Metall", address: "Budapest", contact: "+36 1 278", web: "csepelmetall.hu", maps: "https://maps.google.com/?q=Csepel+Metall", desc: "SME Guss/Bau.", strategy: "Gehäuse-Strukturen.", pitch: ["SME Flexibilität.", "Guss-Integration."], travelNext: { distance: "15km", time: "20 min" } },
+          { name: "Csepel Metall", address: "Budapest", contact: "+36 1 278", web: "csepelmetall.hu", maps: "https://maps.google.com/?q=Csepel+Metall", desc: "KKV Guss/Bau.", strategy: "Gehäuse-Strukturen.", pitch: ["KKV Flexibilität.", "Guss-Integration."], travelNext: { distance: "15km", time: "20 min" } },
           { name: "Ganz-Mavag", address: "Budapest", contact: "+36 1 431", web: "ganzmavag.hu", maps: "https://maps.google.com/?q=Ganz+Mavag", desc: "Lokomotivenbau.", strategy: "Rahmen-Strukturen.", pitch: ["Schwerindustrie.", "Bahn-Zertifikat."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Ikarus Hub", address: "Budapest", contact: "+36 1 432", web: "ikarus.hu", maps: "https://maps.google.com/?q=Ikarus+Budapest", desc: "Bus-Fertigung.", strategy: "Skelettbau-Module.", pitch: ["Rohrrahmen-Spezialist.", "E-Bus Projekt."], travelNext: { distance: "18km", time: "22 min" } },
           { name: "Samsung SDI", address: "Göd", contact: "+36 27 542", web: "samsungsdi.com", maps: "https://maps.google.com/?q=Samsung+SDI+God", desc: "Battery Tech.", strategy: "Transport-Gestelle.", pitch: ["Reinraum-Anforderungen.", "Große Stückzahlen."], travelNext: { distance: "25km", time: "30 min" } },
           { name: "SK Innovation", address: "Komárom", contact: "+36 34 526", web: "skon-global.com", maps: "https://maps.google.com/?q=SK+Innovation+Komarom", desc: "Batterie-Zellen.", strategy: "Anlagen-Rahmenbau.", pitch: ["Precision Welding.", "Tech-Cluster-Nähe."], travelNext: { distance: "28km", time: "35 min" } },
-          { name: "Bridgestone", address: "Tatabánya", contact: "+36 34 521", web: "bridgestone.hu", maps: "https://maps.google.com/?q=Bridgestone+Tatabanya", desc: "Reifen-Global.", strategy: "Maschinen-Vorrichtungen.", pitch: ["Instandhaltung SME.", "Spezial-Gestelle."] }
+          { name: "Bridgestone", address: "Tatabánya", contact: "+36 34 521", web: "bridgestone.hu", maps: "https://maps.google.com/?q=Bridgestone+Tatabanya", desc: "Reifen-Global.", strategy: "Maschinen-Vorrichtungen.", pitch: ["Instandhaltung KKV.", "Spezial-Gestelle."] }
         ]
       },
       {
         group: "Tag 2: Süd-Ungarn Agrar-Axis",
-        focus: "Agrar-Technik & Heavy Duty SME",
+        focus: "Agrar-Technik & Heavy Duty KKV",
         companies: [
-          { name: "Mercedes-Benz", address: "Kecskemét", contact: "+36 76 805", web: "mercedes-benz.hu", maps: "https://maps.google.com/?q=Mercedes+Kecskemet", desc: "PKW-Werk Global.", strategy: "Halterungen/SME-Teile.", pitch: ["Höchste Optik.", "IATF Standards."], travelNext: { distance: "85km", time: "55 min" } },
+          { name: "Mercedes-Benz", address: "Kecskemét", contact: "+36 76 805", web: "mercedes-benz.hu", maps: "https://maps.google.com/?q=Mercedes+Kecskemet", desc: "PKW-Werk Global.", strategy: "Halterungen/KKV-Teile.", pitch: ["Höchste Optik.", "IATF Standards."], travelNext: { distance: "85km", time: "55 min" } },
           { name: "ContiTech", address: "Szeged", contact: "+36 62 566", web: "contitech.hu", maps: "https://maps.google.com/?q=ContiTech+Szeged", desc: "Industrie-Schläuche.", strategy: "Druck-Flansche.", pitch: ["Öl & Gas Fokus.", "Hochdruck-Nähte."], travelNext: { distance: "12km", time: "18 min" } },
-          { name: "Vogel & Noot", address: "Mosonmagyaróvár", contact: "+36 96 577", web: "vogel-noot.info", maps: "https://maps.google.com/?q=Vogel+Noot", desc: "Agrar-SME.", strategy: "Pflug-Chassis.", pitch: ["Verschleißfestbau.", "Borstahl-Schweißen."], travelNext: { distance: "45km", time: "40 min" } },
+          { name: "Vogel & Noot", address: "Mosonmagyaróvár", contact: "+36 96 577", web: "vogel-noot.info", maps: "https://maps.google.com/?q=Vogel+Noot", desc: "Agrar-KKV.", strategy: "Pflug-Chassis.", pitch: ["Verschleißfestbau.", "Borstahl-Schweißen."], travelNext: { distance: "45km", time: "40 min" } },
           { name: "CLAAS Hungaria", address: "Törökszentmiklós", contact: "+36 56 597", web: "claas.hu", maps: "https://maps.google.com/?q=CLAAS+Torokszentmiklos", desc: "Mähdrescher-Hub.", strategy: "Schneidwerks-Rahmen.", pitch: ["Serien-Outsourcing.", "Agrar-Gigant."], travelNext: { distance: "35km", time: "30 min" } },
           { name: "Jungheinrich", address: "Biatorbágy Hub", contact: "+36 23 532", web: "jungheinrich.hu", maps: "https://maps.google.com/?q=Jungheinrich+Biatorbagy", desc: "Intralogistik.", strategy: "Mast-Baugruppen.", pitch: ["Statische Präzision.", "Service-Partner."], travelNext: { distance: "25km", time: "25 min" } },
           { name: "KUKA Automation", address: "Dunaharaszti", contact: "+36 24 501", web: "kuka.hu", maps: "https://maps.google.com/?q=KUKA+Dunaharaszti", desc: "Robotics Hub.", strategy: "Roboter-Basen.", pitch: ["Schwingungsfrei.", "High-Tech Schweißung."], travelNext: { distance: "28km", time: "30 min" } },
-          { name: "Axon Automotive", address: "Kecskemét", contact: "+36 76 501", web: "axon-automotive.hu", maps: "https://maps.google.com/?q=Axon+Kecskemet", desc: "Lightweight SME.", strategy: "Carbon-Metall-Baugruppen.", pitch: ["Faserverbund-Technik.", "Innovations-Partner."], travelNext: { distance: "10km", time: "12 min" } },
-          { name: "Haba Hungaria", address: "Bicske", contact: "+36 22 565", web: "habasit.hu", maps: "https://maps.google.com/?q=Haba+Hungaria", desc: "Transportbänder.", strategy: "SME Förder-Rahmen.", pitch: ["Wirtschaftlich & Schnell.", "SME Zuverlässigkeit."] }
+          { name: "Axon Automotive", address: "Kecskemét", contact: "+36 76 501", web: "axon-automotive.hu", maps: "https://maps.google.com/?q=Axon+Kecskemet", desc: "Lightweight KKV.", strategy: "Carbon-Metall-Baugruppen.", pitch: ["Faserverbund-Technik.", "Innovations-Partner."], travelNext: { distance: "10km", time: "12 min" } },
+          { name: "Haba Hungaria", address: "Bicske", contact: "+36 22 565", web: "habasit.hu", maps: "https://maps.google.com/?q=Haba+Hungaria", desc: "Transportbänder.", strategy: "KKV Förder-Rahmen.", pitch: ["Wirtschaftlich & Schnell.", "KKV Zuverlässigkeit."] }
         ]
       }
     ]
@@ -1091,160 +1294,28 @@ const TRIP_TABS = [
         group: "Tag 1: Zagreb & Continental Croatia",
         focus: "Rolling Stock & Heavy Engineering",
         companies: [
-          { name: "Končar KEV", address: "Zagreb", contact: "+385 1 3496", web: "koncar-kev.hr", maps: "https://maps.google.com/?q=Koncar+KEV+Zagreb", desc: "Züge & Trams.", strategy: "Chassis-Bau.", pitch: ["Bahn-Schweißung EN 15085.", "SME Modulmontage."], travelNext: { distance: "8km", time: "15 min" } },
+          { name: "Končar KEV", address: "Zagreb", contact: "+385 1 3496", web: "koncar-kev.hr", maps: "https://maps.google.com/?q=Koncar+KEV+Zagreb", desc: "Züge & Trams.", strategy: "Chassis-Bau.", pitch: ["Bahn-Schweißung EN 15085.", "MSP Modulmontage."], travelNext: { distance: "8km", time: "15 min" } },
           { name: "Đuro Đaković", address: "Zagreb/Slavonski B", contact: "+385 35 444", web: "duro-dakovic.com", maps: "https://maps.google.com/?q=Duro+Dakovic", desc: "Spezialfahrzeuge.", strategy: "Panzerstahl-Baugruppen.", pitch: ["Schwerlast-Waggonbau.", "Security-Cluster."], travelNext: { distance: "12km", time: "20 min" } },
-          { name: "HSTEC", address: "Zagreb/Zadar", contact: "+385 23 205", web: "hstec.hr", maps: "https://maps.google.com/?q=HSTEC+Zagreb", desc: "Automation SME.", strategy: "Roboter-Module.", pitch: ["High-Precision SME.", "Automation Hub."], travelNext: { distance: "10km", time: "15 min" } },
+          { name: "HSTEC", address: "Zagreb/Zadar", contact: "+385 23 205", web: "hstec.hr", maps: "https://maps.google.com/?q=HSTEC+Zagreb", desc: "Automation MSP.", strategy: "Roboter-Module.", pitch: ["High-Precision MSP.", "Automation Hub."], travelNext: { distance: "10km", time: "15 min" } },
           { name: "Rimac Group", address: "Sveta Nedelja", contact: "+385 1 563", web: "rimac-automobili.com", maps: "https://maps.google.com/?q=Rimac+Sveta+Nedelja", desc: "Hypercars/EV.", strategy: "Alu/Carbon-Anbindungen.", pitch: ["Next-Gen Fabrik.", "High-End Technology."], travelNext: { distance: "15km", time: "20 min" } },
-          { name: "AD Plastik", address: "Solin Hub", contact: "+385 21 206", web: "adplastik.hr", maps: "https://maps.google.com/?q=AD+Plastik+Solin", desc: "Automotive SME.", strategy: "Metall-Insert-Teile.", pitch: ["Automotive Standard.", "SME Zuliefernetz."], travelNext: { distance: "50km", time: "45 min" } },
+          { name: "AD Plastik", address: "Solin Hub", contact: "+385 21 206", web: "adplastik.hr", maps: "https://maps.google.com/?q=AD+Plastik+Solin", desc: "Automotive MSP.", strategy: "Metall-Insert-Teile.", pitch: ["Automotive Standard.", "MSP Zuliefernetz."], travelNext: { distance: "50km", time: "45 min" } },
           { name: "DOK-ING", address: "Zagreb", contact: "+385 1 248", web: "dok-ing.hr", maps: "https://maps.google.com/?q=DOK-ING+Zagreb", desc: "Robotic Systems.", strategy: "Minenräum-Chassis.", pitch: ["Robustes Engineering.", "Spezialstahl-Focus."], travelNext: { distance: "10km", time: "12 min" } },
-          { name: "Rasco", address: "Kalinovac", contact: "+385 48 883", web: "rasco.hr", maps: "https://maps.google.com/?q=Rasco+Kalinovac", desc: "Kommunaltechnik.", strategy: "Kehrmaschinen-Rahmen.", pitch: ["Wirtschaftlicher Gerätebau.", "SME Partner."], travelNext: { distance: "60km", time: "55 min" } },
-          { name: "Metalska jezgra", address: "Čakovec", contact: "+385 40 395", web: "metalskajezgra.hr", maps: "https://maps.google.com/?q=Metalska+jezgra+Cakovec", desc: "Innovation Center.", strategy: "Prototypen-Bau.", pitch: ["F&E Partnerschaft.", "SME Tech Region."] }
+          { name: "Rasco", address: "Kalinovac", contact: "+385 48 883", web: "rasco.hr", maps: "https://maps.google.com/?q=Rasco+Kalinovac", desc: "Kommunaltechnik.", strategy: "Kehrmaschinen-Rahmen.", pitch: ["Wirtschaftlicher Gerätebau.", "MSP Partner."], travelNext: { distance: "60km", time: "55 min" } },
+          { name: "Metalska jezgra", address: "Čakovec", contact: "+385 40 395", web: "metalskajezgra.hr", maps: "https://maps.google.com/?q=Metalska+jezgra+Cakovec", desc: "Innovation Center.", strategy: "Prototypen-Bau.", pitch: ["F&E Partnerschaft.", "MSP Tech Region."] }
         ]
       },
       {
         group: "Tag 2: Adria-Region & Küsten-Stahlbau",
-        focus: "Maritime-Stahlbau & Offshore SME",
+        focus: "Maritime-Stahlbau & Offshore MSP",
         companies: [
           { name: "Brodosplit", address: "Split", contact: "+385 21 392", web: "brodosplit.hr", maps: "https://maps.google.com/?q=Brodosplit+Split", desc: "Werft Global.", strategy: "Offshore-Stahlbau.", pitch: ["Gigantische Strukturen.", "Marine Korrosionsschutz."], travelNext: { distance: "250km", time: "2h 30 min" } },
           { name: "Viktor Lenac", address: "Rijeka", contact: "+385 51 405", web: "lenac.hr", maps: "https://maps.google.com/?q=Viktor+Lenac+Rijeka", desc: "Shipyard Hub.", strategy: "Stahlbau-Refit.", pitch: ["24/7 Schweiß-Service.", "Zertifizierter Offshorebau."], travelNext: { distance: "15km", time: "20 min" } },
-          { name: "Hempel", address: "Umag", contact: "+385 52 701", web: "hempel.com", maps: "https://maps.google.com/?q=Hempel+Umag", desc: "Coatings Global.", strategy: "Vorbehandelter Stahl.", pitch: ["Integrierter Schutz.", "SME Küstenlogistik."], travelNext: { distance: "45km", time: "40 min" } },
+          { name: "Hempel", address: "Umag", contact: "+385 52 701", web: "hempel.com", maps: "https://maps.google.com/?q=Hempel+Umag", desc: "Coatings Global.", strategy: "Vorbehandelter Stahl.", pitch: ["Integrierter Schutz.", "MSP Küstenlogistik."], travelNext: { distance: "45km", time: "40 min" } },
           { name: "3. MAJ", address: "Rijeka", contact: "+385 51 611", web: "3maj.hr", maps: "https://maps.google.com/?q=3+MAJ+Rijeka", desc: "Schiffbau.", strategy: "Rumpf-Sektionen.", pitch: ["Massivstahl-Spezialist.", "Großraum-Fertigung."], travelNext: { distance: "20km", time: "25 min" } },
           { name: "Uljanik", address: "Pula", contact: "+385 52 374", web: "uljanik.hr", maps: "https://maps.google.com/?q=Uljanik+Pula", desc: "Spezialschiffbau.", strategy: "Deck-Aufbauten.", pitch: ["Passgenauer Stahlbau.", "Adria Excellence."], travelNext: { distance: "30km", time: "35 min" } },
-          { name: "Tehnomont", address: "Pula", contact: "+385 52 214", web: "tehnomont.hr", maps: "https://maps.google.com/?q=Tehnomont+Pula", desc: "Werft & Stahl.", strategy: "Alu-Patrouillenboote.", pitch: ["Alu-Schweiß-Profi.", "SME-Flexibilität."], travelNext: { distance: "35km", time: "40 min" } },
-          { name: "Metis d. d.", address: "Rijeka Hub", contact: "+385 51 343", web: "metis.hr", maps: "https://maps.google.com/?q=Metis+Rijeka", desc: "Recycling/Rohstoff.", strategy: "Schrotthandel-Logistik.", pitch: ["Rohstoff-Partner.", "SME Kreislauf."], travelNext: { distance: "15km", time: "20 min" } },
+          { name: "Tehnomont", address: "Pula", contact: "+385 52 214", web: "tehnomont.hr", maps: "https://maps.google.com/?q=Tehnomont+Pula", desc: "Werft & Stahl.", strategy: "Alu-Patrouillenboote.", pitch: ["Alu-Schweiß-Profi.", "MSP-Flexibilität."], travelNext: { distance: "35km", time: "40 min" } },
+          { name: "Metis d. d.", address: "Rijeka Hub", contact: "+385 51 343", web: "metis.hr", maps: "https://maps.google.com/?q=Metis+Rijeka", desc: "Recycling/Rohstoff.", strategy: "Schrotthandel-Logistik.", pitch: ["Rohstoff-Partner.", "MSP Kreislauf."], travelNext: { distance: "15km", time: "20 min" } },
           { name: "Luka Rijeka", address: "Rijeka Port", contact: "+385 51 330", web: "lukarijeka.hr", maps: "https://maps.google.com/?q=Luka+Rijeka", desc: "Logistik-Tor.", strategy: "Hafen-Infrastruktur.", pitch: ["Logistik-Schnittstelle.", "Export-Power."] }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'bayern_tour',
-    label: 'Bayern SME Tour (DE)',
-    description: 'Fokus: Premium-Stahlbau, Automotive-Supply & Spezialmaschinenbau in Oberbayern & Schwaben',
-    leads: [
-      {
-        group: "Tag 1: München & Umland",
-        focus: "High-Tech Stahlbau & Spezial-Fahrzeugbau",
-        companies: [
-          { 
-            name: "Meiller Kipper", 
-            address: "Ambros-Meiller-Straße 1, 80993 München", 
-            contact: "+49 89 1487", 
-            web: "meiller.com", 
-            maps: "https://maps.google.com/?q=Meiller+Kipper+Muenchen", 
-            desc: "Weltmarktführer für Kippaufbauten.", 
-            strategy: "Stahlbau-Zulieferung.", 
-            pitch: ["Harte Schale, harter Kern – wir schweißen für die Ewigkeit.", "Kipp-Stabilität beginnt bei der Wurzelnaht."],
-            pitchEN: ["Tough shell, tough core – we weld for eternity.", "Tipping stability starts at the root pass."],
-            pitchSL: ["Trda lupina, trdo jedro – varimo za večnost.", "Stabilnost prevračanja se začne pri korenskem zvaru."],
-            pitchHU: ["Kemény héj, kemény mag – az örökkévalóságnak hegesztünk.", "A billenési stabilitás a gyökvarratnál kezdődik."],
-            pitchHR: ["Tvrda kora, tvrda jezgra – zavarujemo za vječnost.", "Stabilnost kipanja počinje s korijenskim zvarom."],
-            travelNext: { distance: "25km", time: "30 min" }
-          },
-          { 
-            name: "Krauss-Maffei Wegmann", 
-            address: "Krauss-Maffei-Straße 11, 80997 München", 
-            contact: "+49 89 8140", 
-            web: "knds.de", 
-            maps: "https://maps.google.com/?q=KMW+Muenchen", 
-            desc: "Systemhaus für Schutzsysteme.", 
-            strategy: "Präzisions-Schweißbau.", 
-            pitch: ["Panzerstahl-Flüsterer: Wo andere aufgeben, brennt unser Lichtbogen erst richtig.", "Höchste Zertifizierung: Wir schweißen, was andere nicht mal ansehen dürfen."],
-            pitchEN: ["Tank-steel whisperers: where others quit, our arc really starts to burn.", "Highest certification: we weld what others aren't even allowed to look at."],
-            pitchSL: ["Šepetalci tankovskemu jeklu: kjer drugi odnehajo, naš oblok šele zares zagori.", "Najvišji certifikat: varimo tisto, česar drugi niti gledati ne smejo."],
-            travelNext: { distance: "18km", time: "25 min" }
-          },
-          { 
-            name: "MTU Aero Engines", 
-            address: "Dachauer Str. 665, 80995 München", 
-            contact: "+49 89 1489", 
-            web: "mtu.de", 
-            maps: "https://maps.google.com/?q=MTU+Muenchen", 
-            desc: "Triebwerkstechnik.", 
-            strategy: "Spezial-Schweißverfahren.", 
-            pitch: ["Cleanroom standards.", "Ti-Welding expert."]
-          }
-        ]
-      },
-      {
-        group: "Tag 2: Augsburg & Schwaben",
-        focus: "Anlagenbau & Robotik-Cluster",
-        companies: [
-          { 
-            name: "Humbaur GmbH", 
-            address: "Mercedesring 1, 86368 Gersthofen", 
-            contact: "+49 821 2492", 
-            web: "humbaur.com", 
-            maps: "https://maps.google.com/?q=Humbaur+Gersthofen", 
-            desc: "Anhänger- & Kofferaufbauten.", 
-            strategy: "Chassis-Fertigung.", 
-            pitch: ["Wir schmieden das Rückgrat Ihrer Logistik.", "Verzinkte Perfektion: Rost ist für uns ein Fremdwort."],
-            pitchEN: ["We forge the backbone of your logistics.", "Galvanized perfection: rust is a foreign word to us."],
-            travelNext: { distance: "12km", time: "15 min" }
-          },
-          { 
-            name: "Zeppelin Systems", 
-            address: "Elektronstraße 1, 86316 Friedberg", 
-            contact: "+49 821 7483", 
-            web: "zeppelin-systems.com", 
-            maps: "https://maps.google.com/?q=Zeppelin+Systems+Friedberg", 
-            desc: "Anlagenbau für Schüttgüter.", 
-            strategy: "Silobau & Behälter.", 
-            pitch: ["Alu- & Edelstahlschweißen.", "Großkomponenten."],
-            travelNext: { distance: "35km", time: "40 min" }
-          },
-          { 
-            name: "KUKA Robotics", 
-            address: "Zugspitzstraße 140, 86165 Augsburg", 
-            contact: "+49 821 797", 
-            web: "kuka.com", 
-            maps: "https://maps.google.com/?q=KUKA+Augsburg", 
-            desc: "Automatisierungsprofi.", 
-            strategy: "Vorrichtungskomponenten.", 
-            pitch: ["Smart Factory Integration.", "Precision frames."]
-          }
-        ]
-      },
-      {
-        group: "Tag 3: Niederbayern & Landshut",
-        focus: "Heavy Engineering & Logistik-Systeme",
-        companies: [
-          { 
-            name: "Sennebogen", 
-            address: "Sennebogenstraße 10, 94315 Straubing", 
-            contact: "+49 9421 540", 
-            web: "sennebogen.com", 
-            maps: "https://maps.google.com/?q=Sennebogen+Straubing", 
-            desc: "Umschlagsbagger & Krane.", 
-            strategy: "Massivstahlbau-Outsourcing.", 
-            pitch: ["Baggermasten-Chirurgen: Millimeterarbeit an Tonnen von Stahl.", "Wir bändigen den Verzug in jedem Millimeter."],
-            pitchEN: ["Boom surgeons: millimeter precision on tons of steel.", "We tame the distortion in every millimeter."],
-            pitchSL: ["Kirurgi za bagrske roke: milimetrska natančnost na tonah jekla.", "Ukrotimo popačenje v vsakem milimetru."],
-            travelNext: { distance: "45km", time: "40 min" }
-          },
-          { 
-            name: "Sturm Gruppe", 
-            address: "Industriestraße 10, 94330 Salching", 
-            contact: "+49 9421 5520", 
-            web: "sturm-gruppe.com", 
-            maps: "https://maps.google.com/?q=Sturm+Gruppe+Salching", 
-            desc: "Fördertechnik & Oberflächen.", 
-            strategy: "Anlagen-Gestelle.", 
-            pitch: ["Ihre Gestelle, unsere Schweißnaht – eine Verbindung fürs Leben.", "Magie unter dem Helm: Wir schweißen schneller als die Konkurrenz schaut."],
-            pitchEN: ["Your frames, our weld – a bond for life.", "Magic under the helmet: we weld faster than the competition looks."],
-            pitchSL: ["Vaši okvirji, naš zvar – vez za vse življenje.", "Magija pod masko: varimo hitreje, kot konkurenca gleda."],
-            travelNext: { distance: "28km", time: "30 min" }
-          },
-          { 
-            name: "Dräxlmaier Group", 
-            address: "Landshuter Str. 100, 84137 Vilsbiburg", 
-            contact: "+49 8741 47", 
-            web: "draexlmaier.com", 
-            maps: "https://maps.google.com/?q=Draexlmaier+Vilsbiburg", 
-            desc: "Premium Automotive Supply.", 
-            strategy: "Batteriegehäuse-Frames.", 
-            pitch: ["E-Mobility transition.", "Quality management."]
-          }
         ]
       }
     ]
@@ -1594,7 +1665,7 @@ export default function App() {
             </div>
             {activeTrip && (
               <div className="mt-6 text-xs font-mono uppercase tracking-widest text-[#F27D26]/70 italic">
-                {activeTrip.id === 'slovenia' && lang === 'sl' ? "Fokus: Visokonatančna jeklena konstrukcija, SME strojegradnja & avtomobilski grozd" : 
+                {activeTrip.id === 'slovenia' && lang === 'sl' ? "Fokus: Visokonatančna jeklena konstrukcija, MSP strojegradnja & avtomobilski grozd" : 
                  activeTrip.id === 'hungary_deep' && lang === 'hu' ? "Fókusz: Budapesti nagyvárosi régió és dél-magyarországi mezőgazdasági központ" : 
                  activeTrip.description}
               </div>
@@ -1720,7 +1791,7 @@ export default function App() {
                             </ul>
                             <span className="text-[10px] font-black text-[#F27D26] uppercase tracking-widest block mb-1">{t.strategyLabel}</span>
                             <p className="text-[11px] italic text-[#8E9299] leading-relaxed">
-                              {lang === 'sl' && activeTrip.id === 'slovenia' ? "Strateški partner za SME poddobavo." :
+                              {lang === 'sl' && activeTrip.id === 'slovenia' ? "Strateški partner za MSP poddobavo." :
                                lang === 'hu' && activeTrip.id === 'hungary_deep' ? "Stratégiai partner a beszállítói láncban." :
                                company.strategy}
                             </p>
@@ -1841,7 +1912,11 @@ export default function App() {
                   onClick={() => setActiveTrip(trip)}
                   className={`px-4 py-2 text-[10px] font-black uppercase transition-all ${activeTrip.id === trip.id ? 'bg-[#F27D26] text-black' : 'text-[#8E9299] hover:text-white'}`}
                 >
-                  {trip.label}
+                  {lang === 'en' && trip.labelEN ? trip.labelEN :
+                   lang === 'sl' && trip.labelSL ? trip.labelSL :
+                   lang === 'hu' && trip.labelHU ? trip.labelHU :
+                   lang === 'hr' && trip.labelHR ? trip.labelHR :
+                   trip.label}
                 </button>
               ))}
             </div>
