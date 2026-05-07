@@ -29,7 +29,8 @@ import {
   Euro,
   Award,
   Handshake,
-  Camera
+  Camera,
+  RotateCcw
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -78,6 +79,18 @@ const translations = {
     whyTitle1: "WARUM MONTAGE TEHNIK?",
     whyTitle2: "10 GUTE GRÜNDE",
     whySubtitle: "Erfahren Sie, warum führende Unternehmen in der EU auf unsere Expertise vertrauen.",
+    reasons: [
+      { title: "Geografische Nähe", desc: "Nur 3,5 Stunden von Linz/Graz entfernt (Čakovec). Schneller als viele inländische Partner." },
+      { title: "ISO 3834-3 Zertifizierung", desc: "Höchste internationale Schweißstandards für sicherheitskritische Bauteile." },
+      { title: "Spezialisierte Expertise", desc: "Tiefes Know-how in LKW-Hilfsrahmen und Bergbau-Equipment." },
+      { title: "Maßgeschneiderte Fertigung", desc: "Vollständige Flexibilität für Sonderanfertigungen nach Ihren Plänen." },
+      { title: "Termintreue & Logistik", desc: "Eigene Logistik-Struktur garantiert Liefertermine ohne Verzögerung." },
+      { title: "Große Kapazitäten", desc: "Moderne 1200m² Produktionshalle für Serien und Großprojekte." },
+      { title: "Sprachbarriere? Keine.", desc: "Deutschsprachige Ansprechpartner und Projektleitung vor Ort." },
+      { title: "Kostenvorteil EU-weit", desc: "Wettbewerbsfähige Preise durch kroatischen Standort bei EU-Standards." },
+      { title: "Bewährte Exporterfahrung", desc: "Erfolgreiche Partnerschaften in Schweden, Österreich und Slowenien." },
+      { title: "Full-Service Partner", desc: "Von der Materialbeschaffung bis zur finalen Montage alles aus einer Hand." }
+    ],
     besuchsplanTitle: "BESUCHSPLAN & POTENZIALE",
     besuchsplanDesc: "Katalog potenzieller SME-Partner in Österreich mit Fokus auf Metallbau und Fahrzeugtechnik.",
     pitchLabel: "IHR PITCH (INFO-MATERIAL):",
@@ -116,6 +129,18 @@ const translations = {
     whyTitle1: "WHY MONTAGE TEHNIK?",
     whyTitle2: "10 GOOD REASONS",
     whySubtitle: "Find out why leading companies in the EU trust our expertise.",
+    reasons: [
+      { title: "Geographical Proximity", desc: "Only 3.5 hours from Linz/Graz (Čakovec). Faster than many domestic partners." },
+      { title: "ISO 3834-3 Certification", desc: "Highest international welding standards for safety-critical components." },
+      { title: "Specialized Expertise", desc: "Deep know-how in truck subframes and mining equipment." },
+      { title: "Customized Production", desc: "Full flexibility for custom manufacturing according to your plans." },
+      { title: "On-Time Delivery", desc: "Own logistics structure guarantees delivery dates without delay." },
+      { title: "Large Capacity", desc: "Modern 1200m² production hall for series and large projects." },
+      { title: "No Language Barrier", desc: "German-speaking contacts and project management on-site." },
+      { title: "Cost Advantage EU-wide", desc: "Competitive prices due to Croatian location with EU standards." },
+      { title: "Proven Export Experience", desc: "Successful partnerships in Sweden, Austria, and Slovenia." },
+      { title: "Full-Service Partner", desc: "From material procurement to final assembly all from one source." }
+    ],
     besuchsplanTitle: "VISIT PLAN & POTENTIALS",
     besuchsplanDesc: "Catalog of potential SME partners in Central Europe focusing on metal construction and vehicle technology.",
     pitchLabel: "YOUR PITCH (INFO MATERIAL):",
@@ -154,10 +179,22 @@ const translations = {
     whyTitle1: "ZAKAJ MONTAGE TEHNIK?",
     whyTitle2: "10 DOBRIH RAZLOGOV",
     whySubtitle: "Ugotovite, zakaj vodilna podjetja v EU zaupajo našemu strokovnemu znanju.",
+    reasons: [
+      { title: "Geografska bližina", desc: "Le 3,5 ure od Linza/Gradca (Čakovec). Hitreje kot mnogi domači partnerji." },
+      { title: "Certifikat ISO 3834-3", desc: "Najvišji mednarodni standardi varjenja za varnostno kritične komponente." },
+      { title: "Specializirano znanje", desc: "Globoko znanje o pomožnih podvozjih za tovornjake in rudarski opremi." },
+      { title: "Prilagojena proizvodnja", desc: "Popolna prilagodljivost za izdelke po vaših načrtih." },
+      { title: "Zanesljivost rokov", desc: "Lastna logistična struktura zagotavlja dobavne roke brez zamud." },
+      { title: "Velike kapacitete", desc: "Sodobna proizvodna hala 1200 m² za serije i velike projekte." },
+      { title: "Brez jezikovnih ovir", desc: "Nemško govoreče kontaktne osebe in vodstvo projektov na lokaciji." },
+      { title: "Cenovna prednost", desc: "Konkurenčne cene zaradi hrvaške lokacije ob standardih EU." },
+      { title: "Izvozne izkušnje", desc: "Uspešna partnerstva na Švedskem, v Avstriji in Sloveniji." },
+      { title: "Full-Service Partner", desc: "Od nabave materiala do končne montaže – vse na enem mestu." }
+    ],
     besuchsplanTitle: "NAČRT OBISKA IN POTENCIALI",
     besuchsplanDesc: "Katalog potencialnih SME partnerjev v Srednji Evropi s poudarkom na kovinskih konstrukcijah in tehnologiji vozil.",
-    pitchLabel: "VAŠ PREDSTAVITVENI MATERIAL:",
-    strategyLabel: "STRATEGIJA:",
+    pitchLabel: "VAŠ 'WELDING' PITCH (INFO MATERIAL):",
+    strategyLabel: "STRATEGIJA PREBOJA:",
     tipsTitle: "NASVETI ZA POGOVOR",
     contactTitle1: "DOGOVORITE SE ZA",
     contactTitle2: "SODELOVANJE",
@@ -192,9 +229,21 @@ const translations = {
     whyTitle1: "MIÉRT A MONTAGE TEHNIK?",
     whyTitle2: "10 JÓ OK",
     whySubtitle: "Tudja meg, miért bíznak az EU vezető vállalatai szakértelmünkben.",
+    reasons: [
+      { title: "Földrajzi közelség", desc: "Csak 3,5 óra Linz/Graz városától (Csáktornya). Gyorsabb, mint sok belföldi partner." },
+      { title: "ISO 3834-3 tanúsítvány", desc: "A legmagasabb nemzetközi hegesztési szabványok a biztonságilag kritikus alkatrészekhez." },
+      { title: "Speciális szaktudás", desc: "Mélyreható ismeretek a teherautó segédvázak és bányászati berendezések terén." },
+      { title: "Egyedi gyártás", desc: "Teljes rugalmasság az Ön tervei szerinti egyedi gyártáshoz." },
+      { title: "Határidő-betartás", desc: "Saját logisztikai struktúra garantálja a késés nélküli szállítási határidőket." },
+      { title: "Nagy kapacitás", desc: "Modern, 1200 m²-es gyártócsarnok szériákhoz és nagy projektekhez." },
+      { title: "Nincs nyelvi akadály", desc: "Németül beszélő kapcsolattartók és helyszíni projektvezetés." },
+      { title: "EU-szintű árelőny", desc: "Versenyképes árak a horvátországi helyszínnek köszönhetően, EU szabványok mellett." },
+      { title: "Exporttapasztalat", desc: "Sikeres partnerségek Svédországban, Ausztriában és Szlovéniában." },
+      { title: "Full-Service Partner", desc: "Az anyagbeszerzéstől a végső összeszerelésig – minden egy kézből." }
+    ],
     besuchsplanTitle: "LÁTOGATÁSI TERV ÉS POTENCIÁLOK",
     besuchsplanDesc: "SME-partnerek katalógusa Közép-Európában, különös tekintettel a fémszerkezetekre és a járműtechnológiára.",
-    pitchLabel: "AZ ÖN PITCH (INFÓ ANYAG):",
+    pitchLabel: "AZ ÖN 'WELDING' PITCH ANYAGA:",
     strategyLabel: "STRATÉGIA:",
     tipsTitle: "BESZÉLGETÉSI TIPPEK",
     contactTitle1: "EGYÜTTMŰKÖDÉS",
@@ -224,8 +273,8 @@ const TRIP_TABS = [
         group: "Tag 1: SME-Cluster OÖ (Linz-Steyr)",
         focus: "High-Density Vorfertigung",
         companies: [
-          { name: "Zeko Mobility", address: "Welser Str. 83, Leonding", contact: "+43 732 6711", web: "zeko.at", maps: "https://maps.google.com/?q=Zeko+Mobility", desc: "Sonderaufbauten SME.", strategy: "Schnelle Schweißkonsolen.", pitch: ["24h Prototypenbau.", "SME Flexibilität."], travelNext: { distance: "4km", time: "8 min" } },
-          { name: "TAT-Technom", address: "Technopark 1, Traun", contact: "+43 7229 64840", web: "tat.at", maps: "https://maps.google.com/?q=TAT-Technom", desc: "Antriebstechnik.", strategy: "Maschinengestelle.", pitch: ["Vibrationsresistent.", "ISO 3834-3."], travelNext: { distance: "6km", time: "10 min" } },
+          { name: "Zeko Mobility", address: "Welser Str. 83, Leonding", contact: "+43 732 6711", web: "zeko.at", maps: "https://maps.google.com/?q=Zeko+Mobility", desc: "Sonderaufbauten SME.", strategy: "Schnelle Schweißkonsolen.", pitch: ["Lichtbogen zündet in 24h.", "SME Flexibilität – wir biegen uns, aber brechen nie."], travelNext: { distance: "4km", time: "8 min" } },
+          { name: "TAT-Technom", address: "Technopark 1, Traun", contact: "+43 7229 64840", web: "tat.at", maps: "https://maps.google.com/?q=TAT-Technom", desc: "Antriebstechnik.", strategy: "Maschinengestelle.", pitch: ["Schweißnähte, die über Vibrationen nur lachen.", "ISO 3834-3 ist unser Herzschlag."], travelNext: { distance: "6km", time: "10 min" } },
           { name: "WD-Metall", address: "Gewerbepark, Ansfelden", contact: "+43 7229 88164", web: "wd-metall.at", maps: "https://maps.google.com/?q=WD-Metall", desc: "Blechtechnik.", strategy: "Laser-Schweiß-Kombis.", pitch: ["Modernster Park.", "SME-Preise."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Hofmann Metall", address: "Gewerbepark 5, Sierning", contact: "+43 7259 3131", web: "hofmann-metall.at", maps: "https://maps.google.com/?q=Hofmann+Metall", desc: "Gehäusebau.", strategy: "Serienfertigung.", pitch: ["Kapazitäts-Puffer.", "Hohe Genauigkeit."], travelNext: { distance: "8km", time: "10 min" } },
           { name: "Glatz Mechanik", address: "Gründbergstr. 1, Steyr", contact: "+43 7252 73061", web: "glatz.at", maps: "https://maps.google.com/?q=Glatz+Mechanik", desc: "Maschinenbau SME.", strategy: "Vorfertigung Module.", pitch: ["Baugruppen-Montage.", "Terminfokus."], travelNext: { distance: "5km", time: "8 min" } },
@@ -412,8 +461,9 @@ const TRIP_TABS = [
               "Full-Service: Schweißen, mech. Bearbeitung & Endmontage.",
               "Erfahrener Outsourcing-Partner für stabile Lieferketten."
             ],
-            travelNext: { distance: "38 km", time: "32 min" }
+            travelNext: { distance: "5 km", time: "8 min" }
           },
+          { name: "Lam Research", address: "Villach", contact: "+43 4242", web: "lamresearch.com", maps: "https://maps.google.com/?q=Lam+Research+Villach", desc: "Semicon Equipment.", strategy: "High-Precision Frames.", pitch: ["Cleanroom standards.", "SME precision."], travelNext: { distance: "12 km", time: "15 min" } },
           {
             name: "Wild GmbH",
             address: "Wildstraße 4, 9100 Völkermarkt",
@@ -429,6 +479,7 @@ const TRIP_TABS = [
             ],
             travelNext: { distance: "45 km", time: "35 min" }
           },
+          { name: "Europlast", address: "Berg im Drautal", contact: "+43 4712", web: "europlast.at", maps: "https://maps.google.com/?q=Europlast+Berg", desc: "Plastic Containers.", strategy: "Reinforcement frames.", pitch: ["Large component focus.", "Industrial SME."], travelNext: { distance: "15 km", time: "12 min" } },
           {
             name: "Lindner-Recyclingtech",
             address: "Villacher Str. 48, 9800 Spittal an der Drau",
@@ -441,8 +492,12 @@ const TRIP_TABS = [
               "Verschleißfeste Schweißbaugruppen für Shredder-Gehäuse.",
               "Umgang mit massiven Materialstärken und Vibrationslasten.",
               "Kostenvorteil bei schweren Stahlbau-Komponenten."
-            ]
-          }
+            ],
+            travelNext: { distance: "8 km", time: "10 min" }
+          },
+          { name: "Technogroup", address: "Spittal", contact: "+43 4762", web: "technogroup.at", maps: "https://maps.google.com/?q=Technogroup+Spittal", desc: "Energy systems.", strategy: "Control cabinets.", pitch: ["Modular assembly.", "Electrical SME."], travelNext: { distance: "10 km", time: "12 min" } },
+          { name: "Hasslacher", address: "Sachsenburg-Spittal", contact: "+43 4769", web: "hasslacher.com", maps: "https://maps.google.com/?q=Hasslacher+Sachsenburg", desc: "Timber Industry.", strategy: "Sawmill maintenance.", pitch: ["Robust steelwork.", "Large scale SME."], travelNext: { distance: "15 km", time: "18 min" } },
+          { name: "ÖBB Villach", address: "Villach", contact: "+43 51717", web: "oebb.at", maps: "https://maps.google.com/?q=OEBB+Villach", desc: "Rail Infra.", strategy: "Bridge components.", pitch: ["Rail certified welding.", "Heavy infrastructure."] }
         ]
       },
       {
@@ -464,6 +519,7 @@ const TRIP_TABS = [
             ],
             travelNext: { distance: "52 km", time: "40 min" }
           },
+          { name: "PMS Elektro", address: "Wolfsberg", contact: "+43 4352", web: "pms.at", maps: "https://maps.google.com/?q=PMS+Wolfsberg", desc: "Automation tech.", strategy: "Power plant modules.", pitch: ["Industrial automation.", "SME efficiency."], travelNext: { distance: "8 km", time: "10 min" } },
           {
             name: "URBAS Maschinenfabrik GmbH",
             address: "Billrothstraße 7, 9100 Völkermarkt",
@@ -474,11 +530,12 @@ const TRIP_TABS = [
             strategy: "Outsourcing-Partner für schwere Kesselgehäuse.",
             pitch: [
               "Massivstahlbau-Schweißkompetenz für den Energiebereich.",
-              "SME-Servicelevel mit industrieller Fertigungskapazität.",
+              "SME-Servicelevel with industrieller Fertigungskapazität.",
               "Vorfertigung von Trägerstrukturen für Biomassekraftwerke."
             ],
             travelNext: { distance: "42 km", time: "35 min" }
           },
+          { name: "Kresta Anlagenbau", address: "St. Andrä", contact: "+43 4358", web: "kresta-kt.at", maps: "https://maps.google.com/?q=Kresta+St+Andrae", desc: "Plant engineering.", strategy: "Large vessels/piping.", pitch: ["Energy sector.", "High-pressure welding."], travelNext: { distance: "12 km", time: "15 min" } },
           {
             name: "Springer Maschinenfabrik",
             address: "Hans-Springer-Straße 2, 9360 Friesach",
@@ -491,8 +548,12 @@ const TRIP_TABS = [
               "Präzise Gestelle für automatisierte Förder-Anlagen.",
               "Skalierbare Serienfertigung für Anlagenbau-Serien.",
               "Termintreue Lieferung zur exakten Baustellen-Einbringung."
-            ]
-          }
+            ],
+            travelNext: { distance: "15 km", time: "18 min" }
+          },
+          { name: "Mahle Filtersysteme", address: "St. Michael", contact: "+43 4352", web: "mahle.com", maps: "https://maps.google.com/?q=Mahle+Wolfsberg", desc: "Filter systems.", strategy: "Filter housings.", pitch: ["Automotive precision.", "Mass production."], travelNext: { distance: "10 km", time: "12 min" } },
+          { name: "Geislinger", address: "Bad St. Leonhard", contact: "+43 4352", web: "geislinger.com", maps: "https://maps.google.com/?q=Geislinger+Bad+St+Leonhard", desc: "Couplings & Dampers.", strategy: "High-load components.", pitch: ["Heavy engine parts.", "Specialized steel."], travelNext: { distance: "25 km", time: "28 min" } },
+          { name: "Treibacher Industrie", address: "Althofen", contact: "+43 4262", web: "treibacher.com", maps: "https://maps.google.com/?q=Treibacher+Althofen", desc: "Chemical industry.", strategy: "Reactor parts.", pitch: ["Hard-facing expert.", "Corrosion resistant."] }
         ]
       }
     ]
@@ -506,20 +567,32 @@ const TRIP_TABS = [
         group: "Tag 1: West-Ungarn (Győr)",
         focus: "Fahrzeugbau & SME-Zulieferer",
         companies: [
-          {
-            name: "Rába Automotive Holding",
-            address: "Budai út 1, 9027 Győr, Hungary",
-            contact: "+36 96 622 000",
-            web: "raba.hu",
-            maps: "https://www.google.com/maps/search/?api=1&query=Budai+út+1,+9027+Győr,+Hungary",
-            desc: "Bedeutender Achsen- und Komponentenhersteller.",
-            strategy: "Zulieferung von Achskörper-Schweißbaugruppen.",
-            pitch: [
-              "Spezialist für schwere Achskonstruktionen und Fahrwerksteile.",
-              "Robuste Schweißverbindungen für den Einsatz in Nutzfahrzeugen.",
-              "Logistische Nähe: Nur 2h von Čakovec entfernt."
-            ],
-            travelNext: { distance: "12 km", time: "15 min" }
+          { 
+            name: "Rába Automotive Holding", 
+            address: "Budai út 1, 9027 Győr, Hungary", 
+            contact: "+36 96 622 000", 
+            web: "raba.hu", 
+            maps: "https://www.google.com/maps/search/?api=1&query=Budai+út+1,+9027+Győr,+Hungary", 
+            desc: "Bedeutender Achsen- und Komponentenhersteller.", 
+            strategy: "Zulieferung von Achskörper-Schweißbaugruppen.", 
+            pitch: ["Spezialist für schwere Achskonstruktionen.", "Robuste Schweißverbindungen."],
+            pitchEN: ["We fuse your vision into reality.", "Perfect penetration, zero porosity – that's our baseline."],
+            pitchHU: ["Hegesztési költészet: mentes a porozitástól.", "Mély gyökerek, erős varratok: a Montage Tehnik módja."],
+            pitchSL: ["Zlivamo vašo vizijo v realnost.", "Popolna penetracija, nič poroznosti – to je naš standard."],
+            travelNext: { distance: "5 km", time: "8 min" } 
+          },
+          { 
+            name: "SMR Automotive", 
+            address: "Mosonszolnok", 
+            contact: "+36 96", 
+            web: "smr-automotive.com", 
+            maps: "https://maps.google.com/?q=SMR+Mosonszolnok", 
+            desc: "Mirror systems.", 
+            strategy: "Assembly fixtures.", 
+            pitch: ["Automotive tools.", "SME jigs."],
+            pitchEN: ["Precision automotive tooling.", "High-quality SME jigs and fixtures."],
+            pitchHU: ["Precíziós autóipari szerszámok.", "Kiváló minőségű SME készülékek és befogók."],
+            travelNext: { distance: "12 km", time: "15 min" } 
           },
           {
             name: "Dana Hungary Kft.",
@@ -536,6 +609,7 @@ const TRIP_TABS = [
             ],
             travelNext: { distance: "8 km", time: "10 min" }
           },
+          { name: "Autoliv Hungary", address: "Sopronkövesd", contact: "+36 99", web: "autoliv.com", maps: "https://maps.google.com/?q=Autoliv+Sopronkovesd", desc: "Safety systems.", strategy: "Seatbelt housings.", pitch: ["High volume stamping.", "Precision assembly."], travelNext: { distance: "18 km", time: "22 min" } },
           {
             name: "Nemak Győr Kft.",
             address: "Nyírfa sor, 9027 Győr, Hungary",
@@ -548,8 +622,12 @@ const TRIP_TABS = [
               "Verschweißen von Aluminium-Gussteilen zu komplexen Baugruppen.",
               "Höchste Präzision für die internationale Automotive-Industrie.",
               "Kurze Reaktionszeiten bei Prototypen-Schweißungen."
-            ]
-          }
+            ],
+            travelNext: { distance: "10 km", time: "12 min" }
+          },
+          { name: "Pannon Weld", address: "Győr", contact: "+36 96", web: "pannonweld.hu", maps: "https://maps.google.com/?q=Pannon+Weld+Gyor", desc: "Welding SME.", strategy: "Subcontracting.", pitch: ["Manual & Robot.", "SME flexibility."], travelNext: { distance: "15 km", time: "18 min" } },
+          { name: "Karsai Holding", address: "Székesfehérvár Hub", contact: "+36 22", web: "karsai.hu", maps: "https://maps.google.com/?q=Karsai+Gyor", desc: "Tools & Plastics.", strategy: "Metal inserts.", pitch: ["Hybrid components.", "Automotive supply."], travelNext: { distance: "12 km", time: "15 min" } },
+          { name: "Met-Na Kft.", address: "Győr", contact: "+36 96", web: "met-na.hu", maps: "https://maps.google.com/?q=Met-Na+Gyor", desc: "Precision machining.", strategy: "Precision housings.", pitch: ["CNC & Mounting.", "Short lead times."] }
         ]
       },
       {
@@ -569,8 +647,9 @@ const TRIP_TABS = [
               "Robustheit für den 24/7 Fabrikeinsatz.",
               "ISO-zertifizierte Qualität für höchste Prozesssicherheit."
             ],
-            travelNext: { distance: "52 km", time: "45 min" }
+            travelNext: { distance: "12 km", time: "15 min" }
           },
+          { name: "IAC Group", address: "Lozorno", contact: "+421 2", web: "iacgroup.com", maps: "https://maps.google.com/?q=IAC+Lozorno", desc: "Interiors.", strategy: "Frame supports.", pitch: ["Instrument panel frames.", "Series production."], travelNext: { distance: "35 km", time: "30 min" } },
           {
             name: "CIE Bratislava",
             address: "Ulica viedenská cesta, 851 01 Bratislava, Slovakia",
@@ -584,8 +663,9 @@ const TRIP_TABS = [
               "Hohe Prozessstabilität für Großserien.",
               "SME-Flexibilität innerhalb eines globalen Konzerns."
             ],
-            travelNext: { distance: "35 km", time: "30 min" }
+            travelNext: { distance: "25 km", time: "20 min" }
           },
+          { name: "Schnellecke Logistics", address: "Bratislava", contact: "+421 2", web: "schnellecke.com", maps: "https://maps.google.com/?q=Schnellecke+Bratislava", desc: "Supply chain.", strategy: "Sequencing racks.", pitch: ["Logistics equipment.", "Just-in-sequence."], travelNext: { distance: "18 km", time: "22 min" } },
           {
             name: "Matador Group (Engineering Division)",
             address: "Bratislavská 47, 917 01 Trnava (Nähe Bratislava)",
@@ -598,8 +678,12 @@ const TRIP_TABS = [
               "Fertigung von Schweißvorrichtungen für die automatisierte Produktion.",
               "Hohe geometrische Genauigkeit für Roboter-Cells.",
               "Langjährige Erfahrung in der Zusammenarbeit mit EU-Partnern."
-            ]
-          }
+            ],
+            travelNext: { distance: "15 km", time: "18 min" }
+          },
+          { name: "Tower Automotive", address: "Senec", contact: "+421 2", web: "towerinternational.com", maps: "https://maps.google.com/?q=Tower+Automotive+Senec", desc: "Structural parts.", strategy: "Body-in-white.", pitch: ["Chassis modules.", "Robotic welding."], travelNext: { distance: "22 km", time: "25 min" } },
+          { name: "Schüller", address: "Šamorín", contact: "+421 31", web: "schueller.sk", maps: "https://maps.google.com/?q=Schueller+Samorin", desc: "Kitchen/SME.", strategy: "Sheet metal parts.", pitch: ["Modular furniture.", "SME precision."], travelNext: { distance: "28 km", time: "30 min" } },
+          { name: "HB Reavis", address: "Bratislava", contact: "+421 2", web: "hbreavis.com", maps: "https://maps.google.com/?q=HB+Reavis", desc: "Construction tech.", strategy: "Steel structures.", pitch: ["Urban architecture.", "Large scale steel."] }
         ]
       },
       {
@@ -619,8 +703,9 @@ const TRIP_TABS = [
               "Kapazität für großvolumige Rahmenstrukturen.",
               "Kurze Wege: Wien ist unser tägliches Einsatzgebiet."
             ],
-            travelNext: { distance: "15 km", time: "20 min" }
+            travelNext: { distance: "8 km", time: "10 min" }
           },
+          { name: "Knorr-Bremse", address: "Mödling", contact: "+43 2236", web: "knorr-bremse.at", maps: "https://maps.google.com/?q=Knorr+Bremse+Moedling", desc: "Brake systems.", strategy: "Alu/Steel frames.", pitch: ["Safety standards.", "Rail certified."], travelNext: { distance: "25 km", time: "20 min" } },
           {
             name: "Stahlbau Wien GmbH",
             address: "Haidequerstraße 1, 1110 Wien",
@@ -636,6 +721,7 @@ const TRIP_TABS = [
             ],
             travelNext: { distance: "12 km", time: "18 min" }
           },
+          { name: "Magna Steyr Wien", address: "Wien-Oberwaltersdorf", contact: "+43 2253", web: "magna.com", maps: "https://maps.google.com/?q=Magna+Wien", desc: "Engineering hub.", strategy: "Prototypes.", pitch: ["R&D focus.", "Custom assemblies."], travelNext: { distance: "15 km", time: "22 min" } },
           {
             name: "Rosenbauer International AG",
             address: "Paschinger Str. 90, 4060 Leonding (oder Wiener Büro)",
@@ -648,8 +734,12 @@ const TRIP_TABS = [
               "Leichtbau-Schweißkonstruktionen für maximale Wasserladung.",
               "Korrosionsbeständige Edelstahllösungen für Pumpensysteme.",
               "Partner für Ihre anspruchsvollsten Sonderfahrzeuge."
-            ]
-          }
+            ],
+            travelNext: { distance: "10 km", time: "15 min" }
+          },
+          { name: "Thales Austria", address: "Wien", contact: "+43 1 27711", web: "thalesgroup.com", maps: "https://maps.google.com/?q=Thales+Wien", desc: "Traffic systems.", strategy: "Housing units.", pitch: ["High-tech racks.", "Security welding."], travelNext: { distance: "12 km", time: "12 min" } },
+          { name: "Andritz AG Wien", address: "Wien", contact: "+43 1 81190", web: "andritz.com", maps: "https://maps.google.com/?q=Andritz+Wien", desc: "Plant engineering.", strategy: "Separation tech.", pitch: ["Filter-press frames.", "Process equipment."], travelNext: { distance: "15 km", time: "18 min" } },
+          { name: "Wiener Linien", address: "Simmering", contact: "+43 1 7909", web: "wienerlinien.at", maps: "https://maps.google.com/?q=Wiener+Linien+Wien", desc: "Urban transport.", strategy: "Maintenance parts.", pitch: ["Reliability focus.", "Urban logistics."] }
         ]
       }
     ]
@@ -663,10 +753,35 @@ const TRIP_TABS = [
         group: "Tag 1: Maribor & Nord-Ost (Zentralslowenien)",
         focus: "Schwerer Stahlbau & Sondermaschinen",
         companies: [
-          { name: "ADK d.o.o.", address: "Hoče", contact: "+386 2 616", web: "adk.si", maps: "https://maps.google.com/?q=ADK+Hoce", desc: "Kran-Komponenten.", strategy: "Ausleger-Outsourcing.", pitch: ["Feinkornbaustahl-Pro.", "ISO 3834-2."], travelNext: { distance: "8km", time: "10 min" } },
-          { name: "Ledinek", address: "Hoče", contact: "+386 2 613", web: "ledinek.com", maps: "https://maps.google.com/?q=Ledinek+Hoce", desc: "Holzbearbeitung.", strategy: "Maschinen-Rahmen.", pitch: ["Präzisions-Stahlbau.", "SME-Synergie."], travelNext: { distance: "52km", time: "45 min" } },
+          { 
+            name: "ADK d.o.o.", 
+            address: "Hoče", 
+            contact: "+386 2 616", 
+            web: "adk.si", 
+            maps: "https://maps.google.com/?q=ADK+Hoce", 
+            desc: "Kran-Komponenten.", 
+            strategy: "Ausleger-Outsourcing.", 
+            pitch: ["Tiefen-Penetration ohne Porosität.", "Stahl-Poesie unter dem Visier."],
+            pitchEN: ["Deep penetration without porosity.", "Steel poetry under the welding helmet."],
+            pitchSL: ["Globoka penetracija brez poroznosti.", "Jeklena poezija pod varilno masko."],
+            travelNext: { distance: "8km", time: "10 min" } 
+          },
+          { 
+            name: "Ledinek", 
+            address: "Hoče", 
+            contact: "+386 2 613", 
+            web: "ledinek.com", 
+            maps: "https://maps.google.com/?q=Ledinek+Hoce", 
+            desc: "Holzbearbeitung.", 
+            strategy: "Maschinen-Rahmen.", 
+            pitch: ["Spezialiste für hochbelastbare Schweißkonstruktionen.", "Prüfzertifizierte Naht-Qualität."],
+            pitchEN: ["Our arc is steadier than a surgeon's hand.", "Grind-free aesthetics: when the weld is so good, you don't even want to hide it."],
+            pitchHU: ["Az ívünk stabilabb, mint egy sebész keze.", "Csiszolásmentes esztétika: ha a varrat ilyen jó, nincs mit rejtegetni."],
+            pitchSL: ["Naš oblok je bolj stabilen kot kirurgova roka.", "Estetika brez brušenja: ko je zvar tako dober, ga ne želite skriti."],
+            travelNext: { distance: "52km", time: "45 min" } 
+          },
           { name: "Kovinc d.o.o.", address: "Cerklje", contact: "+386 4 280", web: "kovinc.si", maps: "https://maps.google.com/?q=Kovinc+Lahovce", desc: "Blechbearbeitung SME.", strategy: "Gehäuse-Serien.", pitch: ["Modernster Laserpark.", "Automatisierte Schweißung."], travelNext: { distance: "35km", time: "30 min" } },
-          { name: "Akrapovič", address: "Ivančna Gorica", contact: "+386 1 781", web: "akrapovic.com", maps: "https://maps.google.com/?q=Akrapovic+Ivancna+Gorica", desc: "High-End Exhaust.", strategy: "Titan/Inconel Schweißen.", pitch: ["Roboter-Schweißen.", "Premium Performance."], travelNext: { distance: "45km", time: "40 min" } },
+          { name: "Akrapovič", address: "Ivančna Gorica", contact: "+386 1 781", web: "akrapovic.com", maps: "https://maps.google.com/?q=Akrapovic+Ivancna+Gorica", desc: "High-End Exhaust.", strategy: "Titan/Inconel Schweißen.", pitch: ["WIG-Kunst auf Formel-1 Niveau.", "Gasschutz ist unsere Religion."], travelNext: { distance: "45km", time: "40 min" } },
           { name: "Kolektor", address: "Idrija/Ljubljana", contact: "+386 5 372", web: "kolektor.com", maps: "https://maps.google.com/?q=Kolektor+Ljubljana", desc: "Automotive/Energie.", strategy: "Transformator-Gehäuse.", pitch: ["Dichtheits-Garantie.", "Kern-Komponente."], travelNext: { distance: "55km", time: "50 min" } },
           { name: "Hidria", address: "Ljubljana", contact: "+43 723 371", web: "hidria.com", maps: "https://maps.google.com/?q=Hidria+Ljubljana", desc: "Automotive Global.", strategy: "Chassis-Komponenten.", pitch: ["Alu-Druckguss-Schweiß.", "IATF Standards."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "IMP Pumps", address: "Komenda", contact: "+386 1 280", web: "imp-pumps.com", maps: "https://maps.google.com/?q=IMP+Pumps", desc: "Pumpentechnik.", strategy: "Pumpengehäuse.", pitch: ["Hydraulische Effizienz.", "Edelstahl-Fokus."], travelNext: { distance: "10km", time: "12 min" } },
@@ -733,8 +848,32 @@ const TRIP_TABS = [
         group: "Tag 1: Budapest & Central Hub",
         focus: "Automotive Hub & Railway Systems",
         companies: [
-          { name: "Knorr-Bremse Rail", address: "Budapest", contact: "+36 1 289", web: "knorr-bremse.hu", maps: "https://maps.google.com/?q=Knorr+Bremse+Budapest", desc: "Bahn-Systeme.", strategy: "Guss-Schweiß-Module.", pitch: ["Sicherheits-Fokus.", "Großserien."], travelNext: { distance: "25km", time: "30 min" } },
-          { name: "Magyar Suzuki", address: "Esztergom", contact: "+36 33 541", web: "suzuki.hu", maps: "https://maps.google.com/?q=Suzuki+Esztergom", desc: "Automotive Global.", strategy: "Chassis-Baugruppen.", pitch: ["Automotive Precision.", "JIT Logistik."], travelNext: { distance: "30km", time: "35 min" } },
+          { 
+            name: "Knorr-Bremse Rail", 
+            address: "Budapest", 
+            contact: "+36 1 289", 
+            web: "knorr-bremse.hu", 
+            maps: "https://maps.google.com/?q=Knorr+Bremse+Budapest", 
+            desc: "Bahn-Systeme.", 
+            strategy: "Guss-Schweiß-Module.", 
+            pitch: ["Sicherheits-Fokus.", "Großserien."],
+            pitchEN: ["Safety-critical focus for rail systems.", "High-volume series production."],
+            pitchHU: ["Biztonságkritikus fókusz a vasúti rendszereknél.", "Nagy volumenű sorozatgyártás."],
+            travelNext: { distance: "25km", time: "30 min" } 
+          },
+          { 
+            name: "Magyar Suzuki", 
+            address: "Esztergom", 
+            contact: "+36 33 541", 
+            web: "suzuki.hu", 
+            maps: "https://maps.google.com/?q=Suzuki+Esztergom", 
+            desc: "Automotive Global.", 
+            strategy: "Chassis-Baugruppen.", 
+            pitch: ["Automotive Precision.", "JIT Logistik."],
+            pitchEN: ["Automotive precision standards.", "Just-in-time logistics support."],
+            pitchHU: ["Autóipari precíziós szabványok.", "Just-in-time logisztikai támogatás."],
+            travelNext: { distance: "30km", time: "35 min" } 
+          },
           { name: "Csepel Metall", address: "Budapest", contact: "+36 1 278", web: "csepelmetall.hu", maps: "https://maps.google.com/?q=Csepel+Metall", desc: "SME Guss/Bau.", strategy: "Gehäuse-Strukturen.", pitch: ["SME Flexibilität.", "Guss-Integration."], travelNext: { distance: "15km", time: "20 min" } },
           { name: "Ganz-Mavag", address: "Budapest", contact: "+36 1 431", web: "ganzmavag.hu", maps: "https://maps.google.com/?q=Ganz+Mavag", desc: "Lokomotivenbau.", strategy: "Rahmen-Strukturen.", pitch: ["Schwerindustrie.", "Bahn-Zertifikat."], travelNext: { distance: "12km", time: "15 min" } },
           { name: "Ikarus Hub", address: "Budapest", contact: "+36 1 432", web: "ikarus.hu", maps: "https://maps.google.com/?q=Ikarus+Budapest", desc: "Bus-Fertigung.", strategy: "Skelettbau-Module.", pitch: ["Rohrrahmen-Spezialist.", "E-Bus Projekt."], travelNext: { distance: "18km", time: "22 min" } },
@@ -793,12 +932,157 @@ const TRIP_TABS = [
         ]
       }
     ]
+  },
+  {
+    id: 'bayern_tour',
+    label: 'Bayern SME Tour (DE)',
+    description: 'Fokus: Premium-Stahlbau, Automotive-Supply & Spezialmaschinenbau in Oberbayern & Schwaben',
+    leads: [
+      {
+        group: "Tag 1: München & Umland",
+        focus: "High-Tech Stahlbau & Spezial-Fahrzeugbau",
+        companies: [
+          { 
+            name: "Meiller Kipper", 
+            address: "München (Bernried)", 
+            contact: "+49 89 1487", 
+            web: "meiller.com", 
+            maps: "https://maps.google.com/?q=Meiller+Kipper+Muenchen", 
+            desc: "Weltmarktführer für Kippaufbauten.", 
+            strategy: "Stahlbau-Zulieferung.", 
+            pitch: ["Robuste Schweißbaugruppen.", "Serienfertigung."],
+            travelNext: { distance: "25km", time: "30 min" }
+          },
+          { 
+            name: "Krauss-Maffei Wegmann", 
+            address: "München", 
+            contact: "+49 89 8140", 
+            web: "knds.de", 
+            maps: "https://maps.google.com/?q=KMW+Muenchen", 
+            desc: "Systemhaus für Schutzsysteme.", 
+            strategy: "Präzisions-Schweißbau.", 
+            pitch: ["Höchste Zertifizierungsstufe.", "Panzerstahl-Expertise."],
+            travelNext: { distance: "18km", time: "25 min" }
+          },
+          { 
+            name: "MTU Aero Engines", 
+            address: "Dachau/München", 
+            contact: "+49 89 1489", 
+            web: "mtu.de", 
+            maps: "https://maps.google.com/?q=MTU+Muenchen", 
+            desc: "Triebwerkstechnik.", 
+            strategy: "Spezial-Schweißverfahren.", 
+            pitch: ["Cleanroom standards.", "Ti-Welding expert."]
+          }
+        ]
+      },
+      {
+        group: "Tag 2: Augsburg & Schwaben",
+        focus: "Anlagenbau & Robotik-Cluster",
+        companies: [
+          { 
+            name: "Humbaur GmbH", 
+            address: "Gersthofen", 
+            contact: "+49 821 2492", 
+            web: "humbaur.com", 
+            maps: "https://maps.google.com/?q=Humbaur+Gersthofen", 
+            desc: "Anhänger- & Kofferaufbauten.", 
+            strategy: "Chassis-Fertigung.", 
+            pitch: ["Hoher Automatisierungsgrad.", "Verzinkte Strukturen."],
+            travelNext: { distance: "12km", time: "15 min" }
+          },
+          { 
+            name: "Zeppelin Systems", 
+            address: "Friedberg (Augsburg)", 
+            contact: "+49 821 7483", 
+            web: "zeppelin-systems.com", 
+            maps: "https://maps.google.com/?q=Zeppelin+Systems+Friedberg", 
+            desc: "Anlagenbau für Schüttgüter.", 
+            strategy: "Silobau & Behälter.", 
+            pitch: ["Alu- & Edelstahlschweißen.", "Großkomponenten."],
+            travelNext: { distance: "35km", time: "40 min" }
+          },
+          { 
+            name: "KUKA Robotics", 
+            address: "Augsburg Hub", 
+            contact: "+49 821 797", 
+            web: "kuka.com", 
+            maps: "https://maps.google.com/?q=KUKA+Augsburg", 
+            desc: "Automatisierungsprofi.", 
+            strategy: "Vorrichtungskomponenten.", 
+            pitch: ["Smart Factory Integration.", "Precision frames."]
+          }
+        ]
+      },
+      {
+        group: "Tag 3: Niederbayern & Landshut",
+        focus: "Heavy Engineering & Logistik-Systeme",
+        companies: [
+          { 
+            name: "Sennebogen", 
+            address: "Straubing", 
+            contact: "+49 9421 540", 
+            web: "sennebogen.com", 
+            maps: "https://maps.google.com/?q=Sennebogen+Straubing", 
+            desc: "Umschlagsbagger & Krane.", 
+            strategy: "Massivstahlbau-Outsourcing.", 
+            pitch: ["Baggermasten-Expertise.", "Schwere Baugruppen."],
+            travelNext: { distance: "45km", time: "40 min" }
+          },
+          { 
+            name: "Sturm Gruppe", 
+            address: "Salching", 
+            contact: "+49 9421 5520", 
+            web: "sturm-gruppe.com", 
+            maps: "https://maps.google.com/?q=Sturm+Gruppe+Salching", 
+            desc: "Fördertechnik & Oberflächen.", 
+            strategy: "Anlagen-Gestelle.", 
+            pitch: ["Skalierbare Mechanik.", "JIT Delivery."],
+            travelNext: { distance: "28km", time: "30 min" }
+          },
+          { 
+            name: "Dräxlmaier Group", 
+            address: "Vilsbiburg", 
+            contact: "+49 8741 47", 
+            web: "draexlmaier.com", 
+            maps: "https://maps.google.com/?q=Draexlmaier+Vilsbiburg", 
+            desc: "Premium Automotive Supply.", 
+            strategy: "Batteriegehäuse-Frames.", 
+            pitch: ["E-Mobility transition.", "Quality management."]
+          }
+        ]
+      }
+    ]
   }
 ];
 
 export default function App() {
   const [lang, setLang] = useState<Language>('de');
-  const [activeTrip, setActiveTrip] = useState(TRIP_TABS[0]);
+  const [isAdminMode, setIsAdminMode] = useState(false);
+  const [trips, setTrips] = useState(() => {
+    const saved = localStorage.getItem('trips_data');
+    return saved ? JSON.parse(saved) : TRIP_TABS;
+  });
+  const [activeColors, setActiveColors] = useState(() => {
+    const saved = localStorage.getItem('theme_colors');
+    return saved ? JSON.parse(saved) : COLORS;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('trips_data', JSON.stringify(trips));
+  }, [trips]);
+
+  useEffect(() => {
+    localStorage.setItem('theme_colors', JSON.stringify(activeColors));
+  }, [activeColors]);
+
+  const [activeTrip, setActiveTrip] = useState(trips[0]);
+
+  useEffect(() => {
+    // Keep activeTrip in sync if it was modified
+    const current = trips.find((t: any) => t.id === activeTrip.id);
+    if (current) setActiveTrip(current);
+  }, [trips, activeTrip.id]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -840,12 +1124,22 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen font-sans selection:bg-[#F27D26] selection:text-white" style={{ backgroundColor: COLORS.bg, color: COLORS.text }}>
+    <div className="min-h-screen font-sans selection:bg-[#F27D26] selection:text-white" style={{ backgroundColor: activeColors.bg, color: activeColors.text }}>
+      <style>{`
+        :root {
+          --accent: ${activeColors.accent};
+          --bg: ${activeColors.bg};
+          --card: ${activeColors.card};
+          --text: ${activeColors.text};
+          --muted: ${activeColors.muted};
+          --border: ${activeColors.border};
+        }
+      `}</style>
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#0F0F0F]/90 backdrop-blur-md border-b border-[#2A2A2A] py-3' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[#F27D26] flex items-center justify-center font-bold text-black text-xl">MT</div>
+            <div className="w-10 h-10 bg-[#F27D26] flex items-center justify-center font-bold text-black text-xl cursor-pointer" onClick={() => setIsAdminMode(!isAdminMode)}>MT</div>
             <div className="flex flex-col">
               <span className="font-black text-xl tracking-tighter leading-none">MONTAGE TEHNIK</span>
               <span className="text-[10px] tracking-[0.2em] font-mono text-[#F27D26]">METAL EXCELLENCE</span>
@@ -870,9 +1164,6 @@ export default function App() {
               ))}
             </div>
 
-            <button className="bg-white text-black px-5 py-2 hover:bg-[#F27D26] hover:text-white transition-all transform hover:-translate-y-0.5">
-              {t.sendRequest}
-            </button>
           </div>
 
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -918,8 +1209,8 @@ export default function App() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F0F0F] via-transparent to-transparent z-10" />
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#2A2A2A 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+          <div className="absolute inset-0 z-10" style={{ backgroundImage: `linear-gradient(to right, ${activeColors.bg}, transparent, transparent)` }} />
+          <div className="absolute inset-0" style={{ backgroundImage: `radial-gradient(${activeColors.border} 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -977,7 +1268,7 @@ export default function App() {
       </section>
 
       {/* Trust Section */}
-      <section id="qualität" className="bg-[#1A1A1A] border-y border-[#2A2A2A] py-12">
+      <section id="qualität" className="border-y py-12" style={{ backgroundColor: activeColors.card, borderColor: activeColors.border }}>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-70 grayscale hover:grayscale-0 transition-all">
           <div className="flex items-center gap-3">
             <ShieldCheck className="text-[#F27D26]" />
@@ -1008,20 +1299,23 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#2A2A2A] border border-[#2A2A2A]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px border" style={{ backgroundColor: activeColors.border, borderColor: activeColors.border }}>
             <ServiceCard 
+              theme={activeColors}
               icon={<Truck className="w-8 h-8" />} 
               title={lang === 'de' ? "LKW-HILFSRAHMEN" : lang === 'sl' ? "POMOŽNI PODVOZJI" : lang === 'hu' ? "TEHERAUTÓ SEGÉDVÁZAK" : "TRUCK SUBFRAMES"} 
               subtitle={lang === 'de' ? "Nutzfahrzeuge" : "Nutzfahrzeuge"}
               description={lang === 'de' ? "Spezialisierte Rahmen für Kipper, Kräne und Asphaltmischer. Robust für maximale Beanspruchung." : lang === 'sl' ? "Specializirani okvirji za prekucnike, žerjave in mešalnike asfalta." : "Specialized frames for tippers, cranes, and asphalt mixers."}
             />
             <ServiceCard 
+              theme={activeColors}
               icon={<Pickaxe className="w-8 h-8" />} 
               title={lang === 'de' ? "BERGBAU-KOMPONENTEN" : lang === 'sl' ? "KOMPONENTE ZA RUDARSTVO" : lang === 'hu' ? "BÁNYÁSZATI ALKATRÉSZEK" : "MINING COMPONENTS"} 
               subtitle="Mining Equipment"
               description={lang === 'de' ? "Förderer, Rohrleitungen und Maschinenelemente für schwerste Einsatzbedingungen." : lang === 'sl' ? "Transporterji, cevovodi in strojni elementi za najtežje pogoje uporabe." : "Conveyors, pipelines and machine elements for the toughest operating conditions."}
             />
             <ServiceCard 
+              theme={activeColors}
               icon={<Factory className="w-8 h-8" />} 
               title={lang === 'de' ? "SERIENFERTIGUNG" : lang === 'sl' ? "SERIJSKA PROIZVODNJA" : lang === 'hu' ? "SOROZATGYÁRTÁS" : "SERIES PRODUCTION"} 
               subtitle="Outsourcing Partner"
@@ -1032,19 +1326,19 @@ export default function App() {
       </section>
 
       {/* Sales Arguments / Vorteile Section */}
-      <section id="vorteile" className="py-32 bg-[#1A1A1A]">
+      <section id="vorteile" className="py-32" style={{ backgroundColor: activeColors.card }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6">{t.whyTitle1}<br /><span className="text-[#F27D26]">{t.whyTitle2}</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 underline decoration-[#F27D26] decoration-4 underline-offset-8 text-white">{t.whyTitle1}<br /><span className="text-[#F27D26]">{t.whyTitle2}</span></h2>
             <p className="text-[#8E9299] max-w-2xl mx-auto text-lg italic text-balance">{t.whySubtitle}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {SALES_ARGUMENTS.map((arg, idx) => (
-              <div key={idx} className="bg-[#0F0F0F] border border-[#2A2A2A] p-6 hover:border-[#F27D26] transition-all group">
-                <div className="mb-4 group-hover:scale-110 transition-transform">{arg.icon}</div>
-                <h4 className="text-sm font-black uppercase mb-2 tracking-tight group-hover:text-[#F27D26] transition-colors">{lang === 'de' ? arg.title : lang === 'en' ? (idx === 0 ? "Geographic Proximity" : idx === 1 ? "ISO 3834-3 Certification" : idx === 2 ? "Specialized Expertise" : arg.title) : arg.title}</h4>
-                <p className="text-xs text-[#8E9299] leading-relaxed">{lang === 'de' ? arg.desc : lang === 'en' ? (idx === 0 ? "Only 3.5 hours from Linz/Graz (Čakovec). Faster than many domestic partners." : arg.desc) : arg.desc}</p>
+            {(t.reasons || SALES_ARGUMENTS).map((arg, idx) => (
+              <div key={idx} className="border p-6 hover:border-[#F27D26] transition-all group" style={{ backgroundColor: activeColors.bg, borderColor: activeColors.border }}>
+                <div className="mb-4 group-hover:scale-110 transition-transform">{SALES_ARGUMENTS[idx].icon}</div>
+                <h4 className="text-sm font-black uppercase mb-2 tracking-tight group-hover:text-[#F27D26] transition-colors" style={{ color: activeColors.text }}>{arg.title}</h4>
+                <p className="text-xs leading-relaxed" style={{ color: activeColors.muted }}>{arg.desc}</p>
               </div>
             ))}
           </div>
@@ -1052,15 +1346,15 @@ export default function App() {
       </section>
 
       {/* Trip Plan Section */}
-      <section id="besuchsplan" className="py-32 bg-[#151515] border-y border-[#2A2A2A]">
+      <section id="besuchsplan" className="py-32 border-y" style={{ backgroundColor: activeColors.bg === '#0F0F0F' ? '#151515' : activeColors.bg, borderColor: activeColors.border }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 underline decoration-[#F27D26] decoration-4 underline-offset-8">{t.besuchsplanTitle}</h2>
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 underline decoration-[#F27D26] decoration-4 underline-offset-8 text-white">{t.besuchsplanTitle}</h2>
             <p className="text-[#8E9299] max-w-xl italic mb-10">{t.besuchsplanDesc}</p>
             
             {/* Tab Switched */}
-            <div className="flex flex-wrap gap-4 border-b border-[#2A2A2A] pb-0">
-              {TRIP_TABS.map((trip) => {
+            <div className="flex flex-wrap gap-4 border-b border-[#2A2A2A] pb-0" style={{ borderColor: activeColors.border }}>
+              {trips.length > 0 ? trips.map((trip: any) => {
                 let label = trip.label;
                 if (trip.id === 'slovenia' && lang === 'sl') label = "Slowenien & Adria Tour (SLO)";
                 if (trip.id === 'hungary_deep' && lang === 'hu') label = "Ungarn Deep-Dive (HU)";
@@ -1070,50 +1364,55 @@ export default function App() {
                     key={trip.id}
                     onClick={() => setActiveTrip(trip)}
                     className={`px-8 py-4 font-black uppercase tracking-widest text-sm transition-all relative ${
-                      activeTrip.id === trip.id 
+                      activeTrip?.id === trip.id 
                       ? 'text-[#F27D26]' 
                       : 'text-[#8E9299] hover:text-white'
                     }`}
                   >
                     {label}
-                    {activeTrip.id === trip.id && (
+                    {activeTrip?.id === trip.id && (
                       <motion.div layoutId="tab-active" className="absolute bottom-0 left-0 w-full h-[4px] bg-[#F27D26]" />
                     )}
                   </button>
                 );
-              })}
+              }) : (
+                <div className="pb-4 text-[#8E9299] text-xs font-mono uppercase italic">Trenutno nema dostupnih tura. Upotrijebite Admin Panel za dodavanje.</div>
+              )}
             </div>
-            <div className="mt-6 text-xs font-mono uppercase tracking-widest text-[#F27D26]/70 italic">
-              {activeTrip.id === 'slovenia' && lang === 'sl' ? "Fokus: Visokonatančna jeklena konstrukcija, SME strojegradnja & avtomobilski grozd" : 
-               activeTrip.id === 'hungary_deep' && lang === 'hu' ? "Fókusz: Budapesti nagyvárosi régió és dél-magyarországi mezőgazdasági központ" : 
-               activeTrip.description}
-            </div>
+            {activeTrip && (
+              <div className="mt-6 text-xs font-mono uppercase tracking-widest text-[#F27D26]/70 italic">
+                {activeTrip.id === 'slovenia' && lang === 'sl' ? "Fokus: Visokonatančna jeklena konstrukcija, SME strojegradnja & avtomobilski grozd" : 
+                 activeTrip.id === 'hungary_deep' && lang === 'hu' ? "Fókusz: Budapesti nagyvárosi régió és dél-magyarországi mezőgazdasági központ" : 
+                 activeTrip.description}
+              </div>
+            )}
           </div>
 
           <div className="space-y-12">
             <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTrip.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-                className="space-y-12"
-              >
-                {activeTrip.leads.map((group, gIdx) => (
-                  <div key={gIdx} className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="h-8 w-1 bg-[#F27D26]" />
-                      <h3 className="text-2xl font-black uppercase tracking-tight">{group.group} <span className="text-[#8E9299] font-medium text-lg ml-2">[{group.focus}]</span></h3>
-                    </div>
+              {activeTrip && activeTrip.leads && (
+                <motion.div
+                  key={activeTrip.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+                  className="space-y-12"
+                >
+                  {activeTrip.leads.map((group: any, gIdx: number) => (
+                    <div key={gIdx} className="space-y-6">
+                      <div className="flex items-center gap-4">
+                        <div className="h-8 w-1 bg-[#F27D26]" />
+                        <h3 className="text-2xl font-black uppercase tracking-tight text-white">{group.group} <span className="text-[#8E9299] font-medium text-lg ml-2">[{group.focus}]</span></h3>
+                      </div>
 
                     {/* Graphical Route / Timetable */}
-                    <div className="bg-[#1A1A1A] border border-[#2A2A2A] p-6 mb-8 overflow-x-auto">
+                    <div className="bg-[#1A1A1A] border p-6 mb-8 overflow-x-auto" style={{ backgroundColor: activeColors.card, borderColor: activeColors.border }}>
                       <div className="flex items-center min-w-[800px] justify-between relative py-12">
                         {/* Connecting Line */}
-                        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-[#2A2A2A] -translate-y-1/2 z-0" />
+                        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-[#2A2A2A] -translate-y-1/2 z-0" style={{ backgroundColor: activeColors.border }} />
                         
-                        {group.companies.map((company, cIdx) => (
+                        {group.companies.filter((c: any) => !c.hidden).map((company: any, cIdx: number) => (
                           <React.Fragment key={cIdx}>
                             <div className="relative z-10 flex flex-col items-center group/stop text-center w-40">
                               <div className="w-12 h-12 bg-[#0F0F0F] border-2 border-[#F27D26] flex items-center justify-center rounded-full mb-3 group-hover/stop:bg-[#F27D26] transition-all">
@@ -1127,10 +1426,10 @@ export default function App() {
                               </div>
                             </div>
 
-                            {company.travelNext && (
+                            {(company.travelNext && group.companies.filter((c: any) => !c.hidden)[cIdx + 1]) && (
                               <div className="flex-1 px-4 relative">
                                 <div className="absolute top-1/2 left-0 w-full h-[4px] bg-[#F27D26]/20 -translate-y-1/2" />
-                                <div className="flex flex-col items-center bg-[#1A1A1A] relative z-10 py-1">
+                                <div className="flex flex-col items-center bg-[#1A1A1A] relative z-10 py-1" style={{ backgroundColor: activeColors.card }}>
                                   <div className="flex items-center gap-2 text-[#F27D26]">
                                     <Clock className="w-3 h-3" />
                                     <span className="text-[10px] font-bold">{company.travelNext.time}</span>
@@ -1147,10 +1446,10 @@ export default function App() {
                     </div>
                     
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                      {group.companies.map((company, cIdx) => (
-                        <div key={cIdx} className="bg-[#1A1A1A] border border-[#2A2A2A] p-6 hover:border-[#F27D26]/50 transition-all flex flex-col justify-between group/card">
+                      {group.companies.filter((c: any) => !c.hidden).map((company: any, cIdx: number) => (
+                        <div key={cIdx} className="border p-6 hover:border-[#F27D26]/50 transition-all flex flex-col justify-between group/card" style={{ backgroundColor: activeColors.card, borderColor: activeColors.border }}>
                           <div>
-                            <h4 className="text-xl font-bold mb-2 flex items-center gap-2 group-hover/card:text-[#F27D26] transition-colors">
+                            <h4 className="text-xl font-bold mb-2 flex items-center gap-2 group-hover/card:text-[#F27D26] transition-colors text-white">
                               <Target className="w-4 h-4 text-[#F27D26]" /> {company.name}
                             </h4>
                             <div className="text-xs text-[#8E9299] mb-4 space-y-2">
@@ -1173,35 +1472,26 @@ export default function App() {
                                 </a>
                               </div>
                             </div>
-                            <p className="text-sm border-t border-[#2A2A2A] pt-4 mb-4 text-white/90">
+                            <p className="text-sm border-t border-[#2A2A2A] pt-4 mb-4 text-white/90" style={{ borderTopColor: activeColors.border }}>
                               {company.desc}
                             </p>
                           </div>
                           <div className="bg-[#F27D26]/5 p-4 border border-[#F27D26]/10">
                             <span className="text-[10px] font-black text-[#F27D26] uppercase tracking-widest block mb-2">{t.pitchLabel}</span>
                             <ul className="space-y-2 mb-4">
-                              {company.pitch?.map((point: string, pIdx: number) => {
-                                let translatedPoint = point;
-                                if (lang === 'en') {
-                                  if (point.includes('Schweiß')) translatedPoint = point.replace('Schweiß', 'Welding');
-                                  if (point.includes('Präzision')) translatedPoint = point.replace('Präzision', 'Precision');
-                                  if (point.includes('High-Tech')) translatedPoint = 'High-tech steel construction.';
-                                  if (point.includes('Weltmarktführer')) translatedPoint = 'Global market leader partner.';
-                                } else if (lang === 'sl') {
-                                  if (point.includes('Schweiß')) translatedPoint = 'Varjene baugrupe.';
-                                  if (point.includes('Präzision')) translatedPoint = 'Natančna izdelava.';
-                                  if (point.includes('Kompetenz')) translatedPoint = 'Visoka kompetenca.';
-                                } else if (lang === 'hu') {
-                                  if (point.includes('Präzision')) translatedPoint = 'Precíziós gyártás.';
-                                  if (point.includes('Qualität')) translatedPoint = 'Kiváló minőség.';
-                                }
-                                return (
+                              {company.customPitch ? (
+                                <li className="text-[11px] leading-tight flex items-start gap-2 italic">
+                                  <MessageSquare className="w-3 h-3 text-[#F27D26] shrink-0 mt-0.5" />
+                                  <span className="text-[#E4E3E0]">{company.customPitch}</span>
+                                </li>
+                              ) : (
+                                (company[`pitch${lang.toUpperCase()}` as keyof typeof company] as string[] || company.pitch)?.map((point: string, pIdx: number) => (
                                   <li key={pIdx} className="text-[11px] leading-tight flex items-start gap-2">
                                     <BadgeCheck className="w-3 h-3 text-[#25D366] shrink-0 mt-0.5" />
-                                    <span className="text-[#E4E3E0]">{translatedPoint}</span>
+                                    <span className="text-[#E4E3E0]">{point}</span>
                                   </li>
-                                );
-                              })}
+                                ))
+                              )}
                             </ul>
                             <span className="text-[10px] font-black text-[#F27D26] uppercase tracking-widest block mb-1">{t.strategyLabel}</span>
                             <p className="text-[11px] italic text-[#8E9299] leading-relaxed">
@@ -1216,8 +1506,9 @@ export default function App() {
                   </div>
                 ))}
               </motion.div>
-            </AnimatePresence>
-          </div>
+            )}
+          </AnimatePresence>
+        </div>
 
           <div className="mt-20 p-8 border border-[#F27D26]/30 bg-[#F27D26]/5">
             <h3 className="text-xl font-black uppercase mb-6 flex items-center gap-3">
@@ -1235,15 +1526,15 @@ export default function App() {
       {/* Contact Section */}
       <section id="kontakt" className="py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-[#1A1A1A] border border-[#2A2A2A] p-8 md:p-16 flex flex-col lg:flex-row gap-16">
+          <div className="border p-8 md:p-16 flex flex-col lg:flex-row gap-16" style={{ backgroundColor: activeColors.card, borderColor: activeColors.border }}>
             <div className="flex-1">
-              <h2 className="text-5xl font-black uppercase tracking-tighter mb-8">{t.contactTitle1}<br /><span className="text-[#F27D26]">{t.contactTitle2}</span></h2>
+              <h2 className="text-5xl font-black uppercase tracking-tighter mb-8 text-white">{t.contactTitle1}<br /><span className="text-[#F27D26]">{t.contactTitle2}</span></h2>
               <p className="text-[#8E9299] mb-12 max-w-md">{t.contactDesc}</p>
               
               <div className="space-y-6">
-                <div className="pb-4 border-b border-[#2A2A2A]">
+                <div className="pb-4 border-b" style={{ borderBottomColor: activeColors.border }}>
                   <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#F27D26] mb-1">{t.ansprechpartner}</div>
-                  <div className="font-black text-2xl tracking-tight">Siniša Špoljarić <span className="text-sm font-normal text-[#8E9299]"> – {t.direktor}</span></div>
+                  <div className="font-black text-2xl tracking-tight text-white">Siniša Špoljarić <span className="text-sm font-normal text-[#8E9299]"> – {t.direktor}</span></div>
                 </div>
                 <ContactInfo icon={<Phone />} title={lang === 'de' ? "DIREKTKONTAKT" : "DIRECT CONTACT"} text="+385 92 1987483" />
                 <ContactInfo icon={<Mail />} title={lang === 'de' ? "E-MAIL ANFRAGE" : "EMAIL INQUIRY"} text="info@montagetehnik.com" />
@@ -1361,20 +1652,331 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Admin Panel Overlay */}
+      <AnimatePresence>
+        {isAdminMode && (
+          <div className="fixed inset-0 z-[110] flex items-center justify-end bg-black/60 backdrop-blur-sm">
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              className="w-full max-w-3xl h-full bg-[#1A1A1A] border-l border-[#2A2A2A] flex flex-col"
+            >
+              <div className="p-8 border-b border-[#2A2A2A] flex items-center justify-between bg-[#0F0F0F]">
+                <div>
+                  <h2 className="text-2xl font-black uppercase tracking-tighter text-white">Upravljačka Ploča</h2>
+                  <p className="text-[10px] text-[#F27D26] font-mono uppercase tracking-widest">Upravljanje Turama i Postavkama</p>
+                </div>
+                <button onClick={() => setIsAdminMode(false)} className="p-2 hover:bg-[#2A2A2A] transition-colors rounded text-white">
+                  <X />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto p-8 space-y-12">
+                {/* Theme Settings */}
+                <section>
+                  <h3 className="text-xs font-black uppercase tracking-widest text-[#8E9299] mb-4 border-b border-[#2A2A2A] pb-2">Vizualne Postavke</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-[10px] font-bold uppercase tracking-widest block mb-2 opacity-60">Pozadina</label>
+                      <input 
+                        type="color" 
+                        value={activeColors.bg} 
+                        onChange={(e) => setActiveColors({...activeColors, bg: e.target.value})}
+                        className="w-full h-10 bg-transparent border border-[#2A2A2A] cursor-pointer"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[10px] font-bold uppercase tracking-widest block mb-2 opacity-60">Naglasak (Accent)</label>
+                      <input 
+                        type="color" 
+                        value={activeColors.accent} 
+                        onChange={(e) => setActiveColors({...activeColors, accent: e.target.value})}
+                        className="w-full h-10 bg-transparent border border-[#2A2A2A] cursor-pointer"
+                      />
+                    </div>
+                  </div>
+                </section>
+
+                {/* Tour Management Tabs */}
+                <section>
+                  <div className="flex items-center justify-between mb-6 border-b border-[#2A2A2A] pb-2">
+                    <h3 className="text-xs font-black uppercase tracking-widest text-[#8E9299]">Upravljanje stajalištima tura</h3>
+                  </div>
+
+                  {/* Tour Selector Tabs inside Admin */}
+                  <div className="flex flex-col gap-4 mb-6 border-b border-[#2A2A2A] pb-6">
+                    <div className="flex gap-2 overflow-x-auto pb-2">
+                      {trips.map((trip: any) => (
+                        <button
+                          key={trip.id}
+                          onClick={() => {
+                            const t = trips.find((item: any) => item.id === trip.id);
+                            if (t) setActiveTrip(t);
+                          }}
+                          className={`text-[10px] font-black uppercase px-4 py-2 transition-all whitespace-nowrap ${
+                            activeTrip.id === trip.id 
+                              ? 'bg-[#F27D26] text-black' 
+                              : 'bg-[#2A2A2A] text-[#8E9299] hover:text-white'
+                          }`}
+                        >
+                          {trip.label}
+                        </button>
+                      ))}
+                      <button 
+                        className="bg-green-600 text-white text-[10px] font-black px-4 py-2 uppercase hover:bg-green-500 transition-colors"
+                        onClick={() => {
+                          const newId = `tour_${Date.now()}`;
+                          const newTour = {
+                            id: newId,
+                            label: "Nova Tura",
+                            description: "Opis nove ture",
+                            leads: [
+                              {
+                                group: "Dan 1",
+                                focus: "Fokus tura",
+                                companies: []
+                              }
+                            ]
+                          };
+                          setTrips([...trips, newTour]);
+                          setActiveTrip(newTour);
+                        }}
+                      >
+                        + Nova Tura
+                      </button>
+                    </div>
+
+                    {/* Edit Active Tour Main Info */}
+                    {activeTrip && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-black/20 border border-[#2A2A2A]">
+                        <div className="space-y-1">
+                          <label className="text-[9px] font-black uppercase text-[#F27D26] tracking-widest">Naziv Ture</label>
+                          <input 
+                            className="w-full bg-[#0F0F0F] border border-[#2A2A2A] p-2 text-xs text-white focus:border-[#F27D26] outline-none"
+                            value={activeTrip.label}
+                            onChange={(e) => {
+                              const newTrips = [...trips];
+                              const idx = newTrips.findIndex(t => t.id === activeTrip.id);
+                              newTrips[idx].label = e.target.value;
+                              setTrips(newTrips);
+                            }}
+                          />
+                        </div>
+                        <div className="space-y-1">
+                          <label className="text-[9px] font-black uppercase text-[#F27D26] tracking-widest">Opis / Fokus Ture</label>
+                          <input 
+                            className="w-full bg-[#0F0F0F] border border-[#2A2A2A] p-2 text-xs text-white focus:border-[#F27D26] outline-none"
+                            value={activeTrip.description}
+                            onChange={(e) => {
+                              const newTrips = [...trips];
+                              const idx = newTrips.findIndex(t => t.id === activeTrip.id);
+                              newTrips[idx].description = e.target.value;
+                              setTrips(newTrips);
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="space-y-6">
+                    {activeTrip.leads.map((group: any, gIdx: number) => (
+                      <div key={gIdx} className="bg-[#0F0F0F] p-5 border border-[#2A2A2A]">
+                        <div className="mb-4 flex justify-between items-center border-b border-[#2A2A2A] pb-3">
+                          <div className="space-y-1">
+                            <input 
+                              className="bg-transparent font-black text-lg text-white focus:outline-none focus:border-b border-[#F27D26] w-full"
+                              value={group.group}
+                              onChange={(e) => {
+                                const newTrips = [...trips];
+                                const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                newTrips[tripIdx].leads[gIdx].group = e.target.value;
+                                setTrips(newTrips);
+                              }}
+                            />
+                            <input 
+                              className="bg-transparent text-[10px] font-mono uppercase text-[#F27D26] focus:outline-none w-full"
+                              value={group.focus}
+                              onChange={(e) => {
+                                const newTrips = [...trips];
+                                const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                newTrips[tripIdx].leads[gIdx].focus = e.target.value;
+                                setTrips(newTrips);
+                              }}
+                            />
+                          </div>
+                          <div className="flex gap-2">
+                            <button 
+                              className="bg-[#F27D26] text-black text-[10px] font-black px-3 py-1.5 uppercase hover:bg-white transition-colors"
+                              onClick={() => {
+                                const newTrips = [...trips];
+                                const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                newTrips[tripIdx].leads[gIdx].companies.push({
+                                  name: "Nova Tvrtka",
+                                  address: "Adresa, Grad",
+                                  contact: "Kontakt",
+                                  web: "web.com",
+                                  maps: "#",
+                                  desc: "Kratki opis tvrtke.",
+                                  strategy: "Strategija suradnje.",
+                                  pitch: ["Točka 1"],
+                                  hidden: false
+                                });
+                                setTrips(newTrips);
+                              }}
+                            >
+                              + Dodaj Stajalište
+                            </button>
+                          </div>
+                        </div>
+
+                        <div className="space-y-3">
+                          {group.companies.map((company: any, cIdx: number) => (
+                            <div key={cIdx} className={`p-4 border ${company.hidden ? 'opacity-40 bg-black/40' : 'bg-[#1A1A1A]'} border-[#2A2A2A] transition-all`}>
+                              <div className="flex items-center justify-between mb-4">
+                                <div className="flex items-center gap-3">
+                                  <div className="w-6 h-6 bg-[#2A2A2A] text-[#F27D26] rounded flex items-center justify-center text-[10px] font-bold">
+                                    {cIdx + 1}
+                                  </div>
+                                  <input 
+                                    className="bg-transparent font-bold text-white focus:outline-none focus:border-b border-[#F27D26] min-w-[200px]" 
+                                    value={company.name}
+                                    onChange={(e) => {
+                                      const newTrips = [...trips];
+                                      const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                      newTrips[tripIdx].leads[gIdx].companies[cIdx].name = e.target.value;
+                                      setTrips(newTrips);
+                                    }}
+                                  />
+                                </div>
+                                <div className="flex gap-2">
+                                  <button 
+                                    onClick={() => {
+                                      const newTrips = [...trips];
+                                      const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                      newTrips[tripIdx].leads[gIdx].companies[cIdx].hidden = !company.hidden;
+                                      setTrips(newTrips);
+                                    }}
+                                    className={`p-2 rounded transition-colors ${company.hidden ? 'bg-yellow-500/10 text-yellow-500' : 'bg-[#2A2A2A] text-[#8E9299]'}`}
+                                    title={company.hidden ? 'Prikaži' : 'Sakrij'}
+                                  >
+                                    <Zap className="w-4 h-4" />
+                                  </button>
+                                  <button 
+                                    onClick={() => {
+                                      if (confirm('Obrisati ovo stajalište?')) {
+                                        const newTrips = [...trips];
+                                        const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                        newTrips[tripIdx].leads[gIdx].companies.splice(cIdx, 1);
+                                        setTrips(newTrips);
+                                      }
+                                    }}
+                                    className="p-2 bg-red-500/10 text-red-500 rounded hover:bg-red-500 hover:text-white transition-all"
+                                  >
+                                    <X className="w-4 h-4" />
+                                  </button>
+                                </div>
+                              </div>
+                              
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div className="space-y-1">
+                                  <label className="text-[9px] font-black uppercase text-[#8E9299] tracking-widest">Adresa</label>
+                                  <input 
+                                    className="w-full bg-[#0F0F0F] border border-[#2A2A2A] p-2 text-xs text-white focus:border-[#F27D26] outline-none"
+                                    value={company.address}
+                                    onChange={(e) => {
+                                      const newTrips = [...trips];
+                                      const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                      newTrips[tripIdx].leads[gIdx].companies[cIdx].address = e.target.value;
+                                      setTrips(newTrips);
+                                    }}
+                                  />
+                                </div>
+                                <div className="space-y-1">
+                                  <label className="text-[9px] font-black uppercase text-[#8E9299] tracking-widest">Opis Djelatnosti</label>
+                                  <input 
+                                    className="w-full bg-[#0F0F0F] border border-[#2A2A2A] p-2 text-xs text-white focus:border-[#F27D26] outline-none"
+                                    value={company.desc}
+                                    onChange={(e) => {
+                                      const newTrips = [...trips];
+                                      const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                      newTrips[tripIdx].leads[gIdx].companies[cIdx].desc = e.target.value;
+                                      setTrips(newTrips);
+                                    }}
+                                  />
+                                </div>
+                              </div>
+
+                              <div className="space-y-1">
+                                <label className="text-[9px] font-black uppercase text-[#F27D26] tracking-widest">Vaše Riječi Pitch (Jednostavan Tekst)</label>
+                                <textarea 
+                                  placeholder="Unesite ovdje vaš osobni pitch ili napomene za ovu tvrtku..."
+                                  className="w-full bg-[#0F0F0F] border border-[#2A2A2A] p-3 text-xs text-white focus:border-[#F27D26] outline-none min-h-[100px] resize-none font-sans leading-relaxed"
+                                  value={company.customPitch || ''}
+                                  onChange={(e) => {
+                                    const newTrips = [...trips];
+                                    const tripIdx = newTrips.findIndex(t => t.id === activeTrip.id);
+                                    newTrips[tripIdx].leads[gIdx].companies[cIdx].customPitch = e.target.value;
+                                    setTrips(newTrips);
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex justify-center">
+                    <button 
+                      onClick={() => {
+                        if (confirm('Obrisati CIJELU turu?')) {
+                          const newTrips = trips.filter((t: any) => t.id !== activeTrip.id);
+                          setTrips(newTrips);
+                          if (newTrips.length > 0) setActiveTrip(newTrips[0]);
+                        }
+                      }}
+                      className="px-6 py-3 border border-red-500/20 text-red-500 hover:bg-red-500 hover:text-white transition-all text-xs font-black uppercase tracking-widest"
+                    >
+                      Obriši cijelu turu ({activeTrip.label})
+                    </button>
+                  </div>
+                </section>
+              </div>
+
+              <div className="p-8 border-t border-[#2A2A2A] bg-[#0F0F0F] flex items-center justify-between">
+                <div className="flex items-center gap-3 text-[10px] text-[#8E9299]">
+                  <RotateCcw className="w-3 h-3" />
+                  <span className="italic">Promjene su automatski spremljene lokalno.</span>
+                </div>
+                <button 
+                  onClick={() => setIsAdminMode(false)}
+                  className="bg-[#2A2A2A] hover:bg-white hover:text-black text-xs font-black uppercase tracking-widest px-10 py-4 transition-all"
+                >
+                  Zatvori Panel
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
 
-function ServiceCard({ icon, title, subtitle, description }: { icon: React.ReactNode, title: string, subtitle: string, description: string }) {
+function ServiceCard({ icon, title, subtitle, description, theme }: { icon: React.ReactNode, title: string, subtitle: string, description: string, theme: any }) {
   return (
-    <div className="bg-[#151515] p-10 hover:bg-[#1A1A1A] transition-all group flex flex-col justify-between h-[320px]">
+    <div className="p-10 transition-all group flex flex-col justify-between h-[320px]" style={{ backgroundColor: theme.bg === '#0F0F0F' ? '#151515' : theme.bg, color: theme.text }}>
       <div>
-        <div className="mb-8 text-[#8E9299] group-hover:text-[#F27D26] transition-colors flex justify-between items-start">
-          {icon}
+        <div className="mb-8 transition-colors flex justify-between items-start" style={{ color: theme.muted }}>
+          <div className="group-hover:text-[#F27D26] transition-colors">{icon}</div>
           <div className="text-[10px] font-mono font-bold tracking-[0.2em] uppercase opacity-50">{subtitle}</div>
         </div>
-        <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">{title}</h3>
-        <p className="text-[#8E9299] text-sm leading-relaxed group-hover:text-white/80 transition-colors">
+        <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter" style={{ color: theme.text }}>{title}</h3>
+        <p className="text-sm leading-relaxed group-hover:text-white/80 transition-colors" style={{ color: theme.muted }}>
           {description}
         </p>
       </div>
