@@ -20,9 +20,32 @@ import {
   Menu,
   X,
   Target,
-  Briefcase
+  Briefcase,
+  MessageSquare,
+  BadgeCheck,
+  Zap,
+  Box,
+  Languages,
+  Euro,
+  Award,
+  Handshake
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+
+const WHATSAPP_LINK = "https://wa.me/38540000000?text=Sehr%20geehrtes%20Montage%20Tehnik%20Team%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Zusammenarbeit.";
+
+const SALES_ARGUMENTS = [
+  { title: "Geografische Nähe", desc: "Nur 3,5 Stunden von Linz/Graz entfernt (Čakovec). Schneller als viele inländische Partner.", icon: <MapPin className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "ISO 3834-3 Zertifizierung", desc: "Höchste internationale Schweißstandards für sicherheitskritische Bauteile.", icon: <ShieldCheck className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "Spezialisierte Expertise", desc: "Tiefes Know-how in LKW-Hilfsrahmen und Bergbau-Equipment.", icon: <Truck className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "Maßgeschneiderte Fertigung", desc: "Vollständige Flexibilität für Sonderanfertigungen nach Ihren Plänen.", icon: <Zap className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "Termintreue & Logistik", desc: "Eigene Logistik-Struktur garantiert Liefertermine ohne Verzögerung.", icon: <Clock className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "Große Kapazitäten", desc: "Moderne 1200m² Produktionshalle für Serien und Großprojekte.", icon: <Box className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "Sprachbarriere? Keine.", desc: "Deutschsprachige Ansprechpartner und Projektleitung vor Ort.", icon: <Languages className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "Kostenvorteil EU-weit", desc: "Wettbewerbsfähige Preise durch kroatischen Standort bei EU-Standards.", icon: <Euro className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "Bewährte Exporterfahrung", desc: "Erfolgreiche Partnerschaften in Schweden, Österreich und Slowenien.", icon: <Globe className="w-6 h-6 text-[#F27D26]" /> },
+  { title: "Full-Service Partner", desc: "Von der Materialbeschaffung bis zur finalen Montage alles aus einer Hand.", icon: <Award className="w-6 h-6 text-[#F27D26]" /> },
+];
 
 const COLORS = {
   bg: '#0F0F0F',
@@ -45,7 +68,12 @@ const TRIP_LEADS = [
         web: "zekomobility.com",
         maps: "https://www.google.com/maps/search/?api=1&query=Welser+Str.+83,+4060+Leonding",
         desc: "Spezielle Aufbauten und Modifikationen für PKW und Nutzfahrzeuge.",
-        strategy: "Vorfertigung von tragenden Metallelementen und Schweißkonsolen anbieten. Schnelligkeit aus Čakovec (<4h) betonen."
+        strategy: "Vorfertigung von tragenden Metallelementen und Schweißkonsolen anbieten.",
+        pitch: [
+          "Präzise Fertigung von Schweißkonsolen für Sonderaufbauten.",
+          "Schnelle Lieferung innerhalb von 24h bei Serienproduktion.",
+          "Erfahrung in der Modifikation von Nutzfahrzeugen."
+        ]
       },
       {
         name: "TAT-TECHNOM Antriebstechnik GmbH",
@@ -54,7 +82,12 @@ const TRIP_LEADS = [
         web: "tat.at",
         maps: "https://www.google.com/maps/search/?api=1&query=Technologiering+13-17,+4060+Leonding",
         desc: "Automatisierung, Antriebstechnik und Verpackungslösungen.",
-        strategy: "Präzise Gestelle und Rahmen benötigt. ISO 3834-3 garantiert Qualität für Vibrationsbelastungen."
+        strategy: "Präzise Gestelle und Rahmen für vibrationsanfällige Antriebe.",
+        pitch: [
+          "ISO 3834-3 zertifizierte Schweißbaugruppen für Vibrationsresistenz.",
+          "Fertigung von Maschinengestellen nach präzisen Toleranzen.",
+          "Skalierbare Serienfertigung für Automatisierungskomponenten."
+        ]
       },
       {
         name: "WD-Metalltechnik GmbH",
@@ -63,7 +96,12 @@ const TRIP_LEADS = [
         web: "wd-metalltechnik.at",
         maps: "https://www.google.com/maps/search/?api=1&query=Roseggerstraße+12a,+4050+Traun",
         desc: "Klassische Metallbearbeitung, Drehen und Fräsen.",
-        strategy: "Outsourcing-Partner für Serienproduktion von Schweißbaugruppen zur Kapazitätserweiterung."
+        strategy: "Outsourcing-Partner für Serienproduktion von Schweißbaugruppen.",
+        pitch: [
+          "Zuverlässige 'Verlängerte Werkbank' für Schweißüberhang.",
+          "Fachkompetenz in der Serienfertigung komplexer Baugruppen.",
+          "Transparente EU-Preiskalkulation ohne Logistik-Risiken."
+        ]
       }
     ]
   },
@@ -78,7 +116,12 @@ const TRIP_LEADS = [
         web: "riedler.at",
         maps: "https://www.google.com/maps/search/?api=1&query=Bahnleiten+1,+4664+Oberweis",
         desc: "Stärkste Aufbauten für Forst-LKW und Holztransport.",
-        strategy: "Unser Core-Business (LKW-Hilfsrahmen). Bilder von Rahmen für Asphaltmischer und Greifer zeigen."
+        strategy: "Unser Kern-Business: LKW-Hilfsrahmen für maximale Belastung.",
+        pitch: [
+          "Spezialisierung auf hochbelastbare Forst-LKW-Hilfsrahmen.",
+          "Zertifizierte Materialqualität für sicherheitsrelevante Bauteile.",
+          "Konstruktive Erfahrung mit Greifer- und Kran-Integrationen."
+        ]
       },
       {
         name: "Vakutec Gülletechnik GmbH",
@@ -87,7 +130,12 @@ const TRIP_LEADS = [
         web: "vakutec.at",
         maps: "https://www.google.com/maps/search/?api=1&query=Pernsteinerstraße+14,+4552+Nußbach",
         desc: "Gülletechnik und Vakuumbehälter.",
-        strategy: "Edelstahlbehälter und Rohrleitungen. Bergbau-Erfahrung (Pipelines) ist hier 100% anwendbar."
+        strategy: "Edelstahlbehälter und Rohrleitungen für Agrar-Technik.",
+        pitch: [
+          "Expertise in der Fertigung absolut dichter Edelstahlbehälter.",
+          "Know-how aus dem Bergbau (Pipelines) auf Agrar-Equipment übertragbar.",
+          "Hochwertige Schweißnähte für extreme Druckbeständigkeit."
+        ]
       }
     ]
   },
@@ -102,7 +150,12 @@ const TRIP_LEADS = [
         web: "grabner-stahlbau.at",
         maps: "https://www.google.com/maps/search/?api=1&query=Am+Ökopark+11,+8230+Hartberg",
         desc: "Große Stahlkonstruktionen für Industriehallen und Spezialfahrzeuge.",
-        strategy: "Fertigung kleinerer/mittlerer Schweißbaugruppen für deren Großprojekte übernehmen."
+        strategy: "Fertigung von Teilsegmenten für große Stahlbauprojekte.",
+        pitch: [
+          "Fertigung präziser Teilsegmente für Hallen- und Fahrzeugbau.",
+          "Entlastung Ihrer Montagekapazitäten durch Vorfertigung.",
+          "Extreme Termintreue für Ihre terminabhängigen Projekte."
+        ]
       },
       {
         name: "Krenhof GmbH",
@@ -111,7 +164,12 @@ const TRIP_LEADS = [
         web: "krenhof.at",
         maps: "https://www.google.com/maps/search/?api=1&query=Krenhofstraße+37,+8570+Köflach",
         desc: "Präzisionsschmiedeteile für Auto-Industrie und Landwirtschaft.",
-        strategy: "Schmiedestücke zu komplexen Teilen verschweißen. Endbearbeitung und Montage anbieten."
+        strategy: "Schmiedestücke zu komplexen Bauteilen verschweißen.",
+        pitch: [
+          "Verschweißen von Schmiedeteilen zu komplexen Fertigkomponenten.",
+          "Angebot kompletter mechanischer Endbearbeitung & Vor-Montage.",
+          "Prozesssicherheit bei Serien mit höchsten Stückzahlen."
+        ]
       },
       {
         name: "Maschinenfabrik Berger GmbH",
@@ -120,7 +178,12 @@ const TRIP_LEADS = [
         web: "m-berger.at",
         maps: "https://www.google.com/maps/search/?api=1&query=Wiener+Straße+35,+8720+Knittelfeld",
         desc: "Spezialmaschinen und Komponenten für Bergbau und Industrie.",
-        strategy: "Direkte Verbindung zum Bergbau-Know-how. Förderkomponenten und Verschleißteile anbieten."
+        strategy: "Direkte Verbindung zum Bergbau-Know-how nutzen.",
+        pitch: [
+          "Spezialist für Bergbau-Equipment (Förderer, Verschleißteile).",
+          "Robustheit durch ISO 3834-3 Standards für härtesten Einsatz.",
+          "Kurze Logistikwege für Ersatzteil-Fertigung (nur 3,5h Logistik)."
+        ]
       }
     ]
   }
@@ -128,7 +191,36 @@ const TRIP_LEADS = [
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const whatsappOptions = [
+    { 
+      label: "Allgemeine Zusammenarbeit", 
+      message: "Sehr geehrtes Montage Tehnik Team, ich interessiere mich für eine allgemeine Zusammenarbeit und würde gerne mehr über Ihre Kapazitäten erfahren.",
+      icon: <Handshake className="w-5 h-5" />
+    },
+    { 
+      label: "Preisanfrage / Angebot", 
+      message: "Hallo, ich hätte gerne ein unverbindliches Angebot für die Fertigung von Metallkomponenten/Schweißbaugruppen.",
+      icon: <Euro className="w-5 h-5" />
+    },
+    { 
+      label: "Technische Beratung", 
+      message: "Guten Tag, wir haben ein technisches Projekt im Bereich LKW/Bergbau und benötigen Ihre Expertise bei der Umsetzung.",
+      icon: <Wrench className="w-5 h-5" />
+    },
+    { 
+      label: "Besuchstermin vereinbaren", 
+      message: "Ich habe gesehen, dass Sie aktuell in der Region sind. Gerne würde ich einen kurzen Gesprächstermin vereinbaren.",
+      icon: <Clock className="w-5 h-5" />
+    }
+  ];
+
+  const openWhatsApp = (msg: string) => {
+    const url = `https://wa.me/385911234567?text=${encodeURIComponent(msg)}`;
+    window.location.href = url; // Opens in same window as requested earlier
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -207,11 +299,14 @@ export default function App() {
               Präzisionsfertigung von LKW-Hilfsrahmen, Bergbau-Komponenten und Schweißbaugruppen in Serie. ISO 3834-3 Qualität – nur 3,5 Stunden von Ihnen entfernt.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#F27D26] text-white px-8 py-4 font-bold uppercase tracking-widest flex items-center gap-3 hover:bg-[#D9661D] transition-all group">
+              <button onClick={() => document.getElementById('leistungen')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#F27D26] text-white px-8 py-4 font-bold uppercase tracking-widest flex items-center gap-3 hover:bg-[#D9661D] transition-all group">
                 UNSER PORTFOLIO <ChevronRight className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border border-[#2A2A2A] px-8 py-4 font-bold uppercase tracking-widest hover:bg-white/5 transition-all">
-                WERK ČAKOVEC BESICHTIGEN
+              <button 
+                onClick={() => setIsWhatsAppModalOpen(true)}
+                className="bg-[#25D366] text-white px-8 py-4 font-bold uppercase tracking-widest flex items-center gap-3 hover:bg-[#128C7E] transition-all"
+              >
+                <MessageSquare className="w-5 h-5" /> WHATSAPP KONTAKT
               </button>
             </div>
           </motion.div>
@@ -297,6 +392,26 @@ export default function App() {
         </div>
       </section>
 
+      {/* Sales Arguments / Vorteile Section */}
+      <section id="vorteile" className="py-32 bg-[#1A1A1A]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6">WARUM MONTAGE TEHNIK?<br /><span className="text-[#F27D26]">10 GUTE GRÜNDE</span></h2>
+            <p className="text-[#8E9299] max-w-2xl mx-auto text-lg italic text-balance">Erfahren Sie, warum führende Unternehmen in der EU auf unsere Expertise vertrauen.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {SALES_ARGUMENTS.map((arg, idx) => (
+              <div key={idx} className="bg-[#0F0F0F] border border-[#2A2A2A] p-6 hover:border-[#F27D26] transition-all group">
+                <div className="mb-4 group-hover:scale-110 transition-transform">{arg.icon}</div>
+                <h4 className="text-sm font-black uppercase mb-2 tracking-tight group-hover:text-[#F27D26] transition-colors">{arg.title}</h4>
+                <p className="text-xs text-[#8E9299] leading-relaxed">{arg.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trip Plan Section */}
       <section id="besuchsplan" className="py-32 bg-[#151515] border-y border-[#2A2A2A]">
         <div className="max-w-7xl mx-auto px-6">
@@ -345,8 +460,17 @@ export default function App() {
                         </p>
                       </div>
                       <div className="bg-[#F27D26]/5 p-4 border border-[#F27D26]/10">
-                        <span className="text-[10px] font-black text-[#F27D26] uppercase tracking-widest block mb-2">Strategie:</span>
-                        <p className="text-xs italic text-[#8E9299] leading-relaxed">
+                        <span className="text-[10px] font-black text-[#F27D26] uppercase tracking-widest block mb-2">IHR PITCH (INFO-MATERIAL):</span>
+                        <ul className="space-y-2 mb-4">
+                          {(company as any).pitch?.map((point: string, pIdx: number) => (
+                            <li key={pIdx} className="text-[11px] leading-tight flex items-start gap-2">
+                              <BadgeCheck className="w-3 h-3 text-[#25D366] shrink-0 mt-0.5" />
+                              <span className="text-[#E4E3E0]">{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <span className="text-[10px] font-black text-[#F27D26] uppercase tracking-widest block mb-1">STRATEGIE:</span>
+                        <p className="text-[11px] italic text-[#8E9299] leading-relaxed">
                           {company.strategy}
                         </p>
                       </div>
@@ -379,9 +503,18 @@ export default function App() {
               <p className="text-[#8E9299] mb-12 max-w-md">Wir sind aktuell in Ihrer Region unterwegs. Vereinbaren Sie ein persönliches Gespräch für Produktdetails und Kooperationsmodelle.</p>
               
               <div className="space-y-6">
-                <ContactInfo icon={<Phone />} title="DIREKTKONTAKT" text="+385 40 XX XX XX" />
+                <ContactInfo icon={<Phone />} title="DIREKTKONTAKT" text="+385 91 123 4567" />
                 <ContactInfo icon={<Mail />} title="E-MAIL ANFRAGE" text="office@montagetehnik.com" />
                 <ContactInfo icon={<MapPin />} title="STANDORT" text="Zagrebačka 99, 40000 Čakovec, Kroatien" />
+                
+                <div className="pt-6">
+                  <button 
+                    onClick={() => setIsWhatsAppModalOpen(true)}
+                    className="inline-flex items-center gap-4 bg-[#25D366] text-white px-10 py-5 font-black uppercase tracking-widest hover:bg-[#128C7E] transition-all shadow-xl hover:shadow-[#25D366]/20 group"
+                  >
+                    <MessageSquare className="w-6 h-6" /> JETZT ÜBER WHATSAPP KOOPERIEREN
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -414,6 +547,49 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp Modal */}
+      <AnimatePresence>
+        {isWhatsAppModalOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/80 backdrop-blur-sm">
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-[#1A1A1A] border border-[#2A2A2A] w-full max-w-md overflow-hidden relative"
+            >
+              <div className="bg-[#25D366] p-6 flex justify-between items-center">
+                <div className="flex items-center gap-3 text-[#0F0F0F]">
+                  <MessageSquare className="w-6 h-6 fill-current" />
+                  <h3 className="font-black uppercase tracking-tighter text-xl">WhatsApp Kontakt</h3>
+                </div>
+                <button onClick={() => setIsWhatsAppModalOpen(false)} className="text-[#0F0F0F] hover:rotate-90 transition-transform">
+                  <X />
+                </button>
+              </div>
+
+              <div className="p-6 space-y-3">
+                <p className="text-xs text-[#8E9299] uppercase font-bold tracking-widest mb-4">Wählen Sie einen Betreff:</p>
+                {whatsappOptions.map((opt, i) => (
+                  <button 
+                    key={i}
+                    onClick={() => openWhatsApp(opt.message)}
+                    className="w-full flex items-center gap-4 p-4 bg-[#0F0F0F] border border-[#2A2A2A] hover:border-[#25D366] hover:bg-[#25D366]/5 text-left transition-all group"
+                  >
+                    <div className="text-[#8E9299] group-hover:text-[#25D366]">{opt.icon}</div>
+                    <span className="font-bold text-sm uppercase tracking-tight">{opt.label}</span>
+                    <ChevronRight className="w-4 h-4 ml-auto opacity-30 group-hover:opacity-100 group-hover:translate-x-1" />
+                  </button>
+                ))}
+              </div>
+
+              <div className="p-6 pt-0 text-[10px] text-center text-[#8E9299] uppercase tracking-widest opacity-60">
+                Sie werden direkt zur WhatsApp Web/App weitergeleitet.
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
